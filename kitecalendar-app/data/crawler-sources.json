@@ -31,7 +31,7 @@
   },
   {
     "id": "lets-kite-agenda",
-    "name": "Let's Kite Agenda",
+    "name": "LetsKite",
     "baseUrl": "https://letskite.ch/en/agenda",
     "sourceType": "event-platform",
     "crawlFrequency": "weekly",
@@ -208,5 +208,185 @@
     "parserType": "json-ld",
     "confidence": 50,
     "termsNote": "Public destination calendar. Verify kite relevance and location before publishing."
+  },
+  {
+    "id": "international-kiteboarding-association",
+    "name": "International Kiteboarding Association",
+    "baseUrl": "https://www.kiteclasses.org/competitions/upcoming-events",
+    "sourceType": "competition",
+    "crawlFrequency": "weekly",
+    "parserType": "json-ld",
+    "confidence": 86,
+    "termsNote": "Official public competition calendar. Verify class, dates, and locations before publishing."
+  },
+  {
+    "id": "kiteworldshop-competition-calendar",
+    "name": "Kiteworldshop",
+    "baseUrl": "https://www.kiteworldshop.com/en/blog/calendar-competitions-kitesurfing-n18",
+    "sourceType": "event-platform",
+    "crawlFrequency": "monthly",
+    "parserType": "json-ld",
+    "confidence": 60,
+    "termsNote": "Public editorial competition calendar. Use as discovery and verify every event against its original source."
+  },
+  {
+    "id": "rebels-tarifa-calendar",
+    "name": "Rebels Tarifa",
+    "baseUrl": "https://rebelstarifa.com/2025-calendar-kitesurfing-events-and-competitions/",
+    "sourceType": "event-platform",
+    "crawlFrequency": "monthly",
+    "parserType": "json-ld",
+    "confidence": 58,
+    "termsNote": "Public editorial kitesurfing calendar. Use as discovery and verify dates before publishing."
+  },
+  {
+    "id": "duotone-pro-center",
+    "name": "Duotone Pro Center",
+    "baseUrl": "https://www.duotoneprocenter.com/",
+    "sourceType": "school",
+    "crawlFrequency": "monthly",
+    "parserType": "json-ld",
+    "confidence": 55,
+    "termsNote": "Public Duotone Pro Center network page. Use as school/network discovery and keep candidates pending review."
+  },
+  {
+    "id": "ion-club",
+    "name": "ION Club",
+    "baseUrl": "https://www.ion-club.net/",
+    "sourceType": "school",
+    "crawlFrequency": "monthly",
+    "parserType": "json-ld",
+    "confidence": 52,
+    "termsNote": "Public watersports network site. Crawl public pages only and verify kite-specific relevance."
+  },
+  {
+    "id": "vdws",
+    "name": "VDWS",
+    "baseUrl": "https://www.vdws.de/",
+    "sourceType": "school",
+    "crawlFrequency": "monthly",
+    "parserType": "json-ld",
+    "confidence": 50,
+    "termsNote": "Public association site. Use as discovery for schools, camps, and public events only."
+  },
+  {
+    "id": "kitesurf-world-cup-sylt",
+    "name": "Kitesurf World Cup Sylt",
+    "baseUrl": "https://www.kitesurfworldcup.de/",
+    "sourceType": "competition",
+    "crawlFrequency": "weekly",
+    "parserType": "json-ld",
+    "confidence": 82,
+    "termsNote": "Official public event-specific site. Verify schedule and registration details before publishing."
+  },
+  {
+    "id": "defi-wind",
+    "name": "Defi Wind",
+    "baseUrl": "https://defiwind.com/",
+    "sourceType": "competition",
+    "crawlFrequency": "monthly",
+    "parserType": "json-ld",
+    "confidence": 45,
+    "termsNote": "Public event-specific site. Adjacent wind event source; verify kite relevance before publishing."
+  },
+  {
+    "id": "tarifa-events-portal",
+    "name": "Tarifa Events Portal",
+    "baseUrl": "https://www.tarifa.com/",
+    "sourceType": "tourism",
+    "crawlFrequency": "monthly",
+    "parserType": "json-ld",
+    "confidence": 48,
+    "termsNote": "Public destination portal. Use as discovery and verify kite relevance before publishing."
+  },
+  {
+    "id": "duotone-kiteboarding-instagram",
+    "name": "Duotone Kiteboarding Instagram",
+    "baseUrl": "https://www.instagram.com/duotonekiteboarding/",
+    "sourceType": "brand",
+    "crawlFrequency": "monthly",
+    "parserType": "html",
+    "confidence": 25,
+    "termsNote": "Public social profile only. Do not bypass logins, captchas, or anti-bot systems; use as low-confidence discovery."
+  },
+  {
+    "id": "north-kiteboarding-instagram",
+    "name": "North Kiteboarding Instagram",
+    "baseUrl": "https://www.instagram.com/northkiteboarding/",
+    "sourceType": "brand",
+    "crawlFrequency": "monthly",
+    "parserType": "html",
+    "confidence": 25,
+    "termsNote": "Public social profile only. Do not bypass logins, captchas, or anti-bot systems; use as low-confidence discovery."
+  },
+  {
+    "id": "fone-kites-instagram",
+    "name": "F-One Instagram",
+    "baseUrl": "https://www.instagram.com/fonekites/",
+    "sourceType": "brand",
+    "crawlFrequency": "monthly",
+    "parserType": "html",
+    "confidence": 25,
+    "termsNote": "Public social profile only. Do not bypass logins, captchas, or anti-bot systems; use as low-confidence discovery."
+  },
+  {
+    "id": "core-kiteboarding-instagram",
+    "name": "CORE Kiteboarding Instagram",
+    "baseUrl": "https://www.instagram.com/corekites/",
+    "sourceType": "brand",
+    "crawlFrequency": "monthly",
+    "parserType": "html",
+    "confidence": 25,
+    "termsNote": "Public social profile only. Do not bypass logins, captchas, or anti-bot systems; use as low-confidence discovery."
+  },
+  {
+    "id": "sylt-events",
+    "name": "Sylt",
+    "baseUrl": "https://www.sylt.de/",
+    "sourceType": "tourism",
+    "crawlFrequency": "monthly",
+    "parserType": "json-ld",
+    "confidence": 48,
+    "termsNote": "Public location portal. Use for destination discovery and verify kite relevance before publishing."
+  },
+  {
+    "id": "st-peter-ording-events",
+    "name": "St. Peter-Ording",
+    "baseUrl": "https://www.st-peter-ording.de/",
+    "sourceType": "tourism",
+    "crawlFrequency": "monthly",
+    "parserType": "json-ld",
+    "confidence": 48,
+    "termsNote": "Public location portal. Use for destination discovery and verify kite relevance before publishing."
+  },
+  {
+    "id": "el-gouna-events",
+    "name": "El Gouna",
+    "baseUrl": "https://elgouna.com/",
+    "sourceType": "tourism",
+    "crawlFrequency": "monthly",
+    "parserType": "json-ld",
+    "confidence": 48,
+    "termsNote": "Public location portal. Use for destination discovery and verify kite relevance before publishing."
+  },
+  {
+    "id": "dakhla-portal",
+    "name": "Dakhla",
+    "baseUrl": "https://dakhla.com/",
+    "sourceType": "tourism",
+    "crawlFrequency": "monthly",
+    "parserType": "json-ld",
+    "confidence": 48,
+    "termsNote": "Public location portal. Use for destination discovery and verify kite relevance before publishing."
+  },
+  {
+    "id": "jericoacoara-events",
+    "name": "Jericoacoara",
+    "baseUrl": "https://www.jericoacoara.com/",
+    "sourceType": "tourism",
+    "crawlFrequency": "monthly",
+    "parserType": "json-ld",
+    "confidence": 48,
+    "termsNote": "Public location portal. Use for destination discovery and verify kite relevance before publishing."
   }
 ]
