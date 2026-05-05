@@ -1,5 +1,5 @@
 import { Play, Save, ShieldCheck, TimerReset, Trash2 } from "lucide-react";
-import { deleteCrawlSourceAction, runCrawlerAction, updateCrawlSourceAction } from "@/app/admin/actions";
+import { createCrawlSourceAction, deleteCrawlSourceAction, runCrawlerAction, updateCrawlSourceAction } from "@/app/admin/actions";
 
 type CrawlSourceView = {
   id: string;
@@ -43,6 +43,102 @@ export function CrawlerSourceTable({ sources, runs }: { sources: CrawlSourceView
             </button>
           </form>
         </div>
+
+        <form action={createCrawlSourceAction} className="mb-5 grid gap-3 rounded-md border border-sky-100 bg-sky-50 p-4">
+          <div>
+            <h3 className="text-base font-black text-slate-950">Add source</h3>
+            <p className="text-sm text-slate-500">Add public event calendars, brand pages, tourism pages, or kite school event pages.</p>
+          </div>
+          <div className="grid gap-3 lg:grid-cols-[1.2fr_2fr]">
+            <label className="grid gap-1 text-xs font-black uppercase text-slate-500">
+              Name
+              <input
+                name="name"
+                placeholder="Example: Tarifa kite school events"
+                className="h-10 rounded-md border border-sky-100 bg-white px-3 text-sm font-bold normal-case text-slate-900"
+              />
+            </label>
+            <label className="grid gap-1 text-xs font-black uppercase text-slate-500">
+              URL
+              <input
+                name="baseUrl"
+                type="url"
+                placeholder="https://example.com/events"
+                className="h-10 rounded-md border border-sky-100 bg-white px-3 text-sm font-bold normal-case text-slate-900"
+              />
+            </label>
+          </div>
+          <div className="grid gap-3 md:grid-cols-4">
+            <label className="grid gap-1 text-xs font-black uppercase text-slate-500">
+              Type
+              <select
+                name="sourceType"
+                defaultValue="event-platform"
+                className="h-10 rounded-md border border-sky-100 bg-white px-3 text-sm font-bold normal-case text-slate-900"
+              >
+                <option value="competition">Competition</option>
+                <option value="brand">Brand</option>
+                <option value="school">School</option>
+                <option value="tourism">Tourism</option>
+                <option value="event-platform">Event platform</option>
+              </select>
+            </label>
+            <label className="grid gap-1 text-xs font-black uppercase text-slate-500">
+              Frequency
+              <select
+                name="crawlFrequency"
+                defaultValue="weekly"
+                className="h-10 rounded-md border border-sky-100 bg-white px-3 text-sm font-bold normal-case text-slate-900"
+              >
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+              </select>
+            </label>
+            <label className="grid gap-1 text-xs font-black uppercase text-slate-500">
+              Parser
+              <select
+                name="parserType"
+                defaultValue="json-ld"
+                className="h-10 rounded-md border border-sky-100 bg-white px-3 text-sm font-bold normal-case text-slate-900"
+              >
+                <option value="json-ld">JSON-LD</option>
+                <option value="html">HTML</option>
+                <option value="manual-demo">Manual</option>
+              </select>
+            </label>
+            <label className="grid gap-1 text-xs font-black uppercase text-slate-500">
+              Confidence
+              <input
+                name="confidence"
+                type="number"
+                min="0"
+                max="100"
+                defaultValue="50"
+                className="h-10 rounded-md border border-sky-100 bg-white px-3 text-sm font-bold normal-case text-slate-900"
+              />
+            </label>
+          </div>
+          <label className="grid gap-1 text-xs font-black uppercase text-slate-500">
+            Notes
+            <textarea
+              name="termsNote"
+              rows={2}
+              placeholder="Only crawl public pages. Add review notes or terms reminders here."
+              className="rounded-md border border-sky-100 bg-white px-3 py-2 text-sm font-semibold normal-case leading-6 text-slate-700"
+            />
+          </label>
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <label className="inline-flex items-center gap-2 rounded-md bg-white px-2 py-1 text-xs font-bold text-slate-500">
+              <input name="isActive" type="checkbox" defaultChecked className="size-4 accent-sky-600" />
+              Active
+            </label>
+            <button className="inline-flex h-10 items-center justify-center gap-2 rounded-md bg-sky-600 px-4 text-sm font-black text-white hover:bg-sky-700">
+              <Save className="size-4" aria-hidden="true" />
+              Add source
+            </button>
+          </div>
+        </form>
 
         <div className="grid gap-3">
           {sources.map((source) => (

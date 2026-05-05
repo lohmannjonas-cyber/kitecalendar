@@ -82,34 +82,69 @@ export async function runDiscoveryCrawl(sourceId?: string) {
 }
 
 async function getRunnableSources(sourceId?: string) {
-  const definitions = crawlerSources.filter((source) => !sourceId || source.id === sourceId);
-  if (!hasDatabaseUrl()) return definitions;
+  if (!hasDatabaseUrl()) return crawlerSources.filter((source) => !sourceId || source.id === sourceId);
 
   const records = await prisma.crawlSource.findMany({
     where: {
-      id: { in: definitions.map((source) => source.id) },
+      ...(sourceId ? { id: sourceId } : undefined),
       isActive: true,
     },
   });
-  const recordsById = new Map(records.map((record) => [record.id, record]));
+  const definitionById = new Map(crawlerSources.map((definition) => [definition.id, definition]));
 
-  return definitions
-    .map((definition) => {
-      const record = recordsById.get(definition.id);
-      if (!record) return undefined;
+  return records.map((record): CrawlSourceDefinition => {
+    const definition = definitionById.get(record.id) ?? createDatabaseSourceDefinition(record);
 
-      return {
-        ...definition,
-        name: record.name,
-        baseUrl: record.baseUrl,
-        kind: record.sourceType as CrawlSourceDefinition["kind"],
-        crawlFrequency: record.crawlFrequency as CrawlSourceDefinition["crawlFrequency"],
-        parserType: record.parserType as CrawlSourceDefinition["parserType"],
-        confidence: record.confidence,
-        termsNote: record.termsNote ?? undefined,
+    return {
+      ...definition,
+      name: record.name,
+      baseUrl: record.baseUrl,
+      kind: record.sourceType as CrawlSourceDefinition["kind"],
+      crawlFrequency: record.crawlFrequency as CrawlSourceDefinition["crawlFrequency"],
+      parserType: record.parserType as CrawlSourceDefinition["parserType"],
+      confidence: record.confidence,
+      termsNote: record.termsNote ?? definition.termsNote,
+    };
+  });
+}
+
+function createDatabaseSourceDefinition(record: {
+  id: string;
+  name: string;
+  baseUrl: string;
+  sourceType: string;
+  crawlFrequency: string;
+  parserType: string;
+  confidence: number;
+  termsNote: string | null;
+}): CrawlSourceDefinition {
+  return {
+    id: record.id,
+    name: record.name,
+    baseUrl: record.baseUrl,
+    kind: record.sourceType as CrawlSourceDefinition["kind"],
+    robotsPolicy: "must-check",
+    crawlFrequency: record.crawlFrequency as CrawlSourceDefinition["crawlFrequency"],
+    parserType: record.parserType as CrawlSourceDefinition["parserType"],
+    confidence: record.confidence,
+    termsNote: record.termsNote ?? "Custom source added in admin. Crawl public pages only and review all candidates.",
+    async crawl() {
+      const { extractJsonLdEvents, extractTitleDateCandidates } = await import("@/lib/crawler/parsers");
+      const { fetchPublicHtml } = await import("@/lib/crawler/robots");
+      const { html } = await fetchPublicHtml(this.baseUrl);
+      if (!html) return [];
+
+      const defaults = {
+        eventTypeSlug: "community-meetup",
+        organizerName: this.name,
+        brandNames: ["Other"],
       };
-    })
-    .filter((source): source is CrawlSourceDefinition => Boolean(source));
+      const jsonLd = extractJsonLdEvents(html, this, defaults);
+      if (jsonLd.length) return jsonLd;
+
+      return extractTitleDateCandidates(html, this, defaults);
+    },
+  };
 }
 
 async function startRun(source: CrawlSourceDefinition) {

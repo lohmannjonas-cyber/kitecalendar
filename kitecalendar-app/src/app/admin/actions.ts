@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 import { z } from "zod";
 import { clearAdminSession, createAdminSession, requireAdmin, verifyAdminCredentials } from "@/lib/auth";
 import { runDiscoveryCrawl } from "@/lib/crawler";
-import { deleteCrawlSource, updateCrawlSource, updateEvent, updateReviewStatus } from "@/lib/repository";
+import { createCrawlSource, deleteCrawlSource, updateCrawlSource, updateEvent, updateReviewStatus } from "@/lib/repository";
 import type { ReviewStatus } from "@/lib/types";
 
 export async function loginAction(formData: FormData) {
@@ -111,6 +111,28 @@ const crawlSourceSchema = z.object({
   termsNote: z.string().optional(),
   isActive: z.boolean(),
 });
+
+const newCrawlSourceSchema = crawlSourceSchema.omit({ id: true });
+
+export async function createCrawlSourceAction(formData: FormData) {
+  await requireAdmin();
+
+  const parsed = newCrawlSourceSchema.parse({
+    name: formData.get("name"),
+    baseUrl: formData.get("baseUrl"),
+    sourceType: formData.get("sourceType"),
+    crawlFrequency: formData.get("crawlFrequency"),
+    parserType: formData.get("parserType"),
+    confidence: formData.get("confidence"),
+    termsNote: formData.get("termsNote") || undefined,
+    isActive: formData.get("isActive") === "on",
+  });
+
+  await createCrawlSource(parsed);
+
+  revalidatePath("/admin/sources");
+  revalidatePath("/admin/crawled-events");
+}
 
 export async function updateCrawlSourceAction(formData: FormData) {
   await requireAdmin();

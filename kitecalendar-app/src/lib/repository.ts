@@ -165,6 +165,23 @@ export async function updateCrawlSource(input: {
   });
 }
 
+export async function createCrawlSource(input: {
+  name: string;
+  baseUrl: string;
+  sourceType: string;
+  crawlFrequency: string;
+  parserType: string;
+  confidence: number;
+  termsNote?: string;
+  isActive: boolean;
+}) {
+  if (!hasDatabaseUrl()) return undefined;
+
+  return prisma.crawlSource.create({
+    data: input,
+  });
+}
+
 export async function deleteCrawlSource(id: string) {
   if (!hasDatabaseUrl()) return undefined;
 
