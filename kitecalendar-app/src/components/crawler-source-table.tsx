@@ -1,5 +1,5 @@
-import { Play, ShieldCheck, TimerReset } from "lucide-react";
-import { runCrawlerAction } from "@/app/admin/actions";
+import { Play, Save, ShieldCheck, TimerReset } from "lucide-react";
+import { runCrawlerAction, updateCrawlSourceAction } from "@/app/admin/actions";
 
 type CrawlSourceView = {
   id: string;
@@ -47,33 +47,118 @@ export function CrawlerSourceTable({ sources, runs }: { sources: CrawlSourceView
         <div className="grid gap-3">
           {sources.map((source) => (
             <article key={source.id} className="rounded-md border border-slate-100 bg-slate-50 p-4">
-              <div className="flex flex-col gap-3 lg:flex-row lg:items-start lg:justify-between">
-                <div className="min-w-0">
-                  <div className="mb-2 flex flex-wrap items-center gap-2">
-                    <h3 className="text-base font-black text-slate-950">{source.name}</h3>
-                    <span className="rounded-md bg-white px-2 py-1 text-xs font-black text-slate-600">{source.sourceType}</span>
-                    <span className="rounded-md bg-sky-100 px-2 py-1 text-xs font-black text-sky-700">{source.confidence}% confidence</span>
+              <div className="grid gap-4">
+                <form action={updateCrawlSourceAction} className="grid gap-3">
+                  <input type="hidden" name="id" value={source.id} />
+                  <div className="grid gap-3 lg:grid-cols-[1.2fr_2fr]">
+                    <label className="grid gap-1 text-xs font-black uppercase text-slate-500">
+                      Name
+                      <input
+                        name="name"
+                        defaultValue={source.name}
+                        className="h-10 rounded-md border border-slate-200 bg-white px-3 text-sm font-bold normal-case text-slate-900"
+                      />
+                    </label>
+                    <label className="grid gap-1 text-xs font-black uppercase text-slate-500">
+                      URL
+                      <input
+                        name="baseUrl"
+                        type="url"
+                        defaultValue={source.baseUrl}
+                        className="h-10 rounded-md border border-slate-200 bg-white px-3 text-sm font-bold normal-case text-slate-900"
+                      />
+                    </label>
                   </div>
-                  <a href={source.baseUrl} target="_blank" rel="noreferrer" className="break-all text-sm font-bold text-sky-700">
-                    {source.baseUrl}
-                  </a>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">{source.termsNote}</p>
-                  <div className="mt-3 flex flex-wrap gap-2 text-xs font-bold text-slate-500">
-                    <span className="inline-flex items-center gap-1 rounded-md bg-white px-2 py-1">
-                      <TimerReset className="size-3.5" aria-hidden="true" />
-                      {source.crawlFrequency}
-                    </span>
-                    <span className="rounded-md bg-white px-2 py-1">{source.parserType}</span>
-                    <span className="inline-flex items-center gap-1 rounded-md bg-white px-2 py-1">
-                      <ShieldCheck className="size-3.5" aria-hidden="true" />
-                      robots {source.robotsCheckedAt ? "checked" : "pending"}
-                    </span>
-                    <span className="rounded-md bg-white px-2 py-1">
-                      last crawl {source.lastCrawledAt ? new Date(source.lastCrawledAt).toLocaleString() : "never"}
-                    </span>
+
+                  <div className="grid gap-3 md:grid-cols-4">
+                    <label className="grid gap-1 text-xs font-black uppercase text-slate-500">
+                      Type
+                      <select
+                        name="sourceType"
+                        defaultValue={source.sourceType}
+                        className="h-10 rounded-md border border-slate-200 bg-white px-3 text-sm font-bold normal-case text-slate-900"
+                      >
+                        <option value="competition">Competition</option>
+                        <option value="brand">Brand</option>
+                        <option value="school">School</option>
+                        <option value="tourism">Tourism</option>
+                        <option value="event-platform">Event platform</option>
+                      </select>
+                    </label>
+                    <label className="grid gap-1 text-xs font-black uppercase text-slate-500">
+                      Frequency
+                      <select
+                        name="crawlFrequency"
+                        defaultValue={source.crawlFrequency}
+                        className="h-10 rounded-md border border-slate-200 bg-white px-3 text-sm font-bold normal-case text-slate-900"
+                      >
+                        <option value="daily">Daily</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="monthly">Monthly</option>
+                      </select>
+                    </label>
+                    <label className="grid gap-1 text-xs font-black uppercase text-slate-500">
+                      Parser
+                      <select
+                        name="parserType"
+                        defaultValue={source.parserType}
+                        className="h-10 rounded-md border border-slate-200 bg-white px-3 text-sm font-bold normal-case text-slate-900"
+                      >
+                        <option value="json-ld">JSON-LD</option>
+                        <option value="html">HTML</option>
+                        <option value="manual-demo">Manual</option>
+                      </select>
+                    </label>
+                    <label className="grid gap-1 text-xs font-black uppercase text-slate-500">
+                      Confidence
+                      <input
+                        name="confidence"
+                        type="number"
+                        min="0"
+                        max="100"
+                        defaultValue={source.confidence}
+                        className="h-10 rounded-md border border-slate-200 bg-white px-3 text-sm font-bold normal-case text-slate-900"
+                      />
+                    </label>
                   </div>
-                </div>
-                <form action={runCrawlerAction}>
+
+                  <label className="grid gap-1 text-xs font-black uppercase text-slate-500">
+                    Notes
+                    <textarea
+                      name="termsNote"
+                      defaultValue={source.termsNote}
+                      rows={2}
+                      className="rounded-md border border-slate-200 bg-white px-3 py-2 text-sm font-semibold normal-case leading-6 text-slate-700"
+                    />
+                  </label>
+
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                    <div className="flex flex-wrap gap-2 text-xs font-bold text-slate-500">
+                      <label className="inline-flex items-center gap-2 rounded-md bg-white px-2 py-1">
+                        <input name="isActive" type="checkbox" defaultChecked={source.isActive} className="size-4 accent-sky-600" />
+                        Active
+                      </label>
+                      <span className="inline-flex items-center gap-1 rounded-md bg-white px-2 py-1">
+                        <TimerReset className="size-3.5" aria-hidden="true" />
+                        {source.crawlFrequency}
+                      </span>
+                      <span className="inline-flex items-center gap-1 rounded-md bg-white px-2 py-1">
+                        <ShieldCheck className="size-3.5" aria-hidden="true" />
+                        robots {source.robotsCheckedAt ? "checked" : "pending"}
+                      </span>
+                      <span className="rounded-md bg-white px-2 py-1">
+                        last crawl {source.lastCrawledAt ? new Date(source.lastCrawledAt).toLocaleString() : "never"}
+                      </span>
+                    </div>
+
+                    <button className="inline-flex h-10 items-center justify-center gap-2 rounded-md bg-slate-950 px-3 text-sm font-black text-white hover:bg-slate-800">
+                      <Save className="size-4" aria-hidden="true" />
+                      Save source
+                    </button>
+                  </div>
+                </form>
+
+                <form action={runCrawlerAction} className="flex justify-end">
                   <input type="hidden" name="sourceId" value={source.id} />
                   <button className="inline-flex h-10 items-center gap-2 rounded-md border border-sky-200 bg-white px-3 text-sm font-black text-sky-700 hover:bg-sky-50">
                     <Play className="size-4" aria-hidden="true" />

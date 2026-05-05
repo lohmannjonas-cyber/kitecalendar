@@ -8,20 +8,12 @@ export const crawlerSources: CrawlSourceDefinition[] = [...officialCalendarSourc
 export async function syncCrawlerSources() {
   if (!hasDatabaseUrl()) return crawlerSources;
 
-  await Promise.all(
-    crawlerSources.map((source) =>
-      prisma.crawlSource.upsert({
-        where: { baseUrl: source.baseUrl },
-        update: {
-          name: source.name,
-          sourceType: source.kind,
-          crawlFrequency: source.crawlFrequency,
-          parserType: source.parserType,
-          confidence: source.confidence,
-          termsNote: source.termsNote,
-          isActive: true,
-        },
-        create: {
+  for (const source of crawlerSources) {
+    const existing = await prisma.crawlSource.findUnique({ where: { id: source.id } });
+
+    if (!existing) {
+      await prisma.crawlSource.create({
+        data: {
           id: source.id,
           name: source.name,
           baseUrl: source.baseUrl,
@@ -32,13 +24,13 @@ export async function syncCrawlerSources() {
           termsNote: source.termsNote,
           isActive: true,
         },
-      }),
-    ),
-  );
+      });
+    }
+  }
 
   await prisma.crawlSource.updateMany({
     where: {
-      baseUrl: { notIn: crawlerSources.map((source) => source.baseUrl) },
+      id: { notIn: crawlerSources.map((source) => source.id) },
     },
     data: { isActive: false },
   });
@@ -48,7 +40,7 @@ export async function syncCrawlerSources() {
 
 export async function runDiscoveryCrawl(sourceId?: string) {
   await syncCrawlerSources();
-  const sources = crawlerSources.filter((source) => !sourceId || source.id === sourceId);
+  const sources = await getRunnableSources(sourceId);
   const results: CrawlRunResult[] = [];
 
   for (const source of sources) {
@@ -87,6 +79,37 @@ export async function runDiscoveryCrawl(sourceId?: string) {
   }
 
   return results;
+}
+
+async function getRunnableSources(sourceId?: string) {
+  const definitions = crawlerSources.filter((source) => !sourceId || source.id === sourceId);
+  if (!hasDatabaseUrl()) return definitions;
+
+  const records = await prisma.crawlSource.findMany({
+    where: {
+      id: { in: definitions.map((source) => source.id) },
+      isActive: true,
+    },
+  });
+  const recordsById = new Map(records.map((record) => [record.id, record]));
+
+  return definitions
+    .map((definition) => {
+      const record = recordsById.get(definition.id);
+      if (!record) return undefined;
+
+      return {
+        ...definition,
+        name: record.name,
+        baseUrl: record.baseUrl,
+        kind: record.sourceType as CrawlSourceDefinition["kind"],
+        crawlFrequency: record.crawlFrequency as CrawlSourceDefinition["crawlFrequency"],
+        parserType: record.parserType as CrawlSourceDefinition["parserType"],
+        confidence: record.confidence,
+        termsNote: record.termsNote ?? undefined,
+      };
+    })
+    .filter((source): source is CrawlSourceDefinition => Boolean(source));
 }
 
 async function startRun(source: CrawlSourceDefinition) {

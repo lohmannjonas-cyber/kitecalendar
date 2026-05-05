@@ -17,7 +17,7 @@ function officialCalendarSource(
     confidence: definition.confidence ?? 80,
     crawlFrequency: definition.crawlFrequency ?? "daily",
     async crawl() {
-      const { html } = await fetchPublicHtml(definition.baseUrl);
+      const { html } = await fetchPublicHtml(this.baseUrl);
       if (!html) return [];
 
       const jsonLd = extractJsonLdEvents(html, this, definition.defaults);
