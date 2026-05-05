@@ -1,0 +1,10 @@
+.npm-cache/
+.appdata/
+.config/
+npm-cache/
+kitecalendar-app/local-cache/
+kitecalendar-app/appdata/
+kitecalendar-app/config/
+kitecalendar-app/node_modules/
+kitecalendar-app/.next/
+kitecalendar-app/write-test.txt

@@ -1,0 +1,89 @@
+"use server";
+
+import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
+import { z } from "zod";
+import { clearAdminSession, createAdminSession, requireAdmin, verifyAdminCredentials } from "@/lib/auth";
+import { updateEvent, updateReviewStatus } from "@/lib/repository";
+import type { ReviewStatus } from "@/lib/types";
+
+export async function loginAction(formData: FormData) {
+  const email = String(formData.get("email") ?? "");
+  const password = String(formData.get("password") ?? "");
+  const valid = await verifyAdminCredentials(email, password);
+
+  if (!valid) {
+    redirect("/admin?error=invalid");
+  }
+
+  await createAdminSession(email);
+  redirect("/admin");
+}
+
+export async function logoutAction() {
+  await clearAdminSession();
+  redirect("/admin");
+}
+
+export async function reviewAction(formData: FormData) {
+  await requireAdmin();
+
+  const id = String(formData.get("id"));
+  const status = String(formData.get("status")) as ReviewStatus;
+  const reviewerNote = String(formData.get("reviewerNote") ?? "");
+
+  await updateReviewStatus(id, status, reviewerNote || undefined);
+  revalidatePath("/admin");
+  revalidatePath("/admin/submissions");
+  revalidatePath("/admin/crawled-events");
+  revalidatePath("/events");
+}
+
+const eventEditorSchema = z.object({
+  id: z.string(),
+  title: z.string().min(3),
+  description: z.string().min(20),
+  startDate: z.string().min(10),
+  endDate: z.string().min(10),
+  country: z.string().min(2),
+  region: z.string().optional(),
+  city: z.string().min(2),
+  spotName: z.string().optional(),
+  latitude: z.coerce.number(),
+  longitude: z.coerce.number(),
+  eventTypeSlug: z.string(),
+  organizerName: z.string().min(2),
+  organizerWebsite: z.string().url().optional().or(z.literal("")),
+  brandNames: z.array(z.string()).default([]),
+});
+
+export async function updateEventAction(formData: FormData) {
+  await requireAdmin();
+
+  const parsed = eventEditorSchema.parse({
+    id: formData.get("id"),
+    title: formData.get("title"),
+    description: formData.get("description"),
+    startDate: formData.get("startDate"),
+    endDate: formData.get("endDate"),
+    country: formData.get("country"),
+    region: formData.get("region") || undefined,
+    city: formData.get("city"),
+    spotName: formData.get("spotName") || undefined,
+    latitude: formData.get("latitude"),
+    longitude: formData.get("longitude"),
+    eventTypeSlug: formData.get("eventTypeSlug"),
+    organizerName: formData.get("organizerName"),
+    organizerWebsite: formData.get("organizerWebsite") || undefined,
+    brandNames: formData.getAll("brandNames"),
+  });
+
+  await updateEvent({
+    ...parsed,
+    organizerWebsite: parsed.organizerWebsite || undefined,
+  });
+
+  revalidatePath("/events");
+  revalidatePath("/admin/events");
+  redirect("/admin/events");
+}
