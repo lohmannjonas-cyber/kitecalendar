@@ -1,6 +1,7 @@
 import { addDays, formatISO, parseISO } from "date-fns";
-import type { ForecastDay, ForecastSummary, KiteRating } from "@/lib/types";
+import type { ForecastDay, ForecastSummary } from "@/lib/types";
 import { isWithinNextDays } from "@/lib/utils";
+import { rateWind, scoreRating } from "@/lib/weather/rating";
 import type { WeatherProvider } from "@/lib/weather/types";
 
 const directions = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
@@ -50,15 +51,4 @@ function hash(value: string) {
     output |= 0;
   }
   return Math.abs(output);
-}
-
-function rateWind(averageKnots: number, gustKnots: number): KiteRating {
-  if (averageKnots >= 22 && gustKnots >= 30) return "Epic";
-  if (averageKnots >= 17) return "Good";
-  if (averageKnots >= 12) return "Okay";
-  return "Poor";
-}
-
-function scoreRating(rating: KiteRating) {
-  return { Poor: 0, Okay: 1, Good: 2, Epic: 3 }[rating];
 }

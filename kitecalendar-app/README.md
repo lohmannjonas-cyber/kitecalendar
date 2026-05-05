@@ -9,7 +9,7 @@ Modern full-stack calendar for kitesurfing events worldwide.
 - Prisma ORM with PostgreSQL
 - JWT cookie admin auth
 - OpenStreetMap embeds
-- Mock weather provider with a provider interface for real APIs
+- Open-Meteo weather provider, with mock fallback available
 - Responsible crawler architecture with admin review queue
 - English and German i18n dictionaries
 
@@ -54,7 +54,7 @@ Crawler examples live in `src/lib/crawler/sources`. Every real crawler must:
 
 ## Weather Notes
 
-The default provider is `mock`. Add a provider in `src/lib/weather`, normalize wind to knots, register it in `src/lib/weather/index.ts`, then set `WEATHER_PROVIDER` and `WEATHER_API_KEY`.
+The default provider is `open-meteo`, which uses Open-Meteo's public forecast API and does not need an API key for basic use. Set `WEATHER_PROVIDER=mock` if you want deterministic local demo forecasts.
 
 ## Verification
 

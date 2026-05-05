@@ -72,11 +72,13 @@ ADMIN_EMAIL
 ADMIN_PASSWORD or ADMIN_PASSWORD_HASH
 CRON_SECRET
 NEXT_PUBLIC_SITE_URL
-WEATHER_PROVIDER=mock
+WEATHER_PROVIDER=open-meteo
 WEATHER_API_KEY
 ```
 
 Deploy. After Vercel gives you a URL, update `NEXT_PUBLIC_SITE_URL` to the production URL and redeploy.
+
+Open-Meteo does not require `WEATHER_API_KEY` for the basic forecast integration, so it can be left blank.
 
 ## 5. Domain
 
