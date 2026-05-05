@@ -44,13 +44,13 @@ Curated public-source starter pack:
 npm.cmd run db:import -- data/curated-events.json
 ```
 
-Large launch-density seed with curated events plus generated starter entries:
+Curated seed using only source-backed starter entries:
 
 ```powershell
-npm.cmd run db:seed:large -- --generated=180
+npm.cmd run db:seed:curated
 ```
 
-Use generated starter entries for product demos and launch testing. For a live public directory, replace them with verified organizer data or keep them pending until reviewed.
+Do not publish generated placeholder events on the live site. Use verified organizer data, curated imports, or admin-reviewed crawler submissions.
 
 ## 4. Deploy To Vercel
 

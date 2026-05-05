@@ -65,3 +65,5 @@ npm run db:generate
 npm run lint
 node ./node_modules/typescript/bin/tsc --noEmit
 ```
+
+For live data, use `npm run db:import -- data/curated-events.json` or `npm run db:seed:curated`. Generated placeholder events should stay out of production.

@@ -77,7 +77,7 @@ function generatedEvents(count) {
   });
 }
 
-const generatedCount = Number(process.argv.find((arg) => arg.startsWith("--generated="))?.split("=")[1] || 180);
+const generatedCount = Number(process.argv.find((arg) => arg.startsWith("--generated="))?.split("=")[1] || 0);
 const client = createClient();
 
 try {

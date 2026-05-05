@@ -13,7 +13,7 @@
     "db:deploy": "prisma migrate deploy",
     "db:apply-sql": "node scripts/apply-migration.mjs",
     "db:seed": "tsx prisma/seed.ts",
-    "db:seed:large": "node scripts/seed-large.mjs",
+    "db:seed:curated": "node scripts/seed-large.mjs --generated=0",
     "db:import": "node scripts/import-events.mjs",
     "crawl:demo": "tsx scripts/demo-crawl.ts"
   },
