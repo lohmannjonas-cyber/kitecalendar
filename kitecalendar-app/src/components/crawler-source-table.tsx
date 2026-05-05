@@ -1,5 +1,5 @@
-import { Play, Save, ShieldCheck, TimerReset } from "lucide-react";
-import { runCrawlerAction, updateCrawlSourceAction } from "@/app/admin/actions";
+import { Play, Save, ShieldCheck, TimerReset, Trash2 } from "lucide-react";
+import { deleteCrawlSourceAction, runCrawlerAction, updateCrawlSourceAction } from "@/app/admin/actions";
 
 type CrawlSourceView = {
   id: string;
@@ -158,13 +158,25 @@ export function CrawlerSourceTable({ sources, runs }: { sources: CrawlSourceView
                   </div>
                 </form>
 
-                <form action={runCrawlerAction} className="flex justify-end">
-                  <input type="hidden" name="sourceId" value={source.id} />
-                  <button className="inline-flex h-10 items-center gap-2 rounded-md border border-sky-200 bg-white px-3 text-sm font-black text-sky-700 hover:bg-sky-50">
-                    <Play className="size-4" aria-hidden="true" />
-                    Run
-                  </button>
-                </form>
+                <div className="flex flex-col gap-2 border-t border-slate-200 pt-3 sm:flex-row sm:items-center sm:justify-between">
+                  <p className="text-xs font-semibold text-slate-500">Deleting removes this source and its run history. Existing events stay public.</p>
+                  <div className="flex gap-2">
+                    <form action={deleteCrawlSourceAction}>
+                      <input type="hidden" name="id" value={source.id} />
+                      <button className="inline-flex h-10 items-center gap-2 rounded-md border border-rose-200 bg-white px-3 text-sm font-black text-rose-700 hover:bg-rose-50">
+                        <Trash2 className="size-4" aria-hidden="true" />
+                        Delete
+                      </button>
+                    </form>
+                    <form action={runCrawlerAction}>
+                      <input type="hidden" name="sourceId" value={source.id} />
+                      <button className="inline-flex h-10 items-center gap-2 rounded-md border border-sky-200 bg-white px-3 text-sm font-black text-sky-700 hover:bg-sky-50">
+                        <Play className="size-4" aria-hidden="true" />
+                        Run
+                      </button>
+                    </form>
+                  </div>
+                </div>
               </div>
             </article>
           ))}

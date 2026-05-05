@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 import { z } from "zod";
 import { clearAdminSession, createAdminSession, requireAdmin, verifyAdminCredentials } from "@/lib/auth";
 import { runDiscoveryCrawl } from "@/lib/crawler";
-import { updateCrawlSource, updateEvent, updateReviewStatus } from "@/lib/repository";
+import { deleteCrawlSource, updateCrawlSource, updateEvent, updateReviewStatus } from "@/lib/repository";
 import type { ReviewStatus } from "@/lib/types";
 
 export async function loginAction(formData: FormData) {
@@ -131,4 +131,15 @@ export async function updateCrawlSourceAction(formData: FormData) {
 
   revalidatePath("/admin/sources");
   revalidatePath("/admin/crawled-events");
+}
+
+export async function deleteCrawlSourceAction(formData: FormData) {
+  await requireAdmin();
+
+  const id = z.string().min(1).parse(formData.get("id"));
+  await deleteCrawlSource(id);
+
+  revalidatePath("/admin/sources");
+  revalidatePath("/admin/crawled-events");
+  revalidatePath("/admin");
 }

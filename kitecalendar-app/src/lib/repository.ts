@@ -165,6 +165,18 @@ export async function updateCrawlSource(input: {
   });
 }
 
+export async function deleteCrawlSource(id: string) {
+  if (!hasDatabaseUrl()) return undefined;
+
+  await prisma.event.updateMany({
+    where: { crawlSourceId: id },
+    data: { crawlSourceId: null },
+  });
+
+  await prisma.crawlerRun.deleteMany({ where: { sourceId: id } });
+  return prisma.crawlSource.delete({ where: { id } });
+}
+
 export async function createEventSubmission(input: Omit<EventSubmission, "id" | "reviewStatus" | "createdAt" | "updatedAt">) {
   const duplicateOfId = await findDuplicateEventId(input);
   const reviewStatus: ReviewStatus = duplicateOfId ? "duplicate" : "pending";
