@@ -3,8 +3,7 @@ import { AdminShell } from "@/components/admin-shell";
 import { ReviewTable } from "@/components/review-table";
 import { getI18n } from "@/i18n/server";
 import { requireAdmin } from "@/lib/auth";
-import { crawlerSources } from "@/lib/crawler";
-import { listReviewItems } from "@/lib/repository";
+import { listCrawlSources, listReviewItems } from "@/lib/repository";
 
 export const metadata = {
   title: "Admin Crawled Events",
@@ -13,7 +12,7 @@ export const metadata = {
 export default async function AdminCrawledEventsPage() {
   await requireAdmin();
   const { dictionary } = await getI18n();
-  const crawled = await listReviewItems("crawled");
+  const [crawled, crawlerSources] = await Promise.all([listReviewItems("crawled"), listCrawlSources()]);
 
   return (
     <AdminShell dictionary={dictionary}>
@@ -34,6 +33,9 @@ export default async function AdminCrawledEventsPage() {
             <div key={source.id} className="rounded-md bg-slate-50 p-4">
               <p className="font-black text-slate-950">{source.name}</p>
               <p className="mt-1 text-sm text-slate-600">{source.baseUrl}</p>
+              <p className="mt-2 text-xs font-black text-sky-700">
+                {source.crawlFrequency} · {source.parserType} · {source.confidence}% confidence
+              </p>
               <p className="mt-2 text-xs font-bold text-slate-500">{source.termsNote}</p>
             </div>
           ))}

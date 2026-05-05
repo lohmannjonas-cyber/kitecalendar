@@ -13,6 +13,9 @@ export const brandCalendarCrawler: CrawlSourceDefinition = {
   baseUrl: "https://kitecalendar.com/demo/brand-calendar",
   kind: "brand",
   robotsPolicy: "checked-allow",
+  crawlFrequency: "weekly",
+  parserType: "manual-demo",
+  confidence: 40,
   termsNote: "Demo source. Real crawlers must check robots.txt and public terms before fetching.",
   async crawl() {
     return [

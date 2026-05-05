@@ -49,6 +49,75 @@ export async function listReviewItems(sourceType?: "user_submitted" | "crawled")
   return submissions.map(mapSubmission);
 }
 
+export async function listCrawlSources() {
+  const { crawlerSources, syncCrawlerSources } = await import("@/lib/crawler");
+
+  if (!hasDatabaseUrl()) {
+    return crawlerSources.map((source) => ({
+      id: source.id,
+      name: source.name,
+      baseUrl: source.baseUrl,
+      sourceType: source.kind,
+      crawlFrequency: source.crawlFrequency,
+      parserType: source.parserType,
+      confidence: source.confidence,
+      robotsCheckedAt: undefined,
+      termsNote: source.termsNote,
+      isActive: true,
+      lastCrawledAt: undefined,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    }));
+  }
+
+  await syncCrawlerSources();
+  const sources = await prisma.crawlSource.findMany({
+    orderBy: [{ isActive: "desc" }, { confidence: "desc" }, { name: "asc" }],
+  });
+
+  return sources.map((source) => ({
+    id: source.id,
+    name: source.name,
+    baseUrl: source.baseUrl,
+    sourceType: source.sourceType,
+    crawlFrequency: source.crawlFrequency,
+    parserType: source.parserType,
+    confidence: source.confidence,
+    robotsCheckedAt: source.robotsCheckedAt?.toISOString(),
+    termsNote: source.termsNote ?? undefined,
+    isActive: source.isActive,
+    lastCrawledAt: source.lastCrawledAt?.toISOString(),
+    createdAt: source.createdAt.toISOString(),
+    updatedAt: source.updatedAt.toISOString(),
+  }));
+}
+
+export async function listCrawlerRuns(limit = 20) {
+  if (!hasDatabaseUrl()) return [];
+
+  const { syncCrawlerSources } = await import("@/lib/crawler");
+  await syncCrawlerSources();
+  const runs = await prisma.crawlerRun.findMany({
+    include: { source: true },
+    orderBy: { startedAt: "desc" },
+    take: limit,
+  });
+
+  return runs.map((run) => ({
+    id: run.id,
+    sourceName: run.source.name,
+    sourceId: run.sourceId,
+    status: run.status,
+    startedAt: run.startedAt.toISOString(),
+    finishedAt: run.finishedAt?.toISOString(),
+    eventsFound: run.eventsFound,
+    eventsQueued: run.eventsQueued,
+    duplicates: run.duplicates,
+    errorMessage: run.errorMessage ?? undefined,
+    robotsAllowed: run.robotsAllowed ?? undefined,
+  }));
+}
+
 export async function createEventSubmission(input: Omit<EventSubmission, "id" | "reviewStatus" | "createdAt" | "updatedAt">) {
   const duplicateOfId = await findDuplicateEventId(input);
   const reviewStatus: ReviewStatus = duplicateOfId ? "duplicate" : "pending";

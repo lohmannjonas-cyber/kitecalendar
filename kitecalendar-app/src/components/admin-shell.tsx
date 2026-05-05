@@ -1,4 +1,4 @@
-import { BarChart3, CalendarCheck, DatabaseZap, LayoutDashboard, LogOut, Tags } from "lucide-react";
+import { BarChart3, CalendarCheck, DatabaseZap, LayoutDashboard, LogOut, Radar, Tags } from "lucide-react";
 import Link from "next/link";
 import { logoutAction } from "@/app/admin/actions";
 import type { Dictionary } from "@/i18n/dictionaries";
@@ -9,6 +9,7 @@ export function AdminShell({ dictionary, children }: { dictionary: Dictionary; c
     { href: "/admin/events", label: dictionary.admin.events, icon: CalendarCheck },
     { href: "/admin/submissions", label: dictionary.admin.submissions, icon: BarChart3 },
     { href: "/admin/crawled-events", label: dictionary.admin.crawled, icon: DatabaseZap },
+    { href: "/admin/sources", label: "Sources", icon: Radar },
     { href: "/admin/brands", label: dictionary.admin.brands, icon: Tags },
   ];
 

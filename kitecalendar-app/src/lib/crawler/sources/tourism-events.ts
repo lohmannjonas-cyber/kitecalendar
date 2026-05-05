@@ -13,6 +13,9 @@ export const tourismEventsCrawler: CrawlSourceDefinition = {
   baseUrl: "https://kitecalendar.com/demo/tourism-events",
   kind: "tourism",
   robotsPolicy: "checked-allow",
+  crawlFrequency: "monthly",
+  parserType: "manual-demo",
+  confidence: 35,
   termsNote:
     "Demo source. Do not bypass logins, paywalls, captchas, rate limits, anti-bot systems, or blocked robots rules.",
   async crawl() {

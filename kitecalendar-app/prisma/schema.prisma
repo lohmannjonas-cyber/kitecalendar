@@ -136,13 +136,35 @@ model CrawlSource {
   name            String
   baseUrl         String   @unique
   sourceType      String
+  crawlFrequency  String   @default("weekly")
+  parserType      String   @default("html")
+  confidence      Int      @default(50)
   robotsCheckedAt DateTime?
   termsNote       String?
   isActive        Boolean  @default(true)
   lastCrawledAt   DateTime?
   events          Event[]
+  runs            CrawlerRun[]
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
+}
+
+model CrawlerRun {
+  id             String      @id @default(cuid())
+  sourceId       String
+  source         CrawlSource @relation(fields: [sourceId], references: [id], onDelete: Cascade)
+  status         String
+  startedAt      DateTime    @default(now())
+  finishedAt     DateTime?
+  eventsFound    Int         @default(0)
+  eventsQueued   Int         @default(0)
+  duplicates     Int         @default(0)
+  errorMessage   String?
+  robotsAllowed  Boolean?
+  log            Json?
+
+  @@index([sourceId, startedAt])
+  @@index([status, startedAt])
 }
 
 model Forecast {

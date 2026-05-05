@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { z } from "zod";
 import { clearAdminSession, createAdminSession, requireAdmin, verifyAdminCredentials } from "@/lib/auth";
+import { runDiscoveryCrawl } from "@/lib/crawler";
 import { updateEvent, updateReviewStatus } from "@/lib/repository";
 import type { ReviewStatus } from "@/lib/types";
 
@@ -86,4 +87,15 @@ export async function updateEventAction(formData: FormData) {
   revalidatePath("/events");
   revalidatePath("/admin/events");
   redirect("/admin/events");
+}
+
+export async function runCrawlerAction(formData: FormData) {
+  await requireAdmin();
+
+  const sourceId = String(formData.get("sourceId") ?? "") || undefined;
+  await runDiscoveryCrawl(sourceId);
+
+  revalidatePath("/admin/sources");
+  revalidatePath("/admin/crawled-events");
+  revalidatePath("/admin");
 }
