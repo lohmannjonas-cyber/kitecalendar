@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { deleteEventAction } from "@/app/admin/actions";
 import { StatusBadge } from "@/components/badges";
 import type { Dictionary } from "@/i18n/dictionaries";
 import type { KiteEvent } from "@/lib/types";
@@ -16,7 +17,7 @@ export function EventTable({ events, dictionary }: { events: KiteEvent[]; dictio
               <th className="px-4 py-3">{dictionary.common.location}</th>
               <th className="px-4 py-3">{dictionary.common.type}</th>
               <th className="px-4 py-3">{dictionary.common.status}</th>
-              <th className="px-4 py-3">{dictionary.common.edit}</th>
+              <th className="px-4 py-3">Actions</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-slate-100">
@@ -35,9 +36,15 @@ export function EventTable({ events, dictionary }: { events: KiteEvent[]; dictio
                   <StatusBadge status={event.reviewStatus} />
                 </td>
                 <td className="px-4 py-3">
+                  <div className="flex items-center gap-3">
                   <Link href={`/admin/events/${event.id}/edit`} className="font-black text-sky-700 hover:text-sky-800">
                     {dictionary.common.edit}
                   </Link>
+                    <form action={deleteEventAction}>
+                      <input type="hidden" name="id" value={event.id} />
+                      <button className="font-black text-rose-700 hover:text-rose-800">Delete</button>
+                    </form>
+                  </div>
                 </td>
               </tr>
             ))}

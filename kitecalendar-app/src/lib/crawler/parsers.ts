@@ -57,9 +57,12 @@ export function extractJsonLdEvents(html: string, source: CrawlSourceDefinition,
 export function extractTitleDateCandidates(html: string, source: CrawlSourceDefinition, defaults: ParserDefaults): CrawlCandidate[] {
   const text = decodeHtml(stripTags(html)).replace(/\s+/g, " ");
   const currentYear = new Date().getUTCFullYear();
-  const datePattern =
-    /([A-Z][A-Za-z0-9 '&|.-]{8,90}?)\s+((?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2}(?:\s*[-–]\s*(?:\d{1,2}|(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2}))?,?\s+20\d{2})/gi;
-  const matches = [...text.matchAll(datePattern)].slice(0, 12);
+  const datePatterns = [
+    /([A-Z][A-Za-z0-9 '&|.-]{8,90}?)\s+((?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2}(?:\s*[-]\s*(?:\d{1,2}|(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2}))?,?\s+20\d{2})/gi,
+    /([A-Z][A-Za-z0-9 '&|.-]{8,90}?)\s+(\d{1,2}\.?\s*(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec|Januar|Februar|Marz|Mai|Juni|Juli|Oktober|Dezember)[a-z]*\.?(?:\s*[-]\s*\d{1,2}\.?\s*(?:(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec|Januar|Februar|Marz|Mai|Juni|Juli|Oktober|Dezember)[a-z]*\.?)?)?,?\s+20\d{2})/gi,
+    /([A-Z][A-Za-z0-9 '&|.-]{8,90}?)\s+(\d{1,2}[./]\d{1,2}[./]20\d{2}(?:\s*[-]\s*\d{1,2}[./]\d{1,2}[./]20\d{2})?)/gi,
+  ];
+  const matches = datePatterns.flatMap((pattern) => [...text.matchAll(pattern)]).slice(0, 12);
 
   return matches
     .map((match) => {
@@ -86,6 +89,32 @@ export function extractTitleDateCandidates(html: string, source: CrawlSourceDefi
       } satisfies CrawlCandidate;
     })
     .filter(Boolean) as CrawlCandidate[];
+}
+
+export function extractEventLikeLinks(html: string, baseUrl: string, limit = 6) {
+  const links = [...html.matchAll(/<a[^>]+href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)]
+    .map((match) => {
+      try {
+        const url = new URL(decodeHtml(match[1]), baseUrl);
+        const label = decodeHtml(stripTags(match[2])).replace(/\s+/g, " ").trim();
+        return { url: url.toString(), label };
+      } catch {
+        return undefined;
+      }
+    })
+    .filter((link): link is { url: string; label: string } => Boolean(link));
+
+  const keywords = /(event|events|calendar|agenda|competition|competitions|world-cup|worldcup|veranstaltung|termine|kalender|camp|demo)/i;
+  const seen = new Set<string>();
+  return links
+    .filter((link) => keywords.test(link.url) || keywords.test(link.label))
+    .filter((link) => {
+      if (seen.has(link.url)) return false;
+      seen.add(link.url);
+      return true;
+    })
+    .slice(0, limit)
+    .map((link) => link.url);
 }
 
 function safeJson(raw: string) {
@@ -144,7 +173,10 @@ function cleanupTitle(value: string) {
 }
 
 function parseDateRange(value: string, fallbackYear: number) {
-  const normalized = value.replace(/Sept/i, "Sep").replace(/[–]/g, "-");
+  const normalized = value.replace(/Sept/i, "Sep").replace(/\u2013/g, "-");
+  const numeric = parseNumericDateRange(normalized);
+  if (numeric) return numeric;
+
   const yearMatch = normalized.match(/20\d{2}/);
   const year = yearMatch ? Number(yearMatch[0]) : fallbackYear;
   const clean = normalized.replace(/,?\s*20\d{2}/, "");
@@ -158,4 +190,22 @@ function parseDateRange(value: string, fallbackYear: number) {
   end.setUTCHours(18, 0, 0, 0);
   start.setUTCHours(10, 0, 0, 0);
   return { startDate: start.toISOString(), endDate: end.toISOString() };
+}
+
+function parseNumericDateRange(value: string) {
+  const parts = value.match(/\d{1,2}[./]\d{1,2}[./]20\d{2}/g);
+  if (!parts?.length) return undefined;
+  const start = parseNumericDate(parts[0]);
+  const end = parseNumericDate(parts[1] ?? parts[0]);
+  if (!start || !end) return undefined;
+  start.setUTCHours(10, 0, 0, 0);
+  end.setUTCHours(18, 0, 0, 0);
+  return { startDate: start.toISOString(), endDate: end.toISOString() };
+}
+
+function parseNumericDate(value: string) {
+  const match = value.match(/(\d{1,2})[./](\d{1,2})[./](20\d{2})/);
+  if (!match) return undefined;
+  const date = new Date(Date.UTC(Number(match[3]), Number(match[2]) - 1, Number(match[1])));
+  return Number.isNaN(date.getTime()) ? undefined : date;
 }

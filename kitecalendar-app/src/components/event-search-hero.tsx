@@ -1,8 +1,14 @@
-import { ArrowRight, CalendarDays, MapPin, Search } from "lucide-react";
+import { ArrowRight, CalendarDays, Globe2, Search } from "lucide-react";
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
 
-export function EventSearchHero({ dictionary }: { dictionary: Dictionary }) {
+export function EventSearchHero({ dictionary, countries }: { dictionary: Dictionary; countries: string[] }) {
+  const countryOptions = Array.from(new Set(["Germany", ...countries])).sort((a, b) => {
+    if (a === "Germany") return -1;
+    if (b === "Germany") return 1;
+    return a.localeCompare(b);
+  });
+
   return (
     <section className="hero-image relative overflow-hidden">
       <div
@@ -27,12 +33,14 @@ export function EventSearchHero({ dictionary }: { dictionary: Dictionary }) {
             />
           </label>
           <label className="flex h-12 items-center gap-2 rounded-md bg-white px-3">
-            <MapPin className="size-5 text-sky-700" aria-hidden="true" />
-            <input
-              name="location"
-              placeholder={dictionary.hero.locationPlaceholder}
-              className="w-full bg-transparent text-sm font-semibold text-slate-900 outline-none"
-            />
+            <Globe2 className="size-5 text-sky-700" aria-hidden="true" />
+            <select name="country" defaultValue="Germany" className="w-full bg-transparent text-sm font-semibold text-slate-900 outline-none">
+              {countryOptions.map((country) => (
+                <option key={country} value={country}>
+                  {country}
+                </option>
+              ))}
+            </select>
           </label>
           <label className="flex h-12 items-center gap-2 rounded-md bg-white px-3">
             <CalendarDays className="size-5 text-sky-700" aria-hidden="true" />

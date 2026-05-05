@@ -1,6 +1,6 @@
-import { extractJsonLdEvents, extractTitleDateCandidates } from "@/lib/crawler/parsers";
+import { extractEventLikeLinks, extractJsonLdEvents, extractTitleDateCandidates } from "@/lib/crawler/parsers";
 import { fetchPublicHtml } from "@/lib/crawler/robots";
-import type { CrawlSourceDefinition } from "@/lib/crawler/types";
+import type { CrawlCandidate, CrawlSourceDefinition } from "@/lib/crawler/types";
 
 function officialCalendarSource(
   definition: Omit<CrawlSourceDefinition, "crawl" | "robotsPolicy" | "parserType" | "confidence" | "crawlFrequency"> & {
@@ -23,7 +23,22 @@ function officialCalendarSource(
       const jsonLd = extractJsonLdEvents(html, this, definition.defaults);
       if (jsonLd.length) return jsonLd;
 
-      return extractTitleDateCandidates(html, this, definition.defaults);
+      const pageCandidates = extractTitleDateCandidates(html, this, definition.defaults);
+      if (pageCandidates.length) return pageCandidates;
+
+      const linkedCandidates: CrawlCandidate[] = [];
+      for (const url of extractEventLikeLinks(html, this.baseUrl)) {
+        try {
+          const linked = await fetchPublicHtml(url);
+          if (!linked.html) continue;
+          linkedCandidates.push(...extractJsonLdEvents(linked.html, { ...this, baseUrl: url }, definition.defaults));
+          linkedCandidates.push(...extractTitleDateCandidates(linked.html, { ...this, baseUrl: url }, definition.defaults));
+        } catch {
+          // Some event-like links are stale, redirected behind protections, or not public HTML.
+        }
+      }
+
+      return linkedCandidates;
     },
   };
 }

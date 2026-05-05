@@ -247,7 +247,8 @@
     "crawlFrequency": "monthly",
     "parserType": "json-ld",
     "confidence": 55,
-    "termsNote": "Public Duotone Pro Center network page. Use as school/network discovery and keep candidates pending review."
+    "termsNote": "Public Duotone Pro Center network page. Use as school/network discovery and keep candidates pending review.",
+    "isActive": false
   },
   {
     "id": "ion-club",
@@ -257,7 +258,8 @@
     "crawlFrequency": "monthly",
     "parserType": "json-ld",
     "confidence": 52,
-    "termsNote": "Public watersports network site. Crawl public pages only and verify kite-specific relevance."
+    "termsNote": "Public watersports network site. Crawl public pages only and verify kite-specific relevance.",
+    "isActive": false
   },
   {
     "id": "vdws",
@@ -267,7 +269,8 @@
     "crawlFrequency": "monthly",
     "parserType": "json-ld",
     "confidence": 50,
-    "termsNote": "Public association site. Use as discovery for schools, camps, and public events only."
+    "termsNote": "Public association site. Use as discovery for schools, camps, and public events only.",
+    "isActive": false
   },
   {
     "id": "kitesurf-world-cup-sylt",
@@ -307,7 +310,8 @@
     "crawlFrequency": "monthly",
     "parserType": "html",
     "confidence": 25,
-    "termsNote": "Public social profile only. Do not bypass logins, captchas, or anti-bot systems; use as low-confidence discovery."
+    "termsNote": "Public social profile only. Do not bypass logins, captchas, or anti-bot systems; use as low-confidence discovery.",
+    "isActive": false
   },
   {
     "id": "north-kiteboarding-instagram",
@@ -317,7 +321,8 @@
     "crawlFrequency": "monthly",
     "parserType": "html",
     "confidence": 25,
-    "termsNote": "Public social profile only. Do not bypass logins, captchas, or anti-bot systems; use as low-confidence discovery."
+    "termsNote": "Public social profile only. Do not bypass logins, captchas, or anti-bot systems; use as low-confidence discovery.",
+    "isActive": false
   },
   {
     "id": "fone-kites-instagram",
@@ -327,7 +332,8 @@
     "crawlFrequency": "monthly",
     "parserType": "html",
     "confidence": 25,
-    "termsNote": "Public social profile only. Do not bypass logins, captchas, or anti-bot systems; use as low-confidence discovery."
+    "termsNote": "Public social profile only. Do not bypass logins, captchas, or anti-bot systems; use as low-confidence discovery.",
+    "isActive": false
   },
   {
     "id": "core-kiteboarding-instagram",
@@ -337,7 +343,8 @@
     "crawlFrequency": "monthly",
     "parserType": "html",
     "confidence": 25,
-    "termsNote": "Public social profile only. Do not bypass logins, captchas, or anti-bot systems; use as low-confidence discovery."
+    "termsNote": "Public social profile only. Do not bypass logins, captchas, or anti-bot systems; use as low-confidence discovery.",
+    "isActive": false
   },
   {
     "id": "sylt-events",
@@ -347,7 +354,8 @@
     "crawlFrequency": "monthly",
     "parserType": "json-ld",
     "confidence": 48,
-    "termsNote": "Public location portal. Use for destination discovery and verify kite relevance before publishing."
+    "termsNote": "Public location portal. Use for destination discovery and verify kite relevance before publishing.",
+    "isActive": false
   },
   {
     "id": "st-peter-ording-events",
@@ -357,7 +365,8 @@
     "crawlFrequency": "monthly",
     "parserType": "json-ld",
     "confidence": 48,
-    "termsNote": "Public location portal. Use for destination discovery and verify kite relevance before publishing."
+    "termsNote": "Public location portal. Use for destination discovery and verify kite relevance before publishing.",
+    "isActive": false
   },
   {
     "id": "el-gouna-events",
@@ -367,7 +376,8 @@
     "crawlFrequency": "monthly",
     "parserType": "json-ld",
     "confidence": 48,
-    "termsNote": "Public location portal. Use for destination discovery and verify kite relevance before publishing."
+    "termsNote": "Public location portal. Use for destination discovery and verify kite relevance before publishing.",
+    "isActive": false
   },
   {
     "id": "dakhla-portal",
@@ -377,7 +387,8 @@
     "crawlFrequency": "monthly",
     "parserType": "json-ld",
     "confidence": 48,
-    "termsNote": "Public location portal. Use for destination discovery and verify kite relevance before publishing."
+    "termsNote": "Public location portal. Use for destination discovery and verify kite relevance before publishing.",
+    "isActive": false
   },
   {
     "id": "jericoacoara-events",
@@ -387,6 +398,7 @@
     "crawlFrequency": "monthly",
     "parserType": "json-ld",
     "confidence": 48,
-    "termsNote": "Public location portal. Use for destination discovery and verify kite relevance before publishing."
+    "termsNote": "Public location portal. Use for destination discovery and verify kite relevance before publishing.",
+    "isActive": false
   }
 ]

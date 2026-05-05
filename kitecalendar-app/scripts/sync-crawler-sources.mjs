@@ -20,7 +20,7 @@ try {
           "id", "name", "baseUrl", "sourceType", "crawlFrequency", "parserType", "confidence",
           "termsNote", "isActive", "createdAt", "updatedAt"
         )
-        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, true, now(), now())
+        VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, now(), now())
         ON CONFLICT ("id") DO UPDATE SET
           "name" = EXCLUDED."name",
           "baseUrl" = EXCLUDED."baseUrl",
@@ -29,7 +29,7 @@ try {
           "parserType" = EXCLUDED."parserType",
           "confidence" = EXCLUDED."confidence",
           "termsNote" = EXCLUDED."termsNote",
-          "isActive" = true,
+          "isActive" = EXCLUDED."isActive",
           "updatedAt" = now()
       `,
       [
@@ -41,6 +41,7 @@ try {
         source.parserType,
         source.confidence,
         source.termsNote,
+        source.isActive !== false,
       ],
     );
   }

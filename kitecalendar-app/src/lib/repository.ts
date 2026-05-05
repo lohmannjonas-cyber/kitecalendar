@@ -309,6 +309,14 @@ export async function updateEvent(input: {
   return updated;
 }
 
+export async function deleteEvent(id: string) {
+  if (!hasDatabaseUrl()) return undefined;
+
+  return prisma.event.delete({
+    where: { id },
+  });
+}
+
 export async function createAlertSubscription(input: {
   email: string;
   country?: string;
