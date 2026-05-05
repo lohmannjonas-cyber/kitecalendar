@@ -1,0 +1,212 @@
+[
+  {
+    "id": "gka-kite-world-tour",
+    "name": "GKA Kite World Tour",
+    "baseUrl": "https://www.gkakiteworldtour.com/events/",
+    "sourceType": "competition",
+    "crawlFrequency": "daily",
+    "parserType": "json-ld",
+    "confidence": 92,
+    "termsNote": "Official public competition calendar. Crawl public pages only; do not bypass access controls."
+  },
+  {
+    "id": "formula-kite-calendar",
+    "name": "Formula Kite",
+    "baseUrl": "https://www.formulakite.org/events",
+    "sourceType": "competition",
+    "crawlFrequency": "weekly",
+    "parserType": "json-ld",
+    "confidence": 86,
+    "termsNote": "Official public class calendar. Verify extracted dates and locations in review."
+  },
+  {
+    "id": "kitesurf-masters",
+    "name": "Kitesurf Masters",
+    "baseUrl": "https://www.kitesurf-masters.de/",
+    "sourceType": "competition",
+    "crawlFrequency": "weekly",
+    "parserType": "json-ld",
+    "confidence": 82,
+    "termsNote": "Official public event site. Verify partner and schedule details in review."
+  },
+  {
+    "id": "lets-kite-agenda",
+    "name": "Let's Kite Agenda",
+    "baseUrl": "https://letskite.ch/en/agenda",
+    "sourceType": "event-platform",
+    "crawlFrequency": "weekly",
+    "parserType": "json-ld",
+    "confidence": 72,
+    "termsNote": "Public agenda source. Use as discovery only; all candidates stay pending admin review."
+  },
+  {
+    "id": "world-sailing-calendar",
+    "name": "World Sailing Events",
+    "baseUrl": "https://www.sailing.org/events/",
+    "sourceType": "competition",
+    "crawlFrequency": "weekly",
+    "parserType": "json-ld",
+    "confidence": 68,
+    "termsNote": "Official public sailing federation events page. Use only public event listings and verify kite discipline relevance."
+  },
+  {
+    "id": "iqfoil-class-calendar",
+    "name": "iQFOiL Class Calendar",
+    "baseUrl": "https://www.iqfoilclassofficial.org/events",
+    "sourceType": "competition",
+    "crawlFrequency": "monthly",
+    "parserType": "json-ld",
+    "confidence": 55,
+    "termsNote": "Public class calendar for foil racing adjacency. Use as discovery and verify kite relevance in review."
+  },
+  {
+    "id": "duotone-events",
+    "name": "Duotone Events",
+    "baseUrl": "https://www.duotonesports.com/events",
+    "sourceType": "brand",
+    "crawlFrequency": "weekly",
+    "parserType": "json-ld",
+    "confidence": 70,
+    "termsNote": "Public brand event page. Crawl only public listings and keep candidates pending review."
+  },
+  {
+    "id": "north-kiteboarding-events",
+    "name": "North Kiteboarding Events",
+    "baseUrl": "https://northkb.com/pages/events",
+    "sourceType": "brand",
+    "crawlFrequency": "weekly",
+    "parserType": "json-ld",
+    "confidence": 68,
+    "termsNote": "Public brand events page. Verify dates and event type before publishing."
+  },
+  {
+    "id": "core-kites-events",
+    "name": "CORE Kites Events",
+    "baseUrl": "https://corekites.com/events",
+    "sourceType": "brand",
+    "crawlFrequency": "weekly",
+    "parserType": "json-ld",
+    "confidence": 66,
+    "termsNote": "Public brand event page. Do not crawl private or gated content."
+  },
+  {
+    "id": "cabrinha-events",
+    "name": "Cabrinha Events",
+    "baseUrl": "https://www.cabrinha.com/pages/events",
+    "sourceType": "brand",
+    "crawlFrequency": "weekly",
+    "parserType": "json-ld",
+    "confidence": 66,
+    "termsNote": "Public brand events page. Candidates must be reviewed before publishing."
+  },
+  {
+    "id": "fone-events",
+    "name": "F-One Events",
+    "baseUrl": "https://www.f-one.world/events/",
+    "sourceType": "brand",
+    "crawlFrequency": "weekly",
+    "parserType": "json-ld",
+    "confidence": 64,
+    "termsNote": "Public brand event page. Use respectful fetch cadence and review all candidates."
+  },
+  {
+    "id": "flysurfer-events",
+    "name": "Flysurfer Events",
+    "baseUrl": "https://flysurfer.com/events/",
+    "sourceType": "brand",
+    "crawlFrequency": "weekly",
+    "parserType": "json-ld",
+    "confidence": 64,
+    "termsNote": "Public brand event page. Verify public availability and event details in admin review."
+  },
+  {
+    "id": "slingshot-events",
+    "name": "Slingshot Events",
+    "baseUrl": "https://slingshotsports.com/pages/events",
+    "sourceType": "brand",
+    "crawlFrequency": "weekly",
+    "parserType": "json-ld",
+    "confidence": 62,
+    "termsNote": "Public brand event page. Candidates stay pending until reviewed."
+  },
+  {
+    "id": "naish-events",
+    "name": "Naish Events",
+    "baseUrl": "https://www.naish.com/pages/events",
+    "sourceType": "brand",
+    "crawlFrequency": "weekly",
+    "parserType": "json-ld",
+    "confidence": 60,
+    "termsNote": "Public brand event page. Verify before publishing."
+  },
+  {
+    "id": "airush-events",
+    "name": "Airush Events",
+    "baseUrl": "https://airush.com/pages/events",
+    "sourceType": "brand",
+    "crawlFrequency": "weekly",
+    "parserType": "json-ld",
+    "confidence": 60,
+    "termsNote": "Public brand event page. Verify public event details before publishing."
+  },
+  {
+    "id": "eleveight-events",
+    "name": "Eleveight Events",
+    "baseUrl": "https://www.eleveightkites.com/events/",
+    "sourceType": "brand",
+    "crawlFrequency": "weekly",
+    "parserType": "json-ld",
+    "confidence": 60,
+    "termsNote": "Public brand event page. Keep candidates in review until verified."
+  },
+  {
+    "id": "tarifa-events",
+    "name": "Tarifa Event Discovery",
+    "baseUrl": "https://www.turismotarifa.com/en/events/",
+    "sourceType": "tourism",
+    "crawlFrequency": "monthly",
+    "parserType": "json-ld",
+    "confidence": 54,
+    "termsNote": "Public tourism/event page for a major kite destination. Filter and verify kite relevance in review."
+  },
+  {
+    "id": "hood-river-events",
+    "name": "Hood River Event Discovery",
+    "baseUrl": "https://visithoodriver.com/events/",
+    "sourceType": "tourism",
+    "crawlFrequency": "monthly",
+    "parserType": "json-ld",
+    "confidence": 52,
+    "termsNote": "Public destination event calendar. Use as discovery only and verify kite relevance."
+  },
+  {
+    "id": "dakhla-events",
+    "name": "Dakhla Event Discovery",
+    "baseUrl": "https://visitdakhla.com/",
+    "sourceType": "tourism",
+    "crawlFrequency": "monthly",
+    "parserType": "json-ld",
+    "confidence": 50,
+    "termsNote": "Public destination source for Dakhla. Verify event details and source pages before publishing."
+  },
+  {
+    "id": "cape-town-events",
+    "name": "Cape Town Event Discovery",
+    "baseUrl": "https://www.capetown.travel/events/",
+    "sourceType": "tourism",
+    "crawlFrequency": "monthly",
+    "parserType": "json-ld",
+    "confidence": 50,
+    "termsNote": "Public city event calendar. Use for discovery and verify kite relevance in review."
+  },
+  {
+    "id": "visit-fuerteventura-events",
+    "name": "Fuerteventura Event Discovery",
+    "baseUrl": "https://visitfuerteventura.com/en/events/",
+    "sourceType": "tourism",
+    "crawlFrequency": "monthly",
+    "parserType": "json-ld",
+    "confidence": 50,
+    "termsNote": "Public destination calendar. Verify kite relevance and location before publishing."
+  }
+]

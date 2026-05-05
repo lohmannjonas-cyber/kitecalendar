@@ -1,15 +1,9 @@
 import { enqueueCrawlCandidates } from "@/lib/crawler/duplicate";
-import { brandCalendarCrawler } from "@/lib/crawler/sources/brand-calendar";
 import { officialCalendarSources } from "@/lib/crawler/sources/official-calendars";
-import { tourismEventsCrawler } from "@/lib/crawler/sources/tourism-events";
 import type { CrawlRunResult, CrawlSourceDefinition } from "@/lib/crawler/types";
 import { hasDatabaseUrl, prisma } from "@/lib/prisma";
 
-export const crawlerSources: CrawlSourceDefinition[] = [
-  ...officialCalendarSources,
-  brandCalendarCrawler,
-  tourismEventsCrawler,
-];
+export const crawlerSources: CrawlSourceDefinition[] = [...officialCalendarSources];
 
 export async function syncCrawlerSources() {
   if (!hasDatabaseUrl()) return crawlerSources;
@@ -41,6 +35,13 @@ export async function syncCrawlerSources() {
       }),
     ),
   );
+
+  await prisma.crawlSource.updateMany({
+    where: {
+      baseUrl: { notIn: crawlerSources.map((source) => source.baseUrl) },
+    },
+    data: { isActive: false },
+  });
 
   return crawlerSources;
 }

@@ -15,6 +15,7 @@
     "db:seed": "tsx prisma/seed.ts",
     "db:seed:curated": "node scripts/seed-large.mjs --generated=0",
     "db:import": "node scripts/import-events.mjs",
+    "sources:sync": "node scripts/sync-crawler-sources.mjs",
     "crawl:demo": "tsx scripts/demo-crawl.ts"
   },
   "dependencies": {
