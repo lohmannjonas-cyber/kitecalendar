@@ -1,4 +1,4 @@
-import { addMonths, format, parse, startOfMonth } from "date-fns";
+import { addMonths, format, isBefore, parse, parseISO, startOfDay, startOfMonth } from "date-fns";
 import Link from "next/link";
 import { AlertSignup } from "@/components/alert-signup";
 import { CalendarGrid } from "@/components/calendar-grid";
@@ -66,6 +66,9 @@ export default async function Home({
   const allEvents = await listEvents();
   const countries = Array.from(new Set(allEvents.map((event) => event.country))).sort();
   const view = parseString(params.view) ?? "list";
+  const showPastEvents = parseString(params.showPast) === "1";
+  const today = startOfDay(new Date());
+  const visibleEvents = showPastEvents ? events : events.filter((event) => !isBefore(parseISO(event.endDate), today));
   const calendarMonth = parseCalendarMonth(parseString(params.month));
   const previousMonthHref = buildHomeHref(params, {
     view: "calendar",
@@ -80,6 +83,9 @@ export default async function Home({
     view: "calendar",
     month: format(calendarMonth, "yyyy-MM"),
   });
+  const pastEventsHref = showPastEvents
+    ? buildHomeHref(params, { showPast: undefined })
+    : buildHomeHref(params, { showPast: "1" });
 
   return (
     <>
@@ -117,15 +123,21 @@ export default async function Home({
           <CountryFilterChips dictionary={dictionary} countries={countries} />
         </div>
 
+        <div className="mt-3 flex justify-end">
+          <Link href={pastEventsHref} className="text-sm font-bold text-slate-500 hover:text-sky-700">
+            {showPastEvents ? dictionary.common.hidePastEvents : dictionary.common.showPastEvents}
+          </Link>
+        </div>
+
         <div className="mt-6">
           {view === "calendar" ? (
-            <CalendarGrid events={events} month={calendarMonth} nextHref={nextMonthHref} previousHref={previousMonthHref} />
+            <CalendarGrid events={visibleEvents} month={calendarMonth} nextHref={nextMonthHref} previousHref={previousMonthHref} />
           ) : (
-            <EventListByMonth events={events} dictionary={dictionary} />
+            <EventListByMonth events={visibleEvents} dictionary={dictionary} />
           )}
         </div>
 
-        {events.length === 0 ? (
+        {visibleEvents.length === 0 ? (
           <div className="mt-6 rounded-md border border-dashed border-sky-200 bg-white p-8 text-center">
             <p className="text-lg font-black text-slate-950">{dictionary.common.noResults}</p>
             <Link
