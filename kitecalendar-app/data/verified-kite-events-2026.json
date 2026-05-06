@@ -1,5 +1,26 @@
 [
   {
+    "title": "Comunitat Valenciana Olympic Week - Formula Kite 2026",
+    "description": "Dénia hosts the Formula Kite class during Comunitat Valenciana Olympic Week, with Olympic-format kite racing from Marina El Portet and the Real Club Náutico Dénia event structure.",
+    "startDate": "2026-02-19T10:00:00.000Z",
+    "endDate": "2026-02-22T18:00:00.000Z",
+    "country": "Spain",
+    "region": "Valencian Community",
+    "city": "Dénia",
+    "spotName": "Marina El Portet",
+    "latitude": 38.8408,
+    "longitude": 0.1057,
+    "eventTypeSlug": "race",
+    "organizerName": "Federació de Vela de la Comunitat Valenciana",
+    "organizerWebsite": "https://cadenaser.com/",
+    "brandNames": [
+      "Other"
+    ],
+    "sourceUrl": "https://cadenaser.com/comunitat-valenciana/2026/02/19/denia-acoge-la-formula-kite-olimpica-en-la-comunitat-valenciana-olympic-week-2026-radio-denia/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
     "title": "GKA Big Air World Cup - Lords of Tram 2026",
     "description": "Lords of Tram brings the GKA Big Air World Cup to Le Barcarès for a Tramontana-powered holding period, with the strongest wind days used for full-send twin-tip Big Air competition.",
     "startDate": "2026-03-28T10:00:00.000Z",
@@ -13,11 +34,78 @@
     "eventTypeSlug": "competition",
     "organizerName": "GKA Kite World Tour",
     "organizerWebsite": "https://www.gkakiteworldtour.com/events/",
-    "brandNames": ["Other"],
+    "brandNames": [
+      "Other"
+    ],
     "sourceUrl": "https://www.gkakiteworldtour.com/event/lords-of-tram-gka-big-air-kite-world-cup-france-2026/",
     "sourceType": "admin_created",
     "reviewStatus": "approved",
     "featured": true
+  },
+  {
+    "title": "Defi Kite Gruissan 2026",
+    "description": "Defi Kite is the kiteboarding part of the Gruissan Defi wind-sports festival, mixing long-distance racing, strong Tramontana conditions, and a broad amateur-to-pro fleet on the French Mediterranean coast.",
+    "startDate": "2026-05-08T10:00:00.000Z",
+    "endDate": "2026-05-10T18:00:00.000Z",
+    "country": "France",
+    "region": "Occitanie",
+    "city": "Gruissan",
+    "spotName": "Gruissan",
+    "latitude": 43.1069,
+    "longitude": 3.0869,
+    "eventTypeSlug": "race",
+    "organizerName": "Defi Kite",
+    "organizerWebsite": "https://defiwind.com/",
+    "brandNames": [
+      "Other"
+    ],
+    "sourceUrl": "https://letskite.ch/en/agenda/43/defi-kite-gruissan-1",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved",
+    "featured": true
+  },
+  {
+    "title": "Formula Kite World Championships Viana do Castelo 2026",
+    "description": "The Formula Kite World Championships bring the Olympic kite racing fleets to Viana do Castelo, with men’s and women’s world-title racing on Portugal’s Atlantic coast.",
+    "startDate": "2026-05-09T10:00:00.000Z",
+    "endDate": "2026-05-16T18:00:00.000Z",
+    "country": "Portugal",
+    "region": "Norte",
+    "city": "Viana do Castelo",
+    "spotName": "Cabedelo",
+    "latitude": 41.6818,
+    "longitude": -8.8291,
+    "eventTypeSlug": "race",
+    "organizerName": "International Kiteboarding Association",
+    "organizerWebsite": "https://www.kiteclasses.org/",
+    "brandNames": [
+      "Other"
+    ],
+    "sourceUrl": "https://www.kiteclasses.org/competitions/upcoming-events",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved",
+    "featured": true
+  },
+  {
+    "title": "Dutch Water Week Formula Kite 2026",
+    "description": "Dutch Water Week includes Formula Kite racing in Almere, bringing Olympic-style kitefoil racing into a wider watersports week on the IJmeer.",
+    "startDate": "2026-05-30T10:00:00.000Z",
+    "endDate": "2026-06-07T18:00:00.000Z",
+    "country": "Netherlands",
+    "region": "North Holland",
+    "city": "Almere",
+    "spotName": "IJmeer",
+    "latitude": 52.3637,
+    "longitude": 5.2143,
+    "eventTypeSlug": "race",
+    "organizerName": "Dutch Water Week",
+    "organizerWebsite": "https://dutchwaterweek.com/",
+    "brandNames": [
+      "Other"
+    ],
+    "sourceUrl": "https://letskite.ch/en/agenda",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
   },
   {
     "title": "GKA Freestyle Kite World Cup Borkum 2026",
@@ -33,7 +121,9 @@
     "eventTypeSlug": "competition",
     "organizerName": "GKA Kite World Tour",
     "organizerWebsite": "https://www.gkakiteworldtour.com/events/",
-    "brandNames": ["Other"],
+    "brandNames": [
+      "Other"
+    ],
     "sourceUrl": "https://www.gkakiteworldtour.com/event/gka-freestyle-kite-world-cup-germany-2026/",
     "sourceType": "admin_created",
     "reviewStatus": "approved",
@@ -53,7 +143,9 @@
     "eventTypeSlug": "competition",
     "organizerName": "GKA Kite World Tour",
     "organizerWebsite": "https://www.gkakiteworldtour.com/events/",
-    "brandNames": ["Other"],
+    "brandNames": [
+      "Other"
+    ],
     "sourceUrl": "https://www.gkakiteworldtour.com/event/gka-big-air-kite-world-cup-greece-2026/",
     "sourceType": "admin_created",
     "reviewStatus": "approved",
@@ -73,8 +165,115 @@
     "eventTypeSlug": "competition",
     "organizerName": "GKA Kite World Tour",
     "organizerWebsite": "https://www.gkakiteworldtour.com/events/",
-    "brandNames": ["Other"],
+    "brandNames": [
+      "Other"
+    ],
     "sourceUrl": "https://www.gkakiteworldtour.com/events/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "Formula Kite Gizzeria 2026",
+    "description": "Gizzeria adds another major Formula Kite racing block at Hang Loose Beach, one of Italy?s best-known kitefoil venues with thermal wind and a long history of international racing.",
+    "startDate": "2026-06-29T10:00:00.000Z",
+    "endDate": "2026-07-08T18:00:00.000Z",
+    "country": "Italy",
+    "region": "Calabria",
+    "city": "Gizzeria",
+    "spotName": "Hang Loose Beach",
+    "latitude": 38.9339,
+    "longitude": 16.2041,
+    "eventTypeSlug": "race",
+    "organizerName": "Formula Kite",
+    "organizerWebsite": "https://www.kiteclasses.org/",
+    "brandNames": [
+      "Other"
+    ],
+    "sourceUrl": "https://letskite.ch/en/agenda",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "Formula Kite Youth Europeans Gizzeria 2026",
+    "description": "Hang Loose Beach hosts the Formula Kite Youth European Championships in Gizzeria, giving Europe’s next generation of kitefoil racers a major championship stage in Calabria.",
+    "startDate": "2026-07-01T10:00:00.000Z",
+    "endDate": "2026-07-05T18:00:00.000Z",
+    "country": "Italy",
+    "region": "Calabria",
+    "city": "Gizzeria",
+    "spotName": "Hang Loose Beach",
+    "latitude": 38.9339,
+    "longitude": 16.2041,
+    "eventTypeSlug": "race",
+    "organizerName": "International Kiteboarding Association",
+    "organizerWebsite": "https://www.kiteclasses.org/",
+    "brandNames": [
+      "Other"
+    ],
+    "sourceUrl": "https://www.kiteclasses.org/competitions/upcoming-events",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "Kite Foil Masters Worlds Gizzeria 2026",
+    "description": "The Kite Foil Masters Worlds share the Gizzeria championship window, giving Masters and Grand Masters riders their own international foil-racing title event at Hang Loose Beach.",
+    "startDate": "2026-07-01T10:00:00.000Z",
+    "endDate": "2026-07-05T18:00:00.000Z",
+    "country": "Italy",
+    "region": "Calabria",
+    "city": "Gizzeria",
+    "spotName": "Hang Loose Beach",
+    "latitude": 38.9339,
+    "longitude": 16.2041,
+    "eventTypeSlug": "race",
+    "organizerName": "International Kiteboarding Association",
+    "organizerWebsite": "https://www.kiteclasses.org/",
+    "brandNames": [
+      "Other"
+    ],
+    "sourceUrl": "https://www.kiteclasses.org/competitions/upcoming-events",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "Formula Kite Grand Prix Cesme 2026",
+    "description": "Cesme hosts a Formula Kite Grand Prix on Turkey?s Aegean coast, pairing fast foil racing with the reliable summer winds around the Alacati and Cesme kite area.",
+    "startDate": "2026-08-17T10:00:00.000Z",
+    "endDate": "2026-08-24T18:00:00.000Z",
+    "country": "Turkey",
+    "region": "Izmir",
+    "city": "Cesme",
+    "spotName": "Cesme",
+    "latitude": 38.3228,
+    "longitude": 26.3032,
+    "eventTypeSlug": "race",
+    "organizerName": "Formula Kite",
+    "organizerWebsite": "https://www.kiteclasses.org/",
+    "brandNames": [
+      "Other"
+    ],
+    "sourceUrl": "https://letskite.ch/en/agenda",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "Formula Kite Youth Worlds Cesme 2026",
+    "description": "The Formula Kite Youth Worlds run alongside the Cesme race window, giving junior kitefoil racers a world-level championship week on Turkey?s Aegean coast.",
+    "startDate": "2026-08-17T10:00:00.000Z",
+    "endDate": "2026-08-24T18:00:00.000Z",
+    "country": "Turkey",
+    "region": "Izmir",
+    "city": "Cesme",
+    "spotName": "Cesme",
+    "latitude": 38.3228,
+    "longitude": 26.3032,
+    "eventTypeSlug": "race",
+    "organizerName": "Formula Kite",
+    "organizerWebsite": "https://www.kiteclasses.org/",
+    "brandNames": [
+      "Other"
+    ],
+    "sourceUrl": "https://letskite.ch/en/agenda",
     "sourceType": "admin_created",
     "reviewStatus": "approved"
   },
@@ -92,7 +291,12 @@
     "eventTypeSlug": "expo",
     "organizerName": "California Kitesurf Masters",
     "organizerWebsite": "https://www.kitesurf-masters.de/",
-    "brandNames": ["Duotone", "North", "F-One", "Naish"],
+    "brandNames": [
+      "Duotone",
+      "North",
+      "F-One",
+      "Naish"
+    ],
     "sourceUrl": "https://www.kitesurf-masters.de/kitelifevillage",
     "sourceType": "admin_created",
     "reviewStatus": "approved",
@@ -112,50 +316,13 @@
     "eventTypeSlug": "competition",
     "organizerName": "GKA Kite World Tour",
     "organizerWebsite": "https://www.gkakiteworldtour.com/events/",
-    "brandNames": ["Other"],
+    "brandNames": [
+      "Other"
+    ],
     "sourceUrl": "https://www.gkakiteworldtour.com/event/gka-kite-world-cup-sylt-2026/",
     "sourceType": "admin_created",
     "reviewStatus": "approved",
     "featured": true
-  },
-  {
-    "title": "Formula Kite World Championships Viana do Castelo 2026",
-    "description": "The Formula Kite World Championships bring the Olympic kite racing fleets to Viana do Castelo, with men’s and women’s world-title racing on Portugal’s Atlantic coast.",
-    "startDate": "2026-05-09T10:00:00.000Z",
-    "endDate": "2026-05-16T18:00:00.000Z",
-    "country": "Portugal",
-    "region": "Norte",
-    "city": "Viana do Castelo",
-    "spotName": "Cabedelo",
-    "latitude": 41.6818,
-    "longitude": -8.8291,
-    "eventTypeSlug": "race",
-    "organizerName": "International Kiteboarding Association",
-    "organizerWebsite": "https://www.kiteclasses.org/",
-    "brandNames": ["Other"],
-    "sourceUrl": "https://www.kiteclasses.org/competitions/upcoming-events",
-    "sourceType": "admin_created",
-    "reviewStatus": "approved",
-    "featured": true
-  },
-  {
-    "title": "Formula Kite Youth Europeans Gizzeria 2026",
-    "description": "Hang Loose Beach hosts the Formula Kite Youth European Championships in Gizzeria, giving Europe’s next generation of kitefoil racers a major championship stage in Calabria.",
-    "startDate": "2026-07-01T10:00:00.000Z",
-    "endDate": "2026-07-05T18:00:00.000Z",
-    "country": "Italy",
-    "region": "Calabria",
-    "city": "Gizzeria",
-    "spotName": "Hang Loose Beach",
-    "latitude": 38.9339,
-    "longitude": 16.2041,
-    "eventTypeSlug": "race",
-    "organizerName": "International Kiteboarding Association",
-    "organizerWebsite": "https://www.kiteclasses.org/",
-    "brandNames": ["Other"],
-    "sourceUrl": "https://www.kiteclasses.org/competitions/upcoming-events",
-    "sourceType": "admin_created",
-    "reviewStatus": "approved"
   },
   {
     "title": "Formula Kite Europeans Akyaka 2026",
@@ -171,7 +338,30 @@
     "eventTypeSlug": "race",
     "organizerName": "Formula Kite",
     "organizerWebsite": "https://www.kiteclasses.org/",
-    "brandNames": ["Other"],
+    "brandNames": [
+      "Other"
+    ],
+    "sourceUrl": "https://letskite.ch/en/agenda",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "B2B Kite Summit 2026",
+    "description": "The B2B Kite Summit gathers kite and board-sports industry people in Fuerteventura for a business-focused week around the future of the kite market, community, and brands.",
+    "startDate": "2026-09-22T10:00:00.000Z",
+    "endDate": "2026-09-29T18:00:00.000Z",
+    "country": "Spain",
+    "region": "Canary Islands",
+    "city": "Fuerteventura",
+    "spotName": "Fuerteventura",
+    "latitude": 28.3587,
+    "longitude": -14.0537,
+    "eventTypeSlug": "expo",
+    "organizerName": "B2B Kite Summit",
+    "organizerWebsite": "https://letskite.ch/en/agenda",
+    "brandNames": [
+      "Other"
+    ],
     "sourceUrl": "https://letskite.ch/en/agenda",
     "sourceType": "admin_created",
     "reviewStatus": "approved"
@@ -190,8 +380,31 @@
     "eventTypeSlug": "race",
     "organizerName": "Formula Kite",
     "organizerWebsite": "https://www.kiteclasses.org/",
-    "brandNames": ["Other"],
+    "brandNames": [
+      "Other"
+    ],
     "sourceUrl": "https://letskite.be/en/agenda/112/formula-kite-youth-europeans-torregrande-ita",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "KiteFoil Masters Torregrande 2026",
+    "description": "KiteFoil Masters Torregrande gives Masters and Grand Masters riders a dedicated foil-racing event in Sardinia during the late-September Torregrande championship week.",
+    "startDate": "2026-09-22T10:00:00.000Z",
+    "endDate": "2026-09-28T18:00:00.000Z",
+    "country": "Italy",
+    "region": "Sardinia",
+    "city": "Torregrande",
+    "spotName": "Torregrande",
+    "latitude": 39.9044,
+    "longitude": 8.4994,
+    "eventTypeSlug": "race",
+    "organizerName": "Formula Kite",
+    "organizerWebsite": "https://www.kiteclasses.org/",
+    "brandNames": [
+      "Other"
+    ],
+    "sourceUrl": "https://letskite.ch/en/agenda",
     "sourceType": "admin_created",
     "reviewStatus": "approved"
   },
@@ -209,27 +422,10 @@
     "eventTypeSlug": "race",
     "organizerName": "Formula Kite",
     "organizerWebsite": "https://www.kiteclasses.org/",
-    "brandNames": ["Other"],
+    "brandNames": [
+      "Other"
+    ],
     "sourceUrl": "https://letskite.ch/en/agenda",
-    "sourceType": "admin_created",
-    "reviewStatus": "approved"
-  },
-  {
-    "title": "Comunitat Valenciana Olympic Week - Formula Kite 2026",
-    "description": "Dénia hosts the Formula Kite class during Comunitat Valenciana Olympic Week, with Olympic-format kite racing from Marina El Portet and the Real Club Náutico Dénia event structure.",
-    "startDate": "2026-02-19T10:00:00.000Z",
-    "endDate": "2026-02-22T18:00:00.000Z",
-    "country": "Spain",
-    "region": "Valencian Community",
-    "city": "Dénia",
-    "spotName": "Marina El Portet",
-    "latitude": 38.8408,
-    "longitude": 0.1057,
-    "eventTypeSlug": "race",
-    "organizerName": "Federació de Vela de la Comunitat Valenciana",
-    "organizerWebsite": "https://cadenaser.com/",
-    "brandNames": ["Other"],
-    "sourceUrl": "https://cadenaser.com/comunitat-valenciana/2026/02/19/denia-acoge-la-formula-kite-olimpica-en-la-comunitat-valenciana-olympic-week-2026-radio-denia/",
     "sourceType": "admin_created",
     "reviewStatus": "approved"
   }
