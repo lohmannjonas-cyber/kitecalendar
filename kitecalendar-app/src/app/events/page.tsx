@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { addMonths, format, parse, startOfMonth } from "date-fns";
 import { AlertSignup } from "@/components/alert-signup";
 import { CalendarGrid } from "@/components/calendar-grid";
 import { EventCard } from "@/components/event-card";
@@ -10,6 +11,33 @@ import { parseNumber, parseString } from "@/lib/utils";
 export const metadata = {
   title: "Events",
 };
+
+function parseCalendarMonth(value: string | undefined) {
+  if (!value || !/^\d{4}-\d{2}$/.test(value)) return startOfMonth(new Date());
+
+  const parsed = parse(value, "yyyy-MM", new Date());
+  return Number.isNaN(parsed.getTime()) ? startOfMonth(new Date()) : startOfMonth(parsed);
+}
+
+function buildEventsHref(params: Record<string, string | string[] | undefined>, updates: Record<string, string | undefined>) {
+  const nextParams = new URLSearchParams();
+
+  for (const [key, value] of Object.entries(params)) {
+    const stringValue = parseString(value);
+    if (stringValue) nextParams.set(key, stringValue);
+  }
+
+  for (const [key, value] of Object.entries(updates)) {
+    if (value) {
+      nextParams.set(key, value);
+    } else {
+      nextParams.delete(key);
+    }
+  }
+
+  const query = nextParams.toString();
+  return query ? `/events?${query}` : "/events";
+}
 
 export default async function EventsPage({
   searchParams,
@@ -38,6 +66,24 @@ export default async function EventsPage({
   const allEvents = await listEvents();
   const countries = Array.from(new Set(allEvents.map((event) => event.country))).sort();
   const view = parseString(params.view) ?? "list";
+  const calendarMonth = parseCalendarMonth(parseString(params.month));
+  const previousMonthHref = buildEventsHref(params, {
+    view: "calendar",
+    month: format(addMonths(calendarMonth, -1), "yyyy-MM"),
+  });
+  const nextMonthHref = buildEventsHref(params, {
+    view: "calendar",
+    month: format(addMonths(calendarMonth, 1), "yyyy-MM"),
+  });
+  const todayMonthHref = buildEventsHref(params, {
+    view: "calendar",
+    month: format(new Date(), "yyyy-MM"),
+  });
+  const listHref = buildEventsHref(params, { view: "list", month: undefined });
+  const calendarHref = buildEventsHref(params, {
+    view: "calendar",
+    month: format(calendarMonth, "yyyy-MM"),
+  });
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
@@ -48,13 +94,13 @@ export default async function EventsPage({
         </div>
         <div className="flex rounded-md border border-sky-100 bg-white p-1 shadow-sm">
           <Link
-            href="/events?view=list"
+            href={listHref}
             className="rounded-sm px-3 py-2 text-sm font-black text-slate-600 hover:bg-sky-50 hover:text-sky-700"
           >
             {dictionary.common.list}
           </Link>
           <Link
-            href="/events?view=calendar"
+            href={calendarHref}
             className="rounded-sm px-3 py-2 text-sm font-black text-slate-600 hover:bg-sky-50 hover:text-sky-700"
           >
             {dictionary.common.calendar}
@@ -72,7 +118,13 @@ export default async function EventsPage({
 
       <div className="mt-6">
         {view === "calendar" ? (
-          <CalendarGrid events={events} />
+          <CalendarGrid
+            events={events}
+            month={calendarMonth}
+            nextHref={nextMonthHref}
+            previousHref={previousMonthHref}
+            todayHref={todayMonthHref}
+          />
         ) : (
           <div className="grid gap-4 md:grid-cols-2">
             {events.map((event) => (

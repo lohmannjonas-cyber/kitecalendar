@@ -1,16 +1,45 @@
-import { addDays, format, parseISO, startOfMonth, startOfWeek } from "date-fns";
+import { addDays, format, isSameMonth, parseISO, startOfMonth, startOfWeek } from "date-fns";
 import Link from "next/link";
 import type { KiteEvent } from "@/lib/types";
 
-export function CalendarGrid({ events }: { events: KiteEvent[] }) {
-  const monthStart = startOfMonth(new Date());
+export function CalendarGrid({
+  events,
+  month,
+  nextHref,
+  previousHref,
+  todayHref,
+}: {
+  events: KiteEvent[];
+  month: Date;
+  nextHref: string;
+  previousHref: string;
+  todayHref: string;
+}) {
+  const monthStart = startOfMonth(month);
   const gridStart = startOfWeek(monthStart, { weekStartsOn: 1 });
-  const days = Array.from({ length: 35 }).map((_, index) => {
+  const days = Array.from({ length: 42 }).map((_, index) => {
     return addDays(gridStart, index);
   });
 
   return (
     <div className="overflow-hidden rounded-md border border-sky-100 bg-white shadow-sm">
+      <div className="flex flex-col gap-3 border-b border-sky-100 bg-white px-4 py-4 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <p className="text-xs font-black uppercase text-sky-700">Showing</p>
+          <h2 className="text-2xl font-black text-slate-950">{format(monthStart, "MMMM yyyy")}</h2>
+        </div>
+        <div className="grid grid-cols-3 overflow-hidden rounded-md border border-sky-100 text-sm font-black text-slate-700">
+          <Link href={previousHref} className="px-3 py-2 text-center hover:bg-sky-50 hover:text-sky-700">
+            Prev
+          </Link>
+          <Link href={todayHref} className="border-x border-sky-100 px-3 py-2 text-center hover:bg-sky-50 hover:text-sky-700">
+            Today
+          </Link>
+          <Link href={nextHref} className="px-3 py-2 text-center hover:bg-sky-50 hover:text-sky-700">
+            Next
+          </Link>
+        </div>
+      </div>
       <div className="grid grid-cols-7 border-b border-sky-100 bg-slate-50 text-center text-xs font-black uppercase text-slate-500">
         {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((day) => (
           <div key={day} className="px-2 py-3">
@@ -23,7 +52,9 @@ export function CalendarGrid({ events }: { events: KiteEvent[] }) {
           const dayEvents = events.filter((event) => format(parseISO(event.startDate), "yyyy-MM-dd") === format(day, "yyyy-MM-dd"));
           return (
             <div key={day.toISOString()} className="min-h-28 border-b border-r border-sky-50 p-2">
-              <p className="mb-2 text-xs font-black text-slate-500">{format(day, "d")}</p>
+              <p className={`mb-2 text-xs font-black ${isSameMonth(day, monthStart) ? "text-slate-500" : "text-slate-300"}`}>
+                {format(day, "d")}
+              </p>
               <div className="space-y-1">
                 {dayEvents.slice(0, 2).map((event) => (
                   <Link
