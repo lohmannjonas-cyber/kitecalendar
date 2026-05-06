@@ -14,6 +14,7 @@ export const brands = [
   ["naish", "Naish", "https://www.naish.com", "#2563eb"],
   ["airush", "Airush", "https://airush.com", "#7c3aed"],
   ["eleveight", "Eleveight", "https://www.eleveightkites.com", "#0891b2"],
+  ["ozone", "Ozone", "https://ozonekites.com", "#84cc16"],
   ["other", "Other", null, "#64748b"],
 ];
 

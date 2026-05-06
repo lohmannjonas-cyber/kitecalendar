@@ -43,6 +43,90 @@
     "featured": true
   },
   {
+    "title": "Berck-sur-Mer International Kite Festival 2026",
+    "description": "Berck-sur-Mer is one of Europe's major kite-flying festivals, focused on giant and artistic kites rather than kitesurf demo brands; listed with no specific surf brands present.",
+    "startDate": "2026-04-11T10:00:00.000Z",
+    "endDate": "2026-04-19T18:00:00.000Z",
+    "country": "France",
+    "region": "Hauts-de-France",
+    "city": "Berck-sur-Mer",
+    "spotName": "Berck beach",
+    "latitude": 50.408,
+    "longitude": 1.565,
+    "eventTypeSlug": "festival",
+    "organizerName": "Berck-sur-Mer Kite Festival",
+    "organizerWebsite": "https://www.metropolis-drachen.de/en/Kite-festivals-2026/",
+    "brandNames": [
+      "Other"
+    ],
+    "sourceUrl": "https://www.metropolis-drachen.de/en/Kite-festivals-2026/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "Artevento Cervia 2026",
+    "description": "Artevento Cervia is an international kite-art and beach festival in Italy; no kitesurf demo brands are listed, so it appears as a community kite festival.",
+    "startDate": "2026-04-24T10:00:00.000Z",
+    "endDate": "2026-05-03T18:00:00.000Z",
+    "country": "Italy",
+    "region": "Emilia-Romagna",
+    "city": "Cervia",
+    "spotName": "Cervia beach",
+    "latitude": 44.263,
+    "longitude": 12.347,
+    "eventTypeSlug": "festival",
+    "organizerName": "Artevento",
+    "organizerWebsite": "https://www.discovercervia.com/",
+    "brandNames": [
+      "Other"
+    ],
+    "sourceUrl": "https://www.discovercervia.com/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "Kite Festival Dornumersiel 2026",
+    "description": "Dornumersiel's kite festival is a traditional flying-kite gathering on the German North Sea; no kitesurf demo brands are listed.",
+    "startDate": "2026-05-01T10:00:00.000Z",
+    "endDate": "2026-05-03T18:00:00.000Z",
+    "country": "Germany",
+    "region": "Lower Saxony",
+    "city": "Dornumersiel",
+    "spotName": "Dornumersiel beach",
+    "latitude": 53.674,
+    "longitude": 7.475,
+    "eventTypeSlug": "festival",
+    "organizerName": "Dornumersiel Kite Festival",
+    "organizerWebsite": "https://www.metropolis-drachen.de/en/Kite-festivals-2026/",
+    "brandNames": [
+      "Other"
+    ],
+    "sourceUrl": "https://www.metropolis-drachen.de/en/Kite-festivals-2026/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "Flysurfer Demo Tour Saal 2026",
+    "description": "Flysurfer brings its demo tour to Saal for a German Baltic-side test stop focused on trying current Flysurfer kite and foil equipment on the water.",
+    "startDate": "2026-05-02T10:00:00.000Z",
+    "endDate": "2026-05-03T18:00:00.000Z",
+    "country": "Germany",
+    "region": "Mecklenburg-Vorpommern",
+    "city": "Saal",
+    "spotName": "Saaler Bodden",
+    "latitude": 54.31,
+    "longitude": 12.5,
+    "eventTypeSlug": "demo-day",
+    "organizerName": "Flysurfer Demo Tour",
+    "organizerWebsite": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "brandNames": [
+      "Flysurfer"
+    ],
+    "sourceUrl": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
     "title": "Defi Kite Gruissan 2026",
     "description": "Defi Kite is the kiteboarding part of the Gruissan Defi wind-sports festival, mixing long-distance racing, strong Tramontana conditions, and a broad amateur-to-pro fleet on the French Mediterranean coast.",
     "startDate": "2026-05-08T10:00:00.000Z",
@@ -63,6 +147,27 @@
     "sourceType": "admin_created",
     "reviewStatus": "approved",
     "featured": true
+  },
+  {
+    "title": "Flysurfer Demo Tour Busum 2026",
+    "description": "Busum gets a Flysurfer demo weekend on the North Sea, giving riders a chance to test Flysurfer kites and foil gear in tidal German coast conditions.",
+    "startDate": "2026-05-09T10:00:00.000Z",
+    "endDate": "2026-05-10T18:00:00.000Z",
+    "country": "Germany",
+    "region": "Schleswig-Holstein",
+    "city": "Busum",
+    "spotName": "Busum",
+    "latitude": 54.13,
+    "longitude": 8.86,
+    "eventTypeSlug": "demo-day",
+    "organizerName": "Flysurfer Demo Tour",
+    "organizerWebsite": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "brandNames": [
+      "Flysurfer"
+    ],
+    "sourceUrl": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
   },
   {
     "title": "Formula Kite World Championships Viana do Castelo 2026",
@@ -87,6 +192,135 @@
     "featured": true
   },
   {
+    "title": "Romo Kite Testival Weekend 2026",
+    "description": "Romo combines the Kite Tiki Testival, Surfpirates Kite & Wing Testival, Flysurfer Demo Tour, and Ozone demo presence into one packed North Sea test weekend, with Flysurfer and Ozone gear available to try alongside shop-led demo activity.",
+    "startDate": "2026-05-14T10:00:00.000Z",
+    "endDate": "2026-05-17T18:00:00.000Z",
+    "country": "Denmark",
+    "region": "South Denmark",
+    "city": "Romo",
+    "spotName": "Romo Beach",
+    "latitude": 55.145,
+    "longitude": 8.514,
+    "eventTypeSlug": "demo-day",
+    "organizerName": "Kite Tiki / Surfpirates",
+    "organizerWebsite": "https://kitetiki.com/blogs/news",
+    "brandNames": [
+      "Flysurfer",
+      "Ozone"
+    ],
+    "sourceUrl": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved",
+    "featured": true
+  },
+  {
+    "title": "Talamone Flysurfer Demo Days 2026",
+    "description": "Flysurfer visits Talamone for Italian demo days, offering brand-led testing at one of Tuscany's most established kite spots.",
+    "startDate": "2026-05-15T10:00:00.000Z",
+    "endDate": "2026-05-17T18:00:00.000Z",
+    "country": "Italy",
+    "region": "Tuscany",
+    "city": "Talamone",
+    "spotName": "Talamone",
+    "latitude": 42.555,
+    "longitude": 11.133,
+    "eventTypeSlug": "demo-day",
+    "organizerName": "Flysurfer Demo Tour",
+    "organizerWebsite": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "brandNames": [
+      "Flysurfer"
+    ],
+    "sourceUrl": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "Kite Festival Norddeich 2026",
+    "description": "Norddeich's May kite festival is a flying-kite community event on the German coast; no specific kitesurf brands are listed for demos.",
+    "startDate": "2026-05-21T10:00:00.000Z",
+    "endDate": "2026-05-24T18:00:00.000Z",
+    "country": "Germany",
+    "region": "Lower Saxony",
+    "city": "Norddeich",
+    "spotName": "Norddeich",
+    "latitude": 53.614,
+    "longitude": 7.161,
+    "eventTypeSlug": "festival",
+    "organizerName": "Norddeich Kite Festival",
+    "organizerWebsite": "https://www.metropolis-drachen.de/en/Kite-festivals-2026/",
+    "brandNames": [
+      "Other"
+    ],
+    "sourceUrl": "https://www.metropolis-drachen.de/en/Kite-festivals-2026/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "Fehmarn Foil Festival 2026",
+    "description": "The Fehmarn Foil Festival is a long demo and foil weekend on the Baltic, with Ozone listed via the testival calendar and Flysurfer activity around the Fehmarn demo window.",
+    "startDate": "2026-05-22T10:00:00.000Z",
+    "endDate": "2026-05-25T18:00:00.000Z",
+    "country": "Germany",
+    "region": "Schleswig-Holstein",
+    "city": "Fehmarn",
+    "spotName": "Fehmarn",
+    "latitude": 54.437,
+    "longitude": 11.193,
+    "eventTypeSlug": "demo-day",
+    "organizerName": "Fehmarn Foil Festival",
+    "organizerWebsite": "https://www.ozonekites.de/testivals/",
+    "brandNames": [
+      "Ozone",
+      "Flysurfer"
+    ],
+    "sourceUrl": "https://www.ozonekites.de/testivals/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "Holland Flysurfer Demo Days 2026",
+    "description": "The Holland Demo Days give Dutch riders a Flysurfer test stop in May, with Flysurfer equipment available for hands-on sessions at the beach.",
+    "startDate": "2026-05-23T10:00:00.000Z",
+    "endDate": "2026-05-24T18:00:00.000Z",
+    "country": "Netherlands",
+    "region": "North Holland",
+    "city": "Holland",
+    "spotName": "Holland coast",
+    "latitude": 52.4,
+    "longitude": 4.6,
+    "eventTypeSlug": "demo-day",
+    "organizerName": "Flysurfer Demo Tour",
+    "organizerWebsite": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "brandNames": [
+      "Flysurfer"
+    ],
+    "sourceUrl": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "CORE Demo Tour Workum 2026",
+    "description": "CORE's Workum demo stop gives Dutch riders a chance to test CORE kite gear at one of the Netherlands' classic shallow-water spots.",
+    "startDate": "2026-05-30T10:00:00.000Z",
+    "endDate": "2026-05-31T18:00:00.000Z",
+    "country": "Netherlands",
+    "region": "Friesland",
+    "city": "Workum",
+    "spotName": "Workum",
+    "latitude": 52.979,
+    "longitude": 5.447,
+    "eventTypeSlug": "demo-day",
+    "organizerName": "CORE Demo Tour",
+    "organizerWebsite": "https://ridecore.com/us/test-and-buy/demo-tour",
+    "brandNames": [
+      "Core"
+    ],
+    "sourceUrl": "https://ridecore.com/us/test-and-buy/demo-tour",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
     "title": "Dutch Water Week Formula Kite 2026",
     "description": "Dutch Water Week includes Formula Kite racing in Almere, bringing Olympic-style kitefoil racing into a wider watersports week on the IJmeer.",
     "startDate": "2026-05-30T10:00:00.000Z",
@@ -104,6 +338,27 @@
       "Other"
     ],
     "sourceUrl": "https://letskite.ch/en/agenda",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "Wing in Paris Flysurfer Demo 2026",
+    "description": "Wing in Paris is a Flysurfer demo-tour stop in the Paris region, aimed at riders who want to try Flysurfer wing and foil gear close to the French capital.",
+    "startDate": "2026-05-30T10:00:00.000Z",
+    "endDate": "2026-05-31T18:00:00.000Z",
+    "country": "France",
+    "region": "Ile-de-France",
+    "city": "Paris region",
+    "spotName": "Paris region",
+    "latitude": 48.8566,
+    "longitude": 2.3522,
+    "eventTypeSlug": "demo-day",
+    "organizerName": "Flysurfer Demo Tour",
+    "organizerWebsite": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "brandNames": [
+      "Flysurfer"
+    ],
+    "sourceUrl": "https://flysurfer.com/demo-tour/demo-tour-europe/",
     "sourceType": "admin_created",
     "reviewStatus": "approved"
   },
@@ -130,6 +385,90 @@
     "featured": true
   },
   {
+    "title": "Euskal Cup Flysurfer Demo 2026",
+    "description": "The Euskal Cup appears on Flysurfer's demo-tour calendar for the Basque region, combining regional riding with Flysurfer gear testing.",
+    "startDate": "2026-06-06T10:00:00.000Z",
+    "endDate": "2026-06-07T18:00:00.000Z",
+    "country": "France",
+    "region": "Basque Country",
+    "city": "Basque region",
+    "spotName": "Basque coast",
+    "latitude": 43.483,
+    "longitude": -1.558,
+    "eventTypeSlug": "demo-day",
+    "organizerName": "Flysurfer Demo Tour",
+    "organizerWebsite": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "brandNames": [
+      "Flysurfer"
+    ],
+    "sourceUrl": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "Nordic Kite Fest 2026",
+    "description": "Nordic Kite Fest in Parnu is a lifestyle and kite festival on Estonia's Baltic coast; no specific kitesurf demo brands are listed, so it is tracked as a community festival.",
+    "startDate": "2026-06-12T10:00:00.000Z",
+    "endDate": "2026-06-14T18:00:00.000Z",
+    "country": "Estonia",
+    "region": "Parnu County",
+    "city": "Parnu",
+    "spotName": "Parnu beach",
+    "latitude": 58.377,
+    "longitude": 24.497,
+    "eventTypeSlug": "festival",
+    "organizerName": "Nordic Kite Fest",
+    "organizerWebsite": "https://www.bilietai.lt/",
+    "brandNames": [
+      "Other"
+    ],
+    "sourceUrl": "https://www.bilietai.lt/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "Foilie du Lac 2026",
+    "description": "Foilie du Lac is a French lake-foil community weekend in the alpine lake region, with Flysurfer listed on the demo-tour calendar for riders wanting to test foil-focused gear.",
+    "startDate": "2026-06-13T10:00:00.000Z",
+    "endDate": "2026-06-14T18:00:00.000Z",
+    "country": "France",
+    "region": "Auvergne-Rhone-Alpes",
+    "city": "Mayres-Savel",
+    "spotName": "Lac de Monteynard",
+    "latitude": 44.87,
+    "longitude": 5.724,
+    "eventTypeSlug": "community-meetup",
+    "organizerName": "Foilie du Lac",
+    "organizerWebsite": "https://letskite.ch/en/agenda",
+    "brandNames": [
+      "Flysurfer"
+    ],
+    "sourceUrl": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "Rhodos Flysurfer Demo Days 2026",
+    "description": "The Rhodes demo stop brings Flysurfer gear testing to Greece in June, pairing brand demos with one of the Aegean's most reliable summer wind destinations.",
+    "startDate": "2026-06-13T10:00:00.000Z",
+    "endDate": "2026-06-14T18:00:00.000Z",
+    "country": "Greece",
+    "region": "South Aegean",
+    "city": "Rhodes",
+    "spotName": "Rhodes",
+    "latitude": 36.434,
+    "longitude": 28.217,
+    "eventTypeSlug": "demo-day",
+    "organizerName": "Flysurfer Demo Tour",
+    "organizerWebsite": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "brandNames": [
+      "Flysurfer"
+    ],
+    "sourceUrl": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
     "title": "GKA Big Air World Cup Mykonos 2026",
     "description": "Mykonos hosts a GKA Big Air World Cup in the Meltemi wind, combining an Aegean island setting with world-title level big-air riding from the best men and women on tour.",
     "startDate": "2026-06-16T10:00:00.000Z",
@@ -150,6 +489,90 @@
     "sourceType": "admin_created",
     "reviewStatus": "approved",
     "featured": true
+  },
+  {
+    "title": "International Kite Fliers Meeting Fano 2026",
+    "description": "The Fano kite fliers meeting is a Danish flying-kite festival for international kite makers and pilots; no kitesurf demo brands are listed.",
+    "startDate": "2026-06-18T10:00:00.000Z",
+    "endDate": "2026-06-21T18:00:00.000Z",
+    "country": "Denmark",
+    "region": "South Denmark",
+    "city": "Fano",
+    "spotName": "Fano beach",
+    "latitude": 55.416,
+    "longitude": 8.41,
+    "eventTypeSlug": "festival",
+    "organizerName": "Fano Kite Fliers Meeting",
+    "organizerWebsite": "https://www.metropolis-drachen.de/en/Kite-festivals-2026/",
+    "brandNames": [
+      "Other"
+    ],
+    "sourceUrl": "https://www.metropolis-drachen.de/en/Kite-festivals-2026/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "CORE Demo Tour Brouwersdam 2026",
+    "description": "The CORE Demo Tour visits Brouwersdam in June, bringing CORE kite gear to one of the busiest Dutch demo and freeride locations.",
+    "startDate": "2026-06-20T10:00:00.000Z",
+    "endDate": "2026-06-21T18:00:00.000Z",
+    "country": "Netherlands",
+    "region": "Zeeland",
+    "city": "Brouwersdam",
+    "spotName": "Brouwersdam",
+    "latitude": 51.768,
+    "longitude": 3.854,
+    "eventTypeSlug": "demo-day",
+    "organizerName": "CORE Demo Tour",
+    "organizerWebsite": "https://ridecore.com/us/test-and-buy/demo-tour",
+    "brandNames": [
+      "Core"
+    ],
+    "sourceUrl": "https://ridecore.com/us/test-and-buy/demo-tour",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "Salon du Foil Serre-Poncon 2026",
+    "description": "Salon du Foil at Serre-Poncon is a foil-focused expo and demo weekend on the lake, with public agenda listings and Flysurfer demo-tour presence for foil and wing gear tests.",
+    "startDate": "2026-06-20T10:00:00.000Z",
+    "endDate": "2026-06-21T18:00:00.000Z",
+    "country": "France",
+    "region": "Provence-Alpes-Cote d'Azur",
+    "city": "Serre-Poncon",
+    "spotName": "Lac de Serre-Poncon",
+    "latitude": 44.494,
+    "longitude": 6.351,
+    "eventTypeSlug": "expo",
+    "organizerName": "Salon du Foil",
+    "organizerWebsite": "https://letskite.ch/en/agenda",
+    "brandNames": [
+      "Flysurfer"
+    ],
+    "sourceUrl": "https://letskite.ch/en/agenda",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "Schillig Flysurfer Demo Days 2026",
+    "description": "Schillig hosts Flysurfer Demo Days in June, giving North Sea riders another chance to test Flysurfer kites and foil equipment on the German coast.",
+    "startDate": "2026-06-20T10:00:00.000Z",
+    "endDate": "2026-06-21T18:00:00.000Z",
+    "country": "Germany",
+    "region": "Lower Saxony",
+    "city": "Schillig",
+    "spotName": "Schillig",
+    "latitude": 53.703,
+    "longitude": 8.024,
+    "eventTypeSlug": "demo-day",
+    "organizerName": "Flysurfer Demo Tour",
+    "organizerWebsite": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "brandNames": [
+      "Flysurfer"
+    ],
+    "sourceUrl": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
   },
   {
     "title": "GKA Youth Kite World Championships Tarifa 2026",
@@ -173,8 +596,92 @@
     "reviewStatus": "approved"
   },
   {
+    "title": "Harzer Seeland Flysurfer Demo Days 2026",
+    "description": "Harzer Seeland Demo Days add an inland German Flysurfer test stop, aimed at riders who want to try Flysurfer gear away from the coast.",
+    "startDate": "2026-06-27T10:00:00.000Z",
+    "endDate": "2026-06-28T18:00:00.000Z",
+    "country": "Germany",
+    "region": "Saxony-Anhalt",
+    "city": "Harzer Seeland",
+    "spotName": "Harzer Seeland",
+    "latitude": 51.78,
+    "longitude": 11.2,
+    "eventTypeSlug": "demo-day",
+    "organizerName": "Flysurfer Demo Tour",
+    "organizerWebsite": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "brandNames": [
+      "Flysurfer"
+    ],
+    "sourceUrl": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "Norddeich Flysurfer Demo Days 2026",
+    "description": "Norddeich Demo Days are a Flysurfer tour stop on the German North Sea, with brand-led product testing for kite and foil riders.",
+    "startDate": "2026-06-27T10:00:00.000Z",
+    "endDate": "2026-06-28T18:00:00.000Z",
+    "country": "Germany",
+    "region": "Lower Saxony",
+    "city": "Norddeich",
+    "spotName": "Norddeich",
+    "latitude": 53.614,
+    "longitude": 7.161,
+    "eventTypeSlug": "demo-day",
+    "organizerName": "Flysurfer Demo Tour",
+    "organizerWebsite": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "brandNames": [
+      "Flysurfer"
+    ],
+    "sourceUrl": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "Primesurf Testival Fehmarn 2026",
+    "description": "Primesurf Testival Fehmarn is a June demo weekend on the Baltic, with Flysurfer listed for brand testing during the event window.",
+    "startDate": "2026-06-27T10:00:00.000Z",
+    "endDate": "2026-06-28T18:00:00.000Z",
+    "country": "Germany",
+    "region": "Schleswig-Holstein",
+    "city": "Fehmarn",
+    "spotName": "Fehmarn",
+    "latitude": 54.437,
+    "longitude": 11.193,
+    "eventTypeSlug": "demo-day",
+    "organizerName": "Primesurf",
+    "organizerWebsite": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "brandNames": [
+      "Flysurfer"
+    ],
+    "sourceUrl": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "Reschensee Flysurfer Demo Days 2026",
+    "description": "Reschensee Demo Days bring Flysurfer testing to the alpine lake spot in northern Italy, with brand demos in mountain wind conditions.",
+    "startDate": "2026-06-27T10:00:00.000Z",
+    "endDate": "2026-06-28T18:00:00.000Z",
+    "country": "Italy",
+    "region": "South Tyrol",
+    "city": "Reschensee",
+    "spotName": "Reschensee",
+    "latitude": 46.806,
+    "longitude": 10.523,
+    "eventTypeSlug": "demo-day",
+    "organizerName": "Flysurfer Demo Tour",
+    "organizerWebsite": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "brandNames": [
+      "Flysurfer"
+    ],
+    "sourceUrl": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
     "title": "Formula Kite Gizzeria 2026",
-    "description": "Gizzeria adds another major Formula Kite racing block at Hang Loose Beach, one of Italy?s best-known kitefoil venues with thermal wind and a long history of international racing.",
+    "description": "Gizzeria adds another major Formula Kite racing block at Hang Loose Beach, one of Italy's best-known kitefoil venues with thermal wind and a long history of international racing.",
     "startDate": "2026-06-29T10:00:00.000Z",
     "endDate": "2026-07-08T18:00:00.000Z",
     "country": "Italy",
@@ -236,8 +743,92 @@
     "reviewStatus": "approved"
   },
   {
+    "title": "VKC Santa Croce Flysurfer Demo Tour 2026",
+    "description": "The VKC Santa Croce stop brings Flysurfer demo gear to northern Italy in July, focused on testing Flysurfer equipment at the lake spot.",
+    "startDate": "2026-07-04T10:00:00.000Z",
+    "endDate": "2026-07-05T18:00:00.000Z",
+    "country": "Italy",
+    "region": "Veneto",
+    "city": "Santa Croce",
+    "spotName": "Lago di Santa Croce",
+    "latitude": 46.122,
+    "longitude": 12.336,
+    "eventTypeSlug": "demo-day",
+    "organizerName": "Flysurfer Demo Tour",
+    "organizerWebsite": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "brandNames": [
+      "Flysurfer"
+    ],
+    "sourceUrl": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "CORE Demo Tour Langenargen 2026",
+    "description": "CORE's Langenargen stop brings demo gear to Lake Constance in July, giving inland German riders a chance to test CORE equipment.",
+    "startDate": "2026-07-11T10:00:00.000Z",
+    "endDate": "2026-07-12T18:00:00.000Z",
+    "country": "Germany",
+    "region": "Baden-Wurttemberg",
+    "city": "Langenargen",
+    "spotName": "Lake Constance",
+    "latitude": 47.598,
+    "longitude": 9.541,
+    "eventTypeSlug": "demo-day",
+    "organizerName": "CORE Demo Tour",
+    "organizerWebsite": "https://ridecore.com/us/test-and-buy/demo-tour",
+    "brandNames": [
+      "Core"
+    ],
+    "sourceUrl": "https://ridecore.com/us/test-and-buy/demo-tour",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "Kite Festival Schillig 2026",
+    "description": "Schillig's summer kite festival is a flying-kite and beach community event on the North Sea; it is listed without specific kitesurf demo brands.",
+    "startDate": "2026-07-17T10:00:00.000Z",
+    "endDate": "2026-07-19T18:00:00.000Z",
+    "country": "Germany",
+    "region": "Lower Saxony",
+    "city": "Schillig",
+    "spotName": "Schillig beach",
+    "latitude": 53.703,
+    "longitude": 8.024,
+    "eventTypeSlug": "festival",
+    "organizerName": "Schillig Kite Festival",
+    "organizerWebsite": "https://www.metropolis-drachen.de/en/Kite-festivals-2026/",
+    "brandNames": [
+      "Other"
+    ],
+    "sourceUrl": "https://www.metropolis-drachen.de/en/Kite-festivals-2026/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "Heiligenhafen Flysurfer Demo Tour 2026",
+    "description": "Heiligenhafen adds an August Flysurfer demo stop on the Baltic coast, with Flysurfer gear testing during the late-summer German demo season.",
+    "startDate": "2026-08-07T10:00:00.000Z",
+    "endDate": "2026-08-07T18:00:00.000Z",
+    "country": "Germany",
+    "region": "Schleswig-Holstein",
+    "city": "Heiligenhafen",
+    "spotName": "Heiligenhafen",
+    "latitude": 54.37,
+    "longitude": 10.98,
+    "eventTypeSlug": "demo-day",
+    "organizerName": "Flysurfer Demo Tour",
+    "organizerWebsite": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "brandNames": [
+      "Flysurfer"
+    ],
+    "sourceUrl": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
     "title": "Formula Kite Grand Prix Cesme 2026",
-    "description": "Cesme hosts a Formula Kite Grand Prix on Turkey?s Aegean coast, pairing fast foil racing with the reliable summer winds around the Alacati and Cesme kite area.",
+    "description": "Cesme hosts a Formula Kite Grand Prix on Turkey's Aegean coast, pairing fast foil racing with the reliable summer winds around the Alacati and Cesme kite area.",
     "startDate": "2026-08-17T10:00:00.000Z",
     "endDate": "2026-08-24T18:00:00.000Z",
     "country": "Turkey",
@@ -258,7 +849,7 @@
   },
   {
     "title": "Formula Kite Youth Worlds Cesme 2026",
-    "description": "The Formula Kite Youth Worlds run alongside the Cesme race window, giving junior kitefoil racers a world-level championship week on Turkey?s Aegean coast.",
+    "description": "The Formula Kite Youth Worlds run alongside the Cesme race window, giving junior kitefoil racers a world-level championship week on Turkey's Aegean coast.",
     "startDate": "2026-08-17T10:00:00.000Z",
     "endDate": "2026-08-24T18:00:00.000Z",
     "country": "Turkey",
@@ -279,7 +870,7 @@
   },
   {
     "title": "GKA Youth Freestyle World Championship St. Peter-Ording 2026",
-    "description": "The GKA youth freestyle championship runs inside California Kitesurf Masters, with the huge Kite Village testival on Ordinger Strand and brand testing from Duotone, North, F-One, and Naish noted in public event listings.",
+    "description": "The GKA youth freestyle championship runs inside California Kitesurf Masters, with the Kite Village testival on Ordinger Strand and brand testing from Duotone, North, F-One, Naish, Core, and Flysurfer noted across public event and demo-tour listings.",
     "startDate": "2026-08-19T10:00:00.000Z",
     "endDate": "2026-08-23T18:00:00.000Z",
     "country": "Germany",
@@ -295,7 +886,9 @@
       "Duotone",
       "North",
       "F-One",
-      "Naish"
+      "Naish",
+      "Core",
+      "Flysurfer"
     ],
     "sourceUrl": "https://www.kitesurf-masters.de/kitelifevillage",
     "sourceType": "admin_created",
@@ -325,6 +918,27 @@
     "featured": true
   },
   {
+    "title": "Romo Kite Festival 2026",
+    "description": "Romo Kite Festival is the large autumn kite-flying gathering on the Danish island beach; it is tracked separately from the May kitesurf testival and has no specific surf demo brands listed.",
+    "startDate": "2026-09-04T10:00:00.000Z",
+    "endDate": "2026-09-06T18:00:00.000Z",
+    "country": "Denmark",
+    "region": "South Denmark",
+    "city": "Romo",
+    "spotName": "Romo beach",
+    "latitude": 55.145,
+    "longitude": 8.514,
+    "eventTypeSlug": "festival",
+    "organizerName": "Romo Kite Festival",
+    "organizerWebsite": "https://romo-tonder.dk/en/dragefestival/",
+    "brandNames": [
+      "Other"
+    ],
+    "sourceUrl": "https://romo-tonder.dk/en/dragefestival/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
     "title": "Formula Kite Europeans Akyaka 2026",
     "description": "Akyaka hosts the Formula Kite European Championships on Turkey’s windy Aegean coast, with high-speed foil racing in one of the region’s best-known kite spots.",
     "startDate": "2026-09-05T10:00:00.000Z",
@@ -342,6 +956,27 @@
       "Other"
     ],
     "sourceUrl": "https://letskite.ch/en/agenda",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "STADT UND LAND Giant Kite Festival Berlin 2026",
+    "description": "Berlin's Giant Kite Festival is a city kite-flying spectacle at Tempelhofer Feld; no kitesurf demo brands are listed, so it is categorized as a community kite festival.",
+    "startDate": "2026-09-19T10:00:00.000Z",
+    "endDate": "2026-09-19T18:00:00.000Z",
+    "country": "Germany",
+    "region": "Berlin",
+    "city": "Berlin",
+    "spotName": "Tempelhofer Feld",
+    "latitude": 52.473,
+    "longitude": 13.403,
+    "eventTypeSlug": "festival",
+    "organizerName": "STADT UND LAND",
+    "organizerWebsite": "https://www.visitberlin.de/en/event/",
+    "brandNames": [
+      "Other"
+    ],
+    "sourceUrl": "https://www.visitberlin.de/en/event/",
     "sourceType": "admin_created",
     "reviewStatus": "approved"
   },
@@ -405,6 +1040,48 @@
       "Other"
     ],
     "sourceUrl": "https://letskite.ch/en/agenda",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "International Kite Festival Scheveningen 2026",
+    "description": "Scheveningen's international kite festival is a Dutch beach kite-flying event with no specific kitesurf demo brands listed.",
+    "startDate": "2026-09-26T10:00:00.000Z",
+    "endDate": "2026-09-27T18:00:00.000Z",
+    "country": "Netherlands",
+    "region": "South Holland",
+    "city": "Scheveningen",
+    "spotName": "Scheveningen beach",
+    "latitude": 52.104,
+    "longitude": 4.272,
+    "eventTypeSlug": "festival",
+    "organizerName": "Scheveningen Kite Festival",
+    "organizerWebsite": "https://scheveningen.com/en/event/",
+    "brandNames": [
+      "Other"
+    ],
+    "sourceUrl": "https://scheveningen.com/en/event/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "Drachenfest Travemunde 2026",
+    "description": "Drachenfest Travemunde closes the German coastal kite-festival season with flying kites and beach activity; no specific kitesurf demo brands are listed.",
+    "startDate": "2026-10-02T10:00:00.000Z",
+    "endDate": "2026-10-04T18:00:00.000Z",
+    "country": "Germany",
+    "region": "Schleswig-Holstein",
+    "city": "Travemunde",
+    "spotName": "Travemunde beach",
+    "latitude": 53.964,
+    "longitude": 10.875,
+    "eventTypeSlug": "festival",
+    "organizerName": "Travemunde Drachenfest",
+    "organizerWebsite": "https://www.metropolis-drachen.de/en/Kite-festivals-2026/",
+    "brandNames": [
+      "Other"
+    ],
+    "sourceUrl": "https://www.metropolis-drachen.de/en/Kite-festivals-2026/",
     "sourceType": "admin_created",
     "reviewStatus": "approved"
   },

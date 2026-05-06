@@ -11,6 +11,7 @@ export const BRANDS: Brand[] = [
   { id: "naish", name: "Naish", color: "#2563eb", website: "https://www.naish.com" },
   { id: "airush", name: "Airush", color: "#7c3aed", website: "https://airush.com" },
   { id: "eleveight", name: "Eleveight", color: "#0891b2", website: "https://www.eleveightkites.com" },
+  { id: "ozone", name: "Ozone", color: "#84cc16", website: "https://ozonekites.com" },
   { id: "other", name: "Other", color: "#64748b" },
 ];
 
