@@ -25,9 +25,9 @@ export function ReviewTable({ items, dictionary }: { items: EventSubmission[]; d
               </div>
               <h3 className="text-lg font-black text-slate-950">{item.title}</h3>
               <p className="mt-1 text-sm font-semibold text-slate-600">
-                {formatDateRange(item.startDate, item.endDate)} · {item.city}, {item.country}
+                {formatDateRange(item.startDate, item.endDate)} / {item.city}, {item.country}
               </p>
-              <p className="mt-3 line-clamp-2 text-sm leading-6 text-slate-600">{item.description}</p>
+              <p className="mt-3 max-w-3xl whitespace-pre-line text-sm leading-6 text-slate-600">{item.description}</p>
               <div className="mt-3 flex flex-wrap gap-2 text-xs font-bold text-slate-600">
                 <span>{item.organizerName}</span>
                 <span>{item.eventTypeSlug}</span>
