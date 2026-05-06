@@ -28,13 +28,6 @@ export async function syncCrawlerSources() {
     }
   }
 
-  await prisma.crawlSource.updateMany({
-    where: {
-      id: { notIn: crawlerSources.map((source) => source.id) },
-    },
-    data: { isActive: false },
-  });
-
   return crawlerSources;
 }
 
