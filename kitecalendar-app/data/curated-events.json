@@ -13,7 +13,9 @@
     "eventTypeSlug": "festival",
     "organizerName": "Defi Wind",
     "organizerWebsite": "https://www.defiwind.fr/",
-    "brandNames": ["Other"],
+    "brandNames": [
+      "Other"
+    ],
     "sourceUrl": "https://letskite.ch/en/agenda",
     "sourceType": "crawled",
     "reviewStatus": "approved"
@@ -32,30 +34,12 @@
     "eventTypeSlug": "race",
     "organizerName": "Formula Kite",
     "organizerWebsite": "https://www.formulakite.org/",
-    "brandNames": ["Other"],
+    "brandNames": [
+      "Other"
+    ],
     "sourceUrl": "https://letskite.ch/en/agenda",
     "sourceType": "crawled",
     "reviewStatus": "approved"
-  },
-  {
-    "title": "GKA Freestyle Kite World Cup Mexico 2026",
-    "description": "GKA Kite World Tour freestyle stop in Nuevo Nayarit, Mexico.",
-    "startDate": "2026-05-26T10:00:00.000Z",
-    "endDate": "2026-05-30T18:00:00.000Z",
-    "country": "Mexico",
-    "region": "Nayarit",
-    "city": "Nuevo Nayarit",
-    "spotName": "Riviera Nayarit",
-    "latitude": 20.6948,
-    "longitude": -105.2945,
-    "eventTypeSlug": "competition",
-    "organizerName": "GKA Kite World Tour",
-    "organizerWebsite": "https://www.gkakiteworldtour.com/events/",
-    "brandNames": ["Other"],
-    "sourceUrl": "https://www.gkakiteworldtour.com/events/",
-    "sourceType": "crawled",
-    "reviewStatus": "approved",
-    "featured": true
   },
   {
     "title": "Dutch Water Week 2026",
@@ -71,7 +55,9 @@
     "eventTypeSlug": "race",
     "organizerName": "Dutch Water Week",
     "organizerWebsite": "https://dutchwaterweek.com/",
-    "brandNames": ["Other"],
+    "brandNames": [
+      "Other"
+    ],
     "sourceUrl": "https://letskite.ch/en/agenda",
     "sourceType": "crawled",
     "reviewStatus": "approved"
@@ -90,7 +76,9 @@
     "eventTypeSlug": "competition",
     "organizerName": "Choppy Water GmbH",
     "organizerWebsite": "https://www.kiteboardingworldcup.de/",
-    "brandNames": ["Other"],
+    "brandNames": [
+      "Other"
+    ],
     "sourceUrl": "https://www.kiteboardingworldcup.de/",
     "sourceType": "crawled",
     "reviewStatus": "approved",
@@ -110,7 +98,9 @@
     "eventTypeSlug": "community-meetup",
     "organizerName": "Foilie du Lac",
     "organizerWebsite": "https://letskite.ch/en/agenda",
-    "brandNames": ["Other"],
+    "brandNames": [
+      "Other"
+    ],
     "sourceUrl": "https://letskite.ch/en/agenda",
     "sourceType": "crawled",
     "reviewStatus": "approved"
@@ -129,7 +119,9 @@
     "eventTypeSlug": "competition",
     "organizerName": "GKA Kite World Tour",
     "organizerWebsite": "https://www.gkakiteworldtour.com/events/",
-    "brandNames": ["Other"],
+    "brandNames": [
+      "Other"
+    ],
     "sourceUrl": "https://www.gkakiteworldtour.com/events/",
     "sourceType": "crawled",
     "reviewStatus": "approved",
@@ -149,7 +141,9 @@
     "eventTypeSlug": "expo",
     "organizerName": "Salon du Foil",
     "organizerWebsite": "https://letskite.ch/en/agenda",
-    "brandNames": ["Other"],
+    "brandNames": [
+      "Other"
+    ],
     "sourceUrl": "https://letskite.ch/en/agenda",
     "sourceType": "crawled",
     "reviewStatus": "approved"
@@ -168,7 +162,9 @@
     "eventTypeSlug": "competition",
     "organizerName": "GKA Kite World Tour",
     "organizerWebsite": "https://www.gkakiteworldtour.com/events/",
-    "brandNames": ["Other"],
+    "brandNames": [
+      "Other"
+    ],
     "sourceUrl": "https://www.gkakiteworldtour.com/events/",
     "sourceType": "crawled",
     "reviewStatus": "approved"
@@ -187,45 +183,9 @@
     "eventTypeSlug": "race",
     "organizerName": "Formula Kite",
     "organizerWebsite": "https://www.formulakite.org/",
-    "brandNames": ["Other"],
-    "sourceUrl": "https://letskite.ch/en/agenda",
-    "sourceType": "crawled",
-    "reviewStatus": "approved"
-  },
-  {
-    "title": "Long Beach Kite Racing 2026",
-    "description": "Long Beach kite racing event listed in public agenda sources.",
-    "startDate": "2026-07-13T10:00:00.000Z",
-    "endDate": "2026-07-18T18:00:00.000Z",
-    "country": "United States",
-    "region": "California",
-    "city": "Long Beach",
-    "spotName": "Belmont Shore",
-    "latitude": 33.758,
-    "longitude": -118.139,
-    "eventTypeSlug": "race",
-    "organizerName": "Formula Kite",
-    "organizerWebsite": "https://letskite.ch/en/agenda",
-    "brandNames": ["Other"],
-    "sourceUrl": "https://letskite.ch/en/agenda",
-    "sourceType": "crawled",
-    "reviewStatus": "approved"
-  },
-  {
-    "title": "Pan Americans Long Beach 2026",
-    "description": "Pan American kite racing event listed in public agenda sources.",
-    "startDate": "2026-07-21T10:00:00.000Z",
-    "endDate": "2026-07-27T18:00:00.000Z",
-    "country": "United States",
-    "region": "California",
-    "city": "Long Beach",
-    "spotName": "Belmont Shore",
-    "latitude": 33.758,
-    "longitude": -118.139,
-    "eventTypeSlug": "race",
-    "organizerName": "Formula Kite",
-    "organizerWebsite": "https://letskite.ch/en/agenda",
-    "brandNames": ["Other"],
+    "brandNames": [
+      "Other"
+    ],
     "sourceUrl": "https://letskite.ch/en/agenda",
     "sourceType": "crawled",
     "reviewStatus": "approved"
@@ -244,7 +204,9 @@
     "eventTypeSlug": "race",
     "organizerName": "Formula Kite",
     "organizerWebsite": "https://www.formulakite.org/",
-    "brandNames": ["Other"],
+    "brandNames": [
+      "Other"
+    ],
     "sourceUrl": "https://letskite.ch/en/agenda",
     "sourceType": "crawled",
     "reviewStatus": "approved"
@@ -263,7 +225,9 @@
     "eventTypeSlug": "race",
     "organizerName": "Formula Kite",
     "organizerWebsite": "https://www.formulakite.org/",
-    "brandNames": ["Other"],
+    "brandNames": [
+      "Other"
+    ],
     "sourceUrl": "https://letskite.ch/en/agenda",
     "sourceType": "crawled",
     "reviewStatus": "approved"
@@ -282,7 +246,9 @@
     "eventTypeSlug": "expo",
     "organizerName": "California Kitesurf Masters",
     "organizerWebsite": "https://www.kitesurf-masters.de/",
-    "brandNames": ["Other"],
+    "brandNames": [
+      "Other"
+    ],
     "sourceUrl": "https://www.kitesurf-masters.de/",
     "sourceType": "crawled",
     "reviewStatus": "approved",
@@ -302,7 +268,9 @@
     "eventTypeSlug": "competition",
     "organizerName": "GKA Kite World Tour",
     "organizerWebsite": "https://www.gkakiteworldtour.com/events/",
-    "brandNames": ["Other"],
+    "brandNames": [
+      "Other"
+    ],
     "sourceUrl": "https://www.gkakiteworldtour.com/events/",
     "sourceType": "crawled",
     "reviewStatus": "approved",
@@ -322,7 +290,9 @@
     "eventTypeSlug": "race",
     "organizerName": "Formula Kite",
     "organizerWebsite": "https://www.formulakite.org/",
-    "brandNames": ["Other"],
+    "brandNames": [
+      "Other"
+    ],
     "sourceUrl": "https://letskite.ch/en/agenda",
     "sourceType": "crawled",
     "reviewStatus": "approved"
@@ -341,27 +311,10 @@
     "eventTypeSlug": "expo",
     "organizerName": "B2B Kite Summit",
     "organizerWebsite": "https://letskite.ch/en/agenda",
-    "brandNames": ["Other"],
+    "brandNames": [
+      "Other"
+    ],
     "sourceUrl": "https://letskite.ch/en/agenda",
-    "sourceType": "crawled",
-    "reviewStatus": "approved"
-  },
-  {
-    "title": "GKA Kite-Surf World Cup Dakhla 2026",
-    "description": "GKA Kite-Surf World Cup stop in Dakhla, Morocco.",
-    "startDate": "2026-10-04T10:00:00.000Z",
-    "endDate": "2026-10-11T18:00:00.000Z",
-    "country": "Morocco",
-    "region": "Dakhla-Oued Ed-Dahab",
-    "city": "Dakhla",
-    "spotName": "Dakhla Lagoon",
-    "latitude": 23.6848,
-    "longitude": -15.9579,
-    "eventTypeSlug": "competition",
-    "organizerName": "GKA Kite World Tour",
-    "organizerWebsite": "https://www.gkakiteworldtour.com/events/",
-    "brandNames": ["Other"],
-    "sourceUrl": "https://www.gkakiteworldtour.com/events/",
     "sourceType": "crawled",
     "reviewStatus": "approved"
   },
@@ -379,102 +332,9 @@
     "eventTypeSlug": "race",
     "organizerName": "Formula Kite",
     "organizerWebsite": "https://www.formulakite.org/",
-    "brandNames": ["Other"],
-    "sourceUrl": "https://letskite.ch/en/agenda",
-    "sourceType": "crawled",
-    "reviewStatus": "approved"
-  },
-  {
-    "title": "GKA Hydrofoil Big Air World Cup Abu Dhabi 2026",
-    "description": "GKA Hydrofoil Big Air World Cup in Abu Dhabi.",
-    "startDate": "2026-10-20T10:00:00.000Z",
-    "endDate": "2026-10-25T18:00:00.000Z",
-    "country": "United Arab Emirates",
-    "region": "Abu Dhabi",
-    "city": "Abu Dhabi",
-    "spotName": "Yas Island",
-    "latitude": 24.4958,
-    "longitude": 54.6076,
-    "eventTypeSlug": "competition",
-    "organizerName": "GKA Kite World Tour",
-    "organizerWebsite": "https://www.gkakiteworldtour.com/events/",
-    "brandNames": ["Other"],
-    "sourceUrl": "https://www.gkakiteworldtour.com/events/",
-    "sourceType": "crawled",
-    "reviewStatus": "approved"
-  },
-  {
-    "title": "GKA Freestyle Kite World Cup Ilha de Guijaro 2026",
-    "description": "GKA Freestyle Kite World Cup stop in Brazil.",
-    "startDate": "2026-10-28T10:00:00.000Z",
-    "endDate": "2026-10-31T18:00:00.000Z",
-    "country": "Brazil",
-    "region": "Ceara",
-    "city": "Ilha de Guajiru",
-    "spotName": "Ilha de Guajiru Lagoon",
-    "latitude": -3.0266,
-    "longitude": -39.646,
-    "eventTypeSlug": "competition",
-    "organizerName": "GKA Kite World Tour",
-    "organizerWebsite": "https://www.gkakiteworldtour.com/events/",
-    "brandNames": ["Other"],
-    "sourceUrl": "https://www.gkakiteworldtour.com/events/",
-    "sourceType": "crawled",
-    "reviewStatus": "approved"
-  },
-  {
-    "title": "GKA Kite-Surf World Cup Taiba 2026",
-    "description": "GKA Kite-Surf World Cup stop in Taiba, Brazil.",
-    "startDate": "2026-11-02T10:00:00.000Z",
-    "endDate": "2026-11-07T18:00:00.000Z",
-    "country": "Brazil",
-    "region": "Ceara",
-    "city": "Taiba",
-    "spotName": "Taiba Beach",
-    "latitude": -3.5004,
-    "longitude": -38.8994,
-    "eventTypeSlug": "competition",
-    "organizerName": "GKA Kite World Tour",
-    "organizerWebsite": "https://www.gkakiteworldtour.com/events/",
-    "brandNames": ["Other"],
-    "sourceUrl": "https://www.gkakiteworldtour.com/events/",
-    "sourceType": "crawled",
-    "reviewStatus": "approved"
-  },
-  {
-    "title": "GKA Kite-Surf World Cup Ibiraquera 2026",
-    "description": "GKA Kite-Surf World Cup stop in Ibiraquera, Brazil.",
-    "startDate": "2026-11-05T10:00:00.000Z",
-    "endDate": "2026-11-13T18:00:00.000Z",
-    "country": "Brazil",
-    "region": "Santa Catarina",
-    "city": "Ibiraquera",
-    "spotName": "Ibiraquera Lagoon",
-    "latitude": -28.1513,
-    "longitude": -48.654,
-    "eventTypeSlug": "competition",
-    "organizerName": "GKA Kite World Tour",
-    "organizerWebsite": "https://www.gkakiteworldtour.com/events/",
-    "brandNames": ["Other"],
-    "sourceUrl": "https://www.gkakiteworldtour.com/events/",
-    "sourceType": "crawled",
-    "reviewStatus": "approved"
-  },
-  {
-    "title": "Formula Kite Grand Prix China 2026",
-    "description": "Formula Kite Grand Prix event in China listed on public agenda sources.",
-    "startDate": "2026-11-17T10:00:00.000Z",
-    "endDate": "2026-11-23T18:00:00.000Z",
-    "country": "China",
-    "region": "Hainan",
-    "city": "Haikou",
-    "spotName": "Holiday Beach",
-    "latitude": 20.0412,
-    "longitude": 110.1983,
-    "eventTypeSlug": "race",
-    "organizerName": "Formula Kite",
-    "organizerWebsite": "https://www.formulakite.org/",
-    "brandNames": ["Other"],
+    "brandNames": [
+      "Other"
+    ],
     "sourceUrl": "https://letskite.ch/en/agenda",
     "sourceType": "crawled",
     "reviewStatus": "approved"

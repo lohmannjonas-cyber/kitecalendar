@@ -15,6 +15,7 @@
     "db:seed": "tsx prisma/seed.ts",
     "db:seed:curated": "node scripts/seed-large.mjs --generated=0",
     "db:import": "node scripts/import-events.mjs",
+    "events:europe-only": "node -r dotenv/config scripts/remove-non-europe-events.mjs",
     "sources:sync": "node scripts/sync-crawler-sources.mjs",
     "sources:reset": "node scripts/sync-crawler-sources.mjs --force",
     "crawl:demo": "tsx scripts/demo-crawl.ts"
