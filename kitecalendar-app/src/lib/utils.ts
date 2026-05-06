@@ -67,3 +67,8 @@ export function parseString(value: string | string[] | undefined) {
   const first = Array.isArray(value) ? value[0] : value;
   return first?.trim() || undefined;
 }
+
+export function parseStringArray(value: string | string[] | undefined) {
+  const values = Array.isArray(value) ? value : value ? [value] : [];
+  return values.map((item) => item.trim()).filter(Boolean);
+}

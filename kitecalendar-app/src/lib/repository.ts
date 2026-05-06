@@ -445,10 +445,10 @@ function applyEventFilters(events: KiteEvent[], filters: EventFilters) {
     const start = parseISO(event.startDate);
 
     if (filters.q && !searchable.includes(filters.q.toLowerCase())) return false;
-    if (filters.country && event.country !== filters.country) return false;
+    if (filters.country?.length && !filters.country.includes(event.country)) return false;
     if (filters.region && event.region !== filters.region) return false;
     if (filters.city && event.city !== filters.city) return false;
-    if (filters.eventType && event.eventType.slug !== filters.eventType) return false;
+    if (filters.eventType?.length && !filters.eventType.includes(event.eventType.slug)) return false;
     if (filters.brand && !event.brands.some((brand) => brand.id === filters.brand)) return false;
 
     if (filters.datePreset === "week" && (isBefore(start, weekStart) || isAfter(start, weekEnd))) return false;

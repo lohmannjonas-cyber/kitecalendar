@@ -6,7 +6,7 @@ import { EventCard } from "@/components/event-card";
 import { FiltersPanel } from "@/components/filters-panel";
 import { getI18n } from "@/i18n/server";
 import { getBrands, getEventTypes, listEvents } from "@/lib/repository";
-import { parseNumber, parseString } from "@/lib/utils";
+import { parseNumber, parseString, parseStringArray } from "@/lib/utils";
 
 export const metadata = {
   title: "Events",
@@ -23,8 +23,10 @@ function buildEventsHref(params: Record<string, string | string[] | undefined>, 
   const nextParams = new URLSearchParams();
 
   for (const [key, value] of Object.entries(params)) {
-    const stringValue = parseString(value);
-    if (stringValue) nextParams.set(key, stringValue);
+    const values = parseStringArray(value);
+    for (const stringValue of values) {
+      nextParams.append(key, stringValue);
+    }
   }
 
   for (const [key, value] of Object.entries(updates)) {
@@ -48,13 +50,13 @@ export default async function EventsPage({
   const { dictionary } = await getI18n();
   const filters = {
     q: parseString(params.q) ?? parseString(params.location),
-    country: parseString(params.country),
+    country: parseStringArray(params.country),
     region: parseString(params.region),
     city: parseString(params.city),
     datePreset: parseString(params.datePreset) as "week" | "month" | "custom" | undefined,
     start: parseString(params.start),
     end: parseString(params.end),
-    eventType: parseString(params.eventType),
+    eventType: parseStringArray(params.eventType),
     brand: parseString(params.brand),
     minWind: parseNumber(params.minWind),
     windDirection: parseString(params.windDirection),

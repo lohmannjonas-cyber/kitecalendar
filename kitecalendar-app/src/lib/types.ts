@@ -91,13 +91,13 @@ export type EventSubmission = {
 
 export type EventFilters = {
   q?: string;
-  country?: string;
+  country?: string[];
   region?: string;
   city?: string;
   datePreset?: "week" | "month" | "custom";
   start?: string;
   end?: string;
-  eventType?: string;
+  eventType?: string[];
   brand?: string;
   minWind?: number;
   windDirection?: string;

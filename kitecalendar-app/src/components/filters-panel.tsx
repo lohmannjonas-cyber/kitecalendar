@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useState, useTransition } from "react";
 import type { Dictionary } from "@/i18n/dictionaries";
 import type { Brand, EventType } from "@/lib/types";
+import { cn } from "@/lib/utils";
 
 export function FiltersPanel({
   dictionary,
@@ -25,17 +26,43 @@ export function FiltersPanel({
     searchParams.get(key),
   );
   const [open, setOpen] = useState(hasActiveFilters);
+  const selectedCountries = searchParams.getAll("country");
+  const selectedEventTypes = searchParams.getAll("eventType");
 
   function submit(formData: FormData) {
     const params = new URLSearchParams();
     for (const [key, value] of formData.entries()) {
       const stringValue = String(value);
-      if (stringValue) params.set(key, stringValue);
+      if (stringValue) params.append(key, stringValue);
     }
     if (geo) {
       params.set("latitude", String(geo.latitude));
       params.set("longitude", String(geo.longitude));
     }
+
+    startTransition(() => {
+      router.push(`/events?${params.toString()}`);
+    });
+  }
+
+  function toggleMultiValue(key: "country" | "eventType", value: string) {
+    const params = new URLSearchParams(searchParams.toString());
+    const values = params.getAll(key);
+    const nextValues = values.includes(value) ? values.filter((item) => item !== value) : [...values, value];
+
+    params.delete(key);
+    for (const nextValue of nextValues) {
+      params.append(key, nextValue);
+    }
+
+    startTransition(() => {
+      router.push(`/events?${params.toString()}`);
+    });
+  }
+
+  function clearMultiValue(key: "country" | "eventType") {
+    const params = new URLSearchParams(searchParams.toString());
+    params.delete(key);
 
     startTransition(() => {
       router.push(`/events?${params.toString()}`);
@@ -77,6 +104,13 @@ export function FiltersPanel({
             </div>
           </div>
 
+          {selectedCountries.map((country) => (
+            <input key={country} type="hidden" name="country" value={country} />
+          ))}
+          {selectedEventTypes.map((eventType) => (
+            <input key={eventType} type="hidden" name="eventType" value={eventType} />
+          ))}
+
           <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
             <label className="space-y-1">
               <span className="text-xs font-black uppercase text-slate-500">{dictionary.common.search}</span>
@@ -91,23 +125,23 @@ export function FiltersPanel({
               </div>
             </label>
 
-            <Select label={dictionary.common.country} name="country" defaultValue={searchParams.get("country") ?? ""}>
-              <option value="">{dictionary.common.all}</option>
-              {countries.map((country) => (
-                <option key={country} value={country}>
-                  {country}
-                </option>
-              ))}
-            </Select>
+            <ChipGroup
+              label={dictionary.common.country}
+              allLabel={dictionary.common.all}
+              values={countries}
+              selectedValues={selectedCountries}
+              onClear={() => clearMultiValue("country")}
+              onToggle={(value) => toggleMultiValue("country", value)}
+            />
 
-            <Select label={dictionary.common.type} name="eventType" defaultValue={searchParams.get("eventType") ?? ""}>
-              <option value="">{dictionary.common.all}</option>
-              {eventTypes.map((type) => (
-                <option key={type.slug} value={type.slug}>
-                  {type.name}
-                </option>
-              ))}
-            </Select>
+            <ChipGroup
+              label={dictionary.common.type}
+              allLabel={dictionary.common.all}
+              values={eventTypes.map((type) => ({ label: type.name, value: type.slug }))}
+              selectedValues={selectedEventTypes}
+              onClear={() => clearMultiValue("eventType")}
+              onToggle={(value) => toggleMultiValue("eventType", value)}
+            />
 
             <Select label={dictionary.common.brand} name="brand" defaultValue={searchParams.get("brand") ?? ""}>
               <option value="">{dictionary.common.all}</option>
@@ -169,6 +203,63 @@ export function FiltersPanel({
           </button>
         </form>
       ) : null}
+    </div>
+  );
+}
+
+function ChipGroup({
+  label,
+  allLabel,
+  values,
+  selectedValues,
+  onClear,
+  onToggle,
+}: {
+  label: string;
+  allLabel: string;
+  values: Array<string | { label: string; value: string }>;
+  selectedValues: string[];
+  onClear: () => void;
+  onToggle: (value: string) => void;
+}) {
+  return (
+    <div className="space-y-2 md:col-span-2">
+      <span className="text-xs font-black uppercase text-slate-500">{label}</span>
+      <div className="flex flex-wrap gap-2">
+        <button
+          type="button"
+          onClick={onClear}
+          className={cn(
+            "h-9 rounded-md border px-3 text-sm font-black transition",
+            selectedValues.length === 0
+              ? "border-sky-600 bg-sky-600 text-white"
+              : "border-sky-100 bg-white text-slate-700 hover:bg-sky-50 hover:text-sky-700",
+          )}
+        >
+          {allLabel}
+        </button>
+        {values.map((item) => {
+          const value = typeof item === "string" ? item : item.value;
+          const itemLabel = typeof item === "string" ? item : item.label;
+          const selected = selectedValues.includes(value);
+
+          return (
+            <button
+              key={value}
+              type="button"
+              onClick={() => onToggle(value)}
+              className={cn(
+                "h-9 rounded-md border px-3 text-sm font-black transition",
+                selected
+                  ? "border-sky-600 bg-sky-600 text-white"
+                  : "border-sky-100 bg-sky-50 text-sky-800 hover:border-sky-300 hover:bg-sky-100",
+              )}
+            >
+              {itemLabel}
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 }
