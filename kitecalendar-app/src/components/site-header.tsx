@@ -1,4 +1,4 @@
-import { CalendarDays, ShieldCheck, Wind } from "lucide-react";
+import { ShieldCheck, Wind } from "lucide-react";
 import Link from "next/link";
 import { LanguageToggle } from "@/components/language-toggle";
 import type { Dictionary, Locale } from "@/i18n/dictionaries";
@@ -6,7 +6,6 @@ import type { Dictionary, Locale } from "@/i18n/dictionaries";
 export function SiteHeader({ locale, dictionary }: { locale: Locale; dictionary: Dictionary }) {
   const nav = [
     { href: "/", label: dictionary.nav.home },
-    { href: "/events", label: dictionary.nav.events },
     { href: "/submit-event", label: dictionary.nav.submit },
     { href: "/about", label: dictionary.nav.about },
   ];
@@ -37,13 +36,6 @@ export function SiteHeader({ locale, dictionary }: { locale: Locale; dictionary:
         </nav>
 
         <div className="flex items-center gap-2">
-          <Link
-            href="/events"
-            className="hidden size-10 items-center justify-center rounded-md border border-sky-100 bg-white text-sky-700 shadow-sm transition hover:border-sky-200 sm:flex"
-            aria-label={dictionary.nav.events}
-          >
-            <CalendarDays className="size-5" aria-hidden="true" />
-          </Link>
           <Link
             href="/admin"
             className="hidden size-10 items-center justify-center rounded-md border border-sky-100 bg-white text-slate-600 shadow-sm transition hover:border-sky-200 hover:text-sky-700 sm:flex"
