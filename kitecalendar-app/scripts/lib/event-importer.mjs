@@ -15,6 +15,7 @@ export const brands = [
   ["airush", "Airush", "https://airush.com", "#7c3aed"],
   ["eleveight", "Eleveight", "https://www.eleveightkites.com", "#0891b2"],
   ["ozone", "Ozone", "https://ozonekites.com", "#84cc16"],
+  ["lakeunited", "LakeUnited", "https://www.lakeunited.com", "#0284c7"],
   ["other", "Other", null, "#64748b"],
 ];
 

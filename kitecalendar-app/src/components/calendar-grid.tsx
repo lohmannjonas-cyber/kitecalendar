@@ -2,6 +2,7 @@ import { addDays, format, isSameMonth, parseISO, startOfMonth, startOfWeek } fro
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import type { KiteEvent } from "@/lib/types";
+import { formatDateRange } from "@/lib/utils";
 
 export function CalendarGrid({
   events,
@@ -19,6 +20,13 @@ export function CalendarGrid({
   const days = Array.from({ length: 42 }).map((_, index) => {
     return addDays(gridStart, index);
   });
+  const monthDaysWithEvents = days
+    .filter((day) => isSameMonth(day, monthStart))
+    .map((day) => ({
+      day,
+      events: events.filter((event) => format(parseISO(event.startDate), "yyyy-MM-dd") === format(day, "yyyy-MM-dd")),
+    }))
+    .filter((day) => day.events.length > 0);
 
   return (
     <div className="overflow-hidden rounded-md border border-sky-100 bg-white shadow-sm">
@@ -49,14 +57,44 @@ export function CalendarGrid({
           </Link>
         </div>
       </div>
-      <div className="grid grid-cols-7 border-b border-sky-100 bg-slate-50 text-center text-xs font-black uppercase text-slate-500">
+      <div className="border-t border-sky-100 bg-slate-50 p-3 sm:hidden">
+        {monthDaysWithEvents.length ? (
+          <div className="space-y-3">
+            {monthDaysWithEvents.map(({ day, events: dayEvents }) => (
+              <section key={day.toISOString()} className="rounded-md border border-sky-100 bg-white p-3 shadow-sm">
+                <p className="mb-2 text-xs font-black uppercase text-slate-500">{format(day, "EEE, MMM d")}</p>
+                <div className="space-y-2">
+                  {dayEvents.map((event) => (
+                    <Link
+                      key={event.id}
+                      href={`/events/${event.slug}`}
+                      className="block rounded-md bg-sky-50 px-3 py-2 text-sm font-black leading-5 text-sky-900 hover:bg-sky-100"
+                    >
+                      <span className="block">{event.title}</span>
+                      <span className="mt-1 block text-xs font-bold text-slate-500">
+                        {formatDateRange(event.startDate, event.endDate)} · {event.city}, {event.country}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            ))}
+          </div>
+        ) : (
+          <p className="rounded-md border border-dashed border-sky-200 bg-white p-5 text-center text-sm font-bold text-slate-500">
+            No events in {format(monthStart, "MMMM yyyy")}.
+          </p>
+        )}
+      </div>
+
+      <div className="hidden grid-cols-7 border-b border-sky-100 bg-slate-50 text-center text-xs font-black uppercase text-slate-500 sm:grid">
         {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((day) => (
           <div key={day} className="px-2 py-3">
             {day}
           </div>
         ))}
       </div>
-      <div className="grid grid-cols-7">
+      <div className="hidden grid-cols-7 sm:grid">
         {days.map((day) => {
           const dayEvents = events.filter((event) => format(parseISO(event.startDate), "yyyy-MM-dd") === format(day, "yyyy-MM-dd"));
           return (

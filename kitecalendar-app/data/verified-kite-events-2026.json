@@ -1,5 +1,89 @@
 [
   {
+    "title": "LakeUnited Snowkitecamp Austria 15-18 Jan 2026",
+    "description": "LakeUnited runs this snowkite training camp in the Austrian Alps, combining guided coaching, winter kite practice, and a small-group camp format. Brand present: LakeUnited.",
+    "startDate": "2026-01-15T10:00:00.000Z",
+    "endDate": "2026-01-18T18:00:00.000Z",
+    "country": "Austria",
+    "region": "Tyrol",
+    "city": "Austria",
+    "spotName": "Austrian Alps",
+    "latitude": 47.253,
+    "longitude": 11.601,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/snowkitecamp-austria/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "LakeUnited Kitecamp Kenya 17-31 Jan 2026",
+    "description": "LakeUnited hosts this Kenya kitecamp on the Indian Ocean coast, with coaching, guiding, and a relaxed travel program for kiters who want warm-water progression. Brand present: LakeUnited.",
+    "startDate": "2026-01-17T10:00:00.000Z",
+    "endDate": "2026-01-31T18:00:00.000Z",
+    "country": "Kenya",
+    "region": "Kwale County",
+    "city": "Diani Beach",
+    "spotName": "Diani Beach",
+    "latitude": -4.279,
+    "longitude": 39.594,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/kitecamp-kenya/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "LakeUnited Snowkitecamp Austria 22-25 Jan 2026",
+    "description": "LakeUnited runs this snowkite training camp in the Austrian Alps, combining guided coaching, winter kite practice, and a small-group camp format. Brand present: LakeUnited.",
+    "startDate": "2026-01-22T10:00:00.000Z",
+    "endDate": "2026-01-25T18:00:00.000Z",
+    "country": "Austria",
+    "region": "Tyrol",
+    "city": "Austria",
+    "spotName": "Austrian Alps",
+    "latitude": 47.253,
+    "longitude": 11.601,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/snowkitecamp-austria/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "LakeUnited Kitecamp Kenya 01-15 Feb 2026",
+    "description": "LakeUnited hosts this Kenya kitecamp on the Indian Ocean coast, with coaching, guiding, and a relaxed travel program for kiters who want warm-water progression. Brand present: LakeUnited.",
+    "startDate": "2026-02-01T10:00:00.000Z",
+    "endDate": "2026-02-15T18:00:00.000Z",
+    "country": "Kenya",
+    "region": "Kwale County",
+    "city": "Diani Beach",
+    "spotName": "Diani Beach",
+    "latitude": -4.279,
+    "longitude": 39.594,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/kitecamp-kenya/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
     "title": "Comunitat Valenciana Olympic Week - Formula Kite 2026",
     "description": "Dénia hosts the Formula Kite class during Comunitat Valenciana Olympic Week, with Olympic-format kite racing from Marina El Portet and the Real Club Náutico Dénia event structure.",
     "startDate": "2026-02-19T10:00:00.000Z",
@@ -17,6 +101,153 @@
       "Other"
     ],
     "sourceUrl": "https://cadenaser.com/comunitat-valenciana/2026/02/19/denia-acoge-la-formula-kite-olimpica-en-la-comunitat-valenciana-olympic-week-2026-radio-denia/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "LakeUnited Snowkitecamp Norway 28 Feb-07 Mar 2026",
+    "description": "LakeUnited takes riders to Norway for a snowkitecamp focused on guided riding, coaching, and mountain snowkite conditions. Brand present: LakeUnited.",
+    "startDate": "2026-02-28T10:00:00.000Z",
+    "endDate": "2026-03-07T18:00:00.000Z",
+    "country": "Norway",
+    "region": "Hardangervidda",
+    "city": "Hardangervidda",
+    "spotName": "Hardangervidda",
+    "latitude": 60.05,
+    "longitude": 7.45,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/snowkitecamp-norway/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "LakeUnited Kitecamp Egypt 07-14 Mar 2026",
+    "description": "LakeUnited?s Hamata kitecamp uses the Red Sea lagoon setup for coaching, guiding, and warm-water progression across beginner to advanced levels. Brand present: LakeUnited.",
+    "startDate": "2026-03-07T10:00:00.000Z",
+    "endDate": "2026-03-14T18:00:00.000Z",
+    "country": "Egypt",
+    "region": "Red Sea",
+    "city": "Hamata",
+    "spotName": "Hamata",
+    "latitude": 24.294,
+    "longitude": 35.365,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/kiteholidays-egypt-hamata",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "LakeUnited Snowkitecamp Norway 07-14 Mar 2026",
+    "description": "LakeUnited takes riders to Norway for a snowkitecamp focused on guided riding, coaching, and mountain snowkite conditions. Brand present: LakeUnited.",
+    "startDate": "2026-03-07T10:00:00.000Z",
+    "endDate": "2026-03-14T18:00:00.000Z",
+    "country": "Norway",
+    "region": "Hardangervidda",
+    "city": "Hardangervidda",
+    "spotName": "Hardangervidda",
+    "latitude": 60.05,
+    "longitude": 7.45,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/snowkitecamp-norway/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "LakeUnited Kitecamp Egypt 14-21 Mar 2026",
+    "description": "LakeUnited?s Hamata kitecamp uses the Red Sea lagoon setup for coaching, guiding, and warm-water progression across beginner to advanced levels. Brand present: LakeUnited.",
+    "startDate": "2026-03-14T10:00:00.000Z",
+    "endDate": "2026-03-21T18:00:00.000Z",
+    "country": "Egypt",
+    "region": "Red Sea",
+    "city": "Hamata",
+    "spotName": "Hamata",
+    "latitude": 24.294,
+    "longitude": 35.365,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/kiteholidays-egypt-hamata",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "LakeUnited Snowkitecamp Norway 14-21 Mar 2026",
+    "description": "LakeUnited takes riders to Norway for a snowkitecamp focused on guided riding, coaching, and mountain snowkite conditions. Brand present: LakeUnited.",
+    "startDate": "2026-03-14T10:00:00.000Z",
+    "endDate": "2026-03-21T18:00:00.000Z",
+    "country": "Norway",
+    "region": "Hardangervidda",
+    "city": "Hardangervidda",
+    "spotName": "Hardangervidda",
+    "latitude": 60.05,
+    "longitude": 7.45,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/snowkitecamp-norway/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "LakeUnited Snowkitecamp Norway 21-28 Mar 2026",
+    "description": "LakeUnited takes riders to Norway for a snowkitecamp focused on guided riding, coaching, and mountain snowkite conditions. Brand present: LakeUnited.",
+    "startDate": "2026-03-21T10:00:00.000Z",
+    "endDate": "2026-03-28T18:00:00.000Z",
+    "country": "Norway",
+    "region": "Hardangervidda",
+    "city": "Hardangervidda",
+    "spotName": "Hardangervidda",
+    "latitude": 60.05,
+    "longitude": 7.45,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/snowkitecamp-norway/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "LakeUnited Snowkite Outdoor Camp Norway 22-28 Mar 2026",
+    "description": "The LakeUnited Snowkite Outdoor Camp Norway adds a more outdoor-focused snowkite format with guiding, coaching, and winter camp character. Brand present: LakeUnited.",
+    "startDate": "2026-03-22T10:00:00.000Z",
+    "endDate": "2026-03-28T18:00:00.000Z",
+    "country": "Norway",
+    "region": "Hardangervidda",
+    "city": "Hardangervidda",
+    "spotName": "Hardangervidda",
+    "latitude": 60.05,
+    "longitude": 7.45,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/snowkite-outdoor-camp-norway/",
     "sourceType": "admin_created",
     "reviewStatus": "approved"
   },
@@ -127,6 +358,27 @@
     "reviewStatus": "approved"
   },
   {
+    "title": "LakeUnited Kitecamp Tunisia 02-09 May 2026",
+    "description": "LakeUnited?s Djerba-Zarzis kitecamp is built around lagoon riding, coaching, and a relaxed travel program in Tunisia. Brand present: LakeUnited.",
+    "startDate": "2026-05-02T10:00:00.000Z",
+    "endDate": "2026-05-09T18:00:00.000Z",
+    "country": "Tunisia",
+    "region": "Medenine",
+    "city": "Djerba-Zarzis",
+    "spotName": "Djerba-Zarzis Lagoon",
+    "latitude": 33.74,
+    "longitude": 10.83,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/kitecamp-tunisia-djerba",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
     "title": "Defi Kite Gruissan 2026",
     "description": "Defi Kite is the kiteboarding part of the Gruissan Defi wind-sports festival, mixing long-distance racing, strong Tramontana conditions, and a broad amateur-to-pro fleet on the French Mediterranean coast.",
     "startDate": "2026-05-08T10:00:00.000Z",
@@ -192,6 +444,27 @@
     "featured": true
   },
   {
+    "title": "LakeUnited Kitecamp Tunisia 09-16 May 2026",
+    "description": "LakeUnited?s Djerba-Zarzis kitecamp is built around lagoon riding, coaching, and a relaxed travel program in Tunisia. Brand present: LakeUnited.",
+    "startDate": "2026-05-09T10:00:00.000Z",
+    "endDate": "2026-05-16T18:00:00.000Z",
+    "country": "Tunisia",
+    "region": "Medenine",
+    "city": "Djerba-Zarzis",
+    "spotName": "Djerba-Zarzis Lagoon",
+    "latitude": 33.74,
+    "longitude": 10.83,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/kitecamp-tunisia-djerba",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
     "title": "Romo Kite Testival Weekend 2026",
     "description": "Romo combines the Kite Tiki Testival, Surfpirates Kite & Wing Testival, Flysurfer Demo Tour, and Ozone demo presence into one packed North Sea test weekend, with Flysurfer and Ozone gear available to try alongside shop-led demo activity.",
     "startDate": "2026-05-14T10:00:00.000Z",
@@ -232,6 +505,27 @@
       "Flysurfer"
     ],
     "sourceUrl": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "LakeUnited Kitecamp Tunisia 16-23 May 2026",
+    "description": "LakeUnited?s Djerba-Zarzis kitecamp is built around lagoon riding, coaching, and a relaxed travel program in Tunisia. Brand present: LakeUnited.",
+    "startDate": "2026-05-16T10:00:00.000Z",
+    "endDate": "2026-05-23T18:00:00.000Z",
+    "country": "Tunisia",
+    "region": "Medenine",
+    "city": "Djerba-Zarzis",
+    "spotName": "Djerba-Zarzis Lagoon",
+    "latitude": 33.74,
+    "longitude": 10.83,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/kitecamp-tunisia-djerba",
     "sourceType": "admin_created",
     "reviewStatus": "approved"
   },
@@ -296,6 +590,27 @@
       "Flysurfer"
     ],
     "sourceUrl": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "LakeUnited Kitecamp Tunisia 23-30 May 2026",
+    "description": "LakeUnited?s Djerba-Zarzis kitecamp is built around lagoon riding, coaching, and a relaxed travel program in Tunisia. Brand present: LakeUnited.",
+    "startDate": "2026-05-23T10:00:00.000Z",
+    "endDate": "2026-05-30T18:00:00.000Z",
+    "country": "Tunisia",
+    "region": "Medenine",
+    "city": "Djerba-Zarzis",
+    "spotName": "Djerba-Zarzis Lagoon",
+    "latitude": 33.74,
+    "longitude": 10.83,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/kitecamp-tunisia-djerba",
     "sourceType": "admin_created",
     "reviewStatus": "approved"
   },
@@ -406,6 +721,27 @@
     "reviewStatus": "approved"
   },
   {
+    "title": "LakeUnited Kitecamp Sicily 06-13 Jun 2026",
+    "description": "LakeUnited?s Sicily kitecamp at Lo Stagnone focuses on flat-water coaching, progression sessions, and easygoing camp life at one of Europe?s best-known kite lagoons. Brand present: LakeUnited.",
+    "startDate": "2026-06-06T10:00:00.000Z",
+    "endDate": "2026-06-13T18:00:00.000Z",
+    "country": "Italy",
+    "region": "Sicily",
+    "city": "Lo Stagnone",
+    "spotName": "Lo Stagnone",
+    "latitude": 37.867,
+    "longitude": 12.467,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/kitecamp-sizilien-kitereise-lo-stagnone/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
     "title": "Nordic Kite Fest 2026",
     "description": "Nordic Kite Fest in Parnu is a lifestyle and kite festival on Estonia's Baltic coast; no specific kitesurf demo brands are listed, so it is tracked as a community festival.",
     "startDate": "2026-06-12T10:00:00.000Z",
@@ -444,6 +780,27 @@
       "Flysurfer"
     ],
     "sourceUrl": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "LakeUnited Kitecamp Sicily 13-20 Jun 2026",
+    "description": "LakeUnited?s Sicily kitecamp at Lo Stagnone focuses on flat-water coaching, progression sessions, and easygoing camp life at one of Europe?s best-known kite lagoons. Brand present: LakeUnited.",
+    "startDate": "2026-06-13T10:00:00.000Z",
+    "endDate": "2026-06-20T18:00:00.000Z",
+    "country": "Italy",
+    "region": "Sicily",
+    "city": "Lo Stagnone",
+    "spotName": "Lo Stagnone",
+    "latitude": 37.867,
+    "longitude": 12.467,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/kitecamp-sizilien-kitereise-lo-stagnone/",
     "sourceType": "admin_created",
     "reviewStatus": "approved"
   },
@@ -806,6 +1163,48 @@
     "reviewStatus": "approved"
   },
   {
+    "title": "LakeUnited 4x4 Off-road Kitecamp Oman 22-31 Jul 2026",
+    "description": "LakeUnited?s 4x4 Off-road Kitecamp Oman combines mobile kite exploration, coaching, and adventure travel along Oman?s windy coast. Brand present: LakeUnited.",
+    "startDate": "2026-07-22T10:00:00.000Z",
+    "endDate": "2026-07-31T18:00:00.000Z",
+    "country": "Oman",
+    "region": "Dhofar",
+    "city": "Masirah / Oman coast",
+    "spotName": "Oman coast",
+    "latitude": 20.45,
+    "longitude": 58.8,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/4x4-off-road-kite-camp-oman/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "LakeUnited 4x4 Off-road Kitecamp Oman 24 Jul-02 Aug 2026",
+    "description": "LakeUnited?s 4x4 Off-road Kitecamp Oman combines mobile kite exploration, coaching, and adventure travel along Oman?s windy coast. Brand present: LakeUnited.",
+    "startDate": "2026-07-24T10:00:00.000Z",
+    "endDate": "2026-08-02T18:00:00.000Z",
+    "country": "Oman",
+    "region": "Dhofar",
+    "city": "Masirah / Oman coast",
+    "spotName": "Oman coast",
+    "latitude": 20.45,
+    "longitude": 58.8,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/4x4-off-road-kite-camp-oman/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
     "title": "Heiligenhafen Flysurfer Demo Tour 2026",
     "description": "Heiligenhafen adds an August Flysurfer demo stop on the Baltic coast, with Flysurfer gear testing during the late-summer German demo season.",
     "startDate": "2026-08-07T10:00:00.000Z",
@@ -823,6 +1222,27 @@
       "Flysurfer"
     ],
     "sourceUrl": "https://flysurfer.com/demo-tour/demo-tour-europe/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "LakeUnited Kitecamp Denmark 15-22 Aug 2026",
+    "description": "LakeUnited?s Denmark kitecamp around Hvide Sande and Ringkobing Fjord combines coaching, guiding, shallow-water riding, and a hygge-style camp base. Brand present: LakeUnited.",
+    "startDate": "2026-08-15T10:00:00.000Z",
+    "endDate": "2026-08-22T18:00:00.000Z",
+    "country": "Denmark",
+    "region": "Central Denmark",
+    "city": "Hvide Sande",
+    "spotName": "Ringkobing Fjord",
+    "latitude": 56.005,
+    "longitude": 8.126,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/kitecamp-denmark-hvide-sande/",
     "sourceType": "admin_created",
     "reviewStatus": "approved"
   },
@@ -896,6 +1316,27 @@
     "featured": true
   },
   {
+    "title": "LakeUnited Kitecamp Denmark 22-29 Aug 2026",
+    "description": "LakeUnited?s Denmark kitecamp around Hvide Sande and Ringkobing Fjord combines coaching, guiding, shallow-water riding, and a hygge-style camp base. Brand present: LakeUnited.",
+    "startDate": "2026-08-22T10:00:00.000Z",
+    "endDate": "2026-08-29T18:00:00.000Z",
+    "country": "Denmark",
+    "region": "Central Denmark",
+    "city": "Hvide Sande",
+    "spotName": "Ringkobing Fjord",
+    "latitude": 56.005,
+    "longitude": 8.126,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/kitecamp-denmark-hvide-sande/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
     "title": "GKA Kite World Cup Sylt 2026",
     "description": "Sylt brings the GKA tour back to Westerland for Kite-Surf and Hydrofoil Big Air, mixing North Sea waves, beach crowds, and one of Germany’s most established kite event atmospheres.",
     "startDate": "2026-08-25T10:00:00.000Z",
@@ -916,6 +1357,27 @@
     "sourceType": "admin_created",
     "reviewStatus": "approved",
     "featured": true
+  },
+  {
+    "title": "LakeUnited Kitecamp Denmark 29 Aug-05 Sep 2026",
+    "description": "LakeUnited?s Denmark kitecamp around Hvide Sande and Ringkobing Fjord combines coaching, guiding, shallow-water riding, and a hygge-style camp base. Brand present: LakeUnited.",
+    "startDate": "2026-08-29T10:00:00.000Z",
+    "endDate": "2026-09-05T18:00:00.000Z",
+    "country": "Denmark",
+    "region": "Central Denmark",
+    "city": "Hvide Sande",
+    "spotName": "Ringkobing Fjord",
+    "latitude": 56.005,
+    "longitude": 8.126,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/kitecamp-denmark-hvide-sande/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
   },
   {
     "title": "Romo Kite Festival 2026",
@@ -956,6 +1418,69 @@
       "Other"
     ],
     "sourceUrl": "https://letskite.ch/en/agenda",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "LakeUnited Kitecamp Denmark 05-12 Sep 2026",
+    "description": "LakeUnited?s Denmark kitecamp around Hvide Sande and Ringkobing Fjord combines coaching, guiding, shallow-water riding, and a hygge-style camp base. Brand present: LakeUnited.",
+    "startDate": "2026-09-05T10:00:00.000Z",
+    "endDate": "2026-09-12T18:00:00.000Z",
+    "country": "Denmark",
+    "region": "Central Denmark",
+    "city": "Hvide Sande",
+    "spotName": "Ringkobing Fjord",
+    "latitude": 56.005,
+    "longitude": 8.126,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/kitecamp-denmark-hvide-sande/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "LakeUnited Kitecamp Denmark 12-19 Sep 2026",
+    "description": "LakeUnited?s Denmark kitecamp around Hvide Sande and Ringkobing Fjord combines coaching, guiding, shallow-water riding, and a hygge-style camp base. Brand present: LakeUnited.",
+    "startDate": "2026-09-12T10:00:00.000Z",
+    "endDate": "2026-09-19T18:00:00.000Z",
+    "country": "Denmark",
+    "region": "Central Denmark",
+    "city": "Hvide Sande",
+    "spotName": "Ringkobing Fjord",
+    "latitude": 56.005,
+    "longitude": 8.126,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/kitecamp-denmark-hvide-sande/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "LakeUnited Kitecamp Denmark 19-26 Sep 2026",
+    "description": "LakeUnited?s Denmark kitecamp around Hvide Sande and Ringkobing Fjord combines coaching, guiding, shallow-water riding, and a hygge-style camp base. Brand present: LakeUnited.",
+    "startDate": "2026-09-19T10:00:00.000Z",
+    "endDate": "2026-09-26T18:00:00.000Z",
+    "country": "Denmark",
+    "region": "Central Denmark",
+    "city": "Hvide Sande",
+    "spotName": "Ringkobing Fjord",
+    "latitude": 56.005,
+    "longitude": 8.126,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/kitecamp-denmark-hvide-sande/",
     "sourceType": "admin_created",
     "reviewStatus": "approved"
   },
@@ -1103,6 +1628,132 @@
       "Other"
     ],
     "sourceUrl": "https://letskite.ch/en/agenda",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "LakeUnited Kitecamp Sicily 10-17 Oct 2026",
+    "description": "LakeUnited?s Sicily kitecamp at Lo Stagnone focuses on flat-water coaching, progression sessions, and easygoing camp life at one of Europe?s best-known kite lagoons. Brand present: LakeUnited.",
+    "startDate": "2026-10-10T10:00:00.000Z",
+    "endDate": "2026-10-17T18:00:00.000Z",
+    "country": "Italy",
+    "region": "Sicily",
+    "city": "Lo Stagnone",
+    "spotName": "Lo Stagnone",
+    "latitude": 37.867,
+    "longitude": 12.467,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/kitecamp-sizilien-kitereise-lo-stagnone/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "LakeUnited Kitecamp Sicily 17-24 Oct 2026",
+    "description": "LakeUnited?s Sicily kitecamp at Lo Stagnone focuses on flat-water coaching, progression sessions, and easygoing camp life at one of Europe?s best-known kite lagoons. Brand present: LakeUnited.",
+    "startDate": "2026-10-17T10:00:00.000Z",
+    "endDate": "2026-10-24T18:00:00.000Z",
+    "country": "Italy",
+    "region": "Sicily",
+    "city": "Lo Stagnone",
+    "spotName": "Lo Stagnone",
+    "latitude": 37.867,
+    "longitude": 12.467,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/kitecamp-sizilien-kitereise-lo-stagnone/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "LakeUnited Kitecamp Brazil 31 Oct-11 Nov 2026",
+    "description": "LakeUnited?s Brazil kitecamp explores the Ceara coast with coaching, guiding, and downwind-style kite travel in one of the world?s classic trade-wind regions. Brand present: LakeUnited.",
+    "startDate": "2026-10-31T10:00:00.000Z",
+    "endDate": "2026-11-11T18:00:00.000Z",
+    "country": "Brazil",
+    "region": "Ceara",
+    "city": "Cumbuco / Ceara coast",
+    "spotName": "Ceara coast",
+    "latitude": -3.627,
+    "longitude": -38.724,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/kite-camp-brazil/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "LakeUnited Kitecamp Egypt 07-14 Nov 2026",
+    "description": "LakeUnited?s Hamata kitecamp uses the Red Sea lagoon setup for coaching, guiding, and warm-water progression across beginner to advanced levels. Brand present: LakeUnited.",
+    "startDate": "2026-11-07T10:00:00.000Z",
+    "endDate": "2026-11-14T18:00:00.000Z",
+    "country": "Egypt",
+    "region": "Red Sea",
+    "city": "Hamata",
+    "spotName": "Hamata",
+    "latitude": 24.294,
+    "longitude": 35.365,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/kiteholidays-egypt-hamata",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "LakeUnited Kitecamp Brazil 11-22 Nov 2026",
+    "description": "LakeUnited?s Brazil kitecamp explores the Ceara coast with coaching, guiding, and downwind-style kite travel in one of the world?s classic trade-wind regions. Brand present: LakeUnited.",
+    "startDate": "2026-11-11T10:00:00.000Z",
+    "endDate": "2026-11-22T18:00:00.000Z",
+    "country": "Brazil",
+    "region": "Ceara",
+    "city": "Cumbuco / Ceara coast",
+    "spotName": "Ceara coast",
+    "latitude": -3.627,
+    "longitude": -38.724,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/kite-camp-brazil/",
+    "sourceType": "admin_created",
+    "reviewStatus": "approved"
+  },
+  {
+    "title": "LakeUnited Kitecamp Egypt 14-21 Nov 2026",
+    "description": "LakeUnited?s Hamata kitecamp uses the Red Sea lagoon setup for coaching, guiding, and warm-water progression across beginner to advanced levels. Brand present: LakeUnited.",
+    "startDate": "2026-11-14T10:00:00.000Z",
+    "endDate": "2026-11-21T18:00:00.000Z",
+    "country": "Egypt",
+    "region": "Red Sea",
+    "city": "Hamata",
+    "spotName": "Hamata",
+    "latitude": 24.294,
+    "longitude": 35.365,
+    "eventTypeSlug": "training-camp",
+    "organizerName": "LakeUnited",
+    "organizerWebsite": "https://www.lakeunited.com/en/kite-holidays",
+    "brandNames": [
+      "LakeUnited"
+    ],
+    "sourceUrl": "https://www.lakeunited.com/en/portfolio/kiteholidays-egypt-hamata",
     "sourceType": "admin_created",
     "reviewStatus": "approved"
   }
