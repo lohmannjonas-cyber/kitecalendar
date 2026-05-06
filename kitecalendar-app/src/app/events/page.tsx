@@ -75,10 +75,6 @@ export default async function EventsPage({
     view: "calendar",
     month: format(addMonths(calendarMonth, 1), "yyyy-MM"),
   });
-  const todayMonthHref = buildEventsHref(params, {
-    view: "calendar",
-    month: format(new Date(), "yyyy-MM"),
-  });
   const listHref = buildEventsHref(params, { view: "list", month: undefined });
   const calendarHref = buildEventsHref(params, {
     view: "calendar",
@@ -123,7 +119,6 @@ export default async function EventsPage({
             month={calendarMonth}
             nextHref={nextMonthHref}
             previousHref={previousMonthHref}
-            todayHref={todayMonthHref}
           />
         ) : (
           <div className="grid gap-4 md:grid-cols-2">

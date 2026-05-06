@@ -1,4 +1,5 @@
 import { addDays, format, isSameMonth, parseISO, startOfMonth, startOfWeek } from "date-fns";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import type { KiteEvent } from "@/lib/types";
 
@@ -7,13 +8,11 @@ export function CalendarGrid({
   month,
   nextHref,
   previousHref,
-  todayHref,
 }: {
   events: KiteEvent[];
   month: Date;
   nextHref: string;
   previousHref: string;
-  todayHref: string;
 }) {
   const monthStart = startOfMonth(month);
   const gridStart = startOfWeek(monthStart, { weekStartsOn: 1 });
@@ -28,15 +27,25 @@ export function CalendarGrid({
           <p className="text-xs font-black uppercase text-sky-700">Showing</p>
           <h2 className="text-2xl font-black text-slate-950">{format(monthStart, "MMMM yyyy")}</h2>
         </div>
-        <div className="grid grid-cols-3 overflow-hidden rounded-md border border-sky-100 text-sm font-black text-slate-700">
-          <Link href={previousHref} className="px-3 py-2 text-center hover:bg-sky-50 hover:text-sky-700">
-            Prev
+        <div className="grid grid-cols-[44px_minmax(150px,1fr)_44px] overflow-hidden rounded-md border border-sky-100 text-sm font-black text-slate-700">
+          <Link
+            href={previousHref}
+            aria-label="Previous month"
+            title="Previous month"
+            className="flex h-11 items-center justify-center hover:bg-sky-50 hover:text-sky-700"
+          >
+            <ChevronLeft className="h-5 w-5" aria-hidden="true" />
           </Link>
-          <Link href={todayHref} className="border-x border-sky-100 px-3 py-2 text-center hover:bg-sky-50 hover:text-sky-700">
-            Today
-          </Link>
-          <Link href={nextHref} className="px-3 py-2 text-center hover:bg-sky-50 hover:text-sky-700">
-            Next
+          <div className="flex h-11 items-center justify-center border-x border-sky-100 px-4 text-center text-slate-950">
+            {format(monthStart, "MMMM yyyy")}
+          </div>
+          <Link
+            href={nextHref}
+            aria-label="Next month"
+            title="Next month"
+            className="flex h-11 items-center justify-center hover:bg-sky-50 hover:text-sky-700"
+          >
+            <ChevronRight className="h-5 w-5" aria-hidden="true" />
           </Link>
         </div>
       </div>
