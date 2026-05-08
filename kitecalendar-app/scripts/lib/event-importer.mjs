@@ -21,7 +21,7 @@ export const brands = [
 
 export const eventTypes = [
   ["competition", "competition", "Competition", "#0284c7"],
-  ["demo-day", "demo-day", "Demo day", "#0d9488"],
+  ["demo-day", "demo-day", "Brand Demo", "#111827"],
   ["festival", "festival", "Festival", "#f97316"],
   ["training-camp", "training-camp", "Training camp", "#16a34a"],
   ["race", "race", "Race", "#dc2626"],

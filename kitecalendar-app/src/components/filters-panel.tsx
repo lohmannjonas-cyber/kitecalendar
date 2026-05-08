@@ -4,17 +4,15 @@ import { LocateFixed, Search, SlidersHorizontal, X } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState, useTransition } from "react";
 import type { Dictionary } from "@/i18n/dictionaries";
-import type { Brand, EventType } from "@/lib/types";
+import type { Brand } from "@/lib/types";
 
 export function FiltersPanel({
   dictionary,
   brands,
-  eventTypes,
   basePath = "/events",
 }: {
   dictionary: Dictionary;
   brands: Brand[];
-  eventTypes: EventType[];
   basePath?: string;
 }) {
   const router = useRouter();
@@ -26,6 +24,7 @@ export function FiltersPanel({
   );
   const [open, setOpen] = useState(hasActiveFilters);
   const selectedCountries = searchParams.getAll("country");
+  const selectedEventTypes = searchParams.getAll("eventType");
 
   function submit(formData: FormData) {
     const params = new URLSearchParams();
@@ -81,6 +80,9 @@ export function FiltersPanel({
           {selectedCountries.map((country) => (
             <input key={country} type="hidden" name="country" value={country} />
           ))}
+          {selectedEventTypes.map((eventType) => (
+            <input key={eventType} type="hidden" name="eventType" value={eventType} />
+          ))}
 
           <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
             <label className="space-y-1">
@@ -95,15 +97,6 @@ export function FiltersPanel({
                 />
               </div>
             </label>
-
-            <Select label={dictionary.common.type} name="eventType" defaultValue={searchParams.get("eventType") ?? ""}>
-              <option value="">{dictionary.common.all}</option>
-              {eventTypes.map((type) => (
-                <option key={type.slug} value={type.slug}>
-                  {type.name}
-                </option>
-              ))}
-            </Select>
 
             <Select label={dictionary.common.brand} name="brand" defaultValue={searchParams.get("brand") ?? ""}>
               <option value="">{dictionary.common.all}</option>

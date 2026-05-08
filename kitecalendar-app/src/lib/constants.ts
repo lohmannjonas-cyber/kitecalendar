@@ -18,7 +18,7 @@ export const BRANDS: Brand[] = [
 
 export const EVENT_TYPES: EventType[] = [
   { id: "competition", slug: "competition", name: "Competition", color: "#0284c7" },
-  { id: "demo-day", slug: "demo-day", name: "Demo day", color: "#0d9488" },
+  { id: "demo-day", slug: "demo-day", name: "Brand Demo", color: "#111827" },
   { id: "festival", slug: "festival", name: "Festival", color: "#f97316" },
   { id: "training-camp", slug: "training-camp", name: "Training camp", color: "#16a34a" },
   { id: "race", slug: "race", name: "Race", color: "#dc2626" },

@@ -6,15 +6,18 @@ import type { KiteEvent } from "@/lib/types";
 import { formatDateRange } from "@/lib/utils";
 
 export function EventCard({ event, dictionary, compact = false }: { event: KiteEvent; dictionary: Dictionary; compact?: boolean }) {
-  const hasBrandDemo = event.brands.length > 0 && event.brands.some((brand) => brand.name !== "Other");
+  const hasBrandDemo = event.brands.length > 0 && event.brands.some((brand) => !["Other", "LakeUnited"].includes(brand.name));
+  const showTypeBadge = !(hasBrandDemo && event.eventType.slug === "demo-day");
 
   return (
     <article className="group rounded-md border border-sky-100 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-sky-200 hover:shadow-md">
       <div className="flex flex-col gap-4">
         <div className="flex flex-wrap items-center gap-2">
-          <span className="rounded-md px-2 py-1 text-xs font-black text-white" style={{ background: event.eventType.color }}>
-            {event.eventType.name}
-          </span>
+          {showTypeBadge ? (
+            <span className="rounded-md px-2 py-1 text-xs font-black text-white" style={{ background: event.eventType.color }}>
+              {event.eventType.name}
+            </span>
+          ) : null}
           {event.forecast?.rating === "Good" || event.forecast?.rating === "Epic" ? (
             <RatingBadge rating={event.forecast.rating} />
           ) : null}
@@ -40,7 +43,11 @@ export function EventCard({ event, dictionary, compact = false }: { event: KiteE
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="flex flex-wrap gap-2">
             {event.brands.slice(0, 4).map((brand) => (
-              <span key={brand.id} className="rounded-md bg-slate-100 px-2 py-1 text-xs font-bold text-slate-700">
+              <span
+                key={brand.id}
+                className="rounded-md px-2 py-1 text-xs font-bold text-white"
+                style={{ backgroundColor: brand.color ?? "#64748b" }}
+              >
                 {brand.name}
               </span>
             ))}

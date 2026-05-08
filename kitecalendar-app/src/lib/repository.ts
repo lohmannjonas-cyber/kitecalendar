@@ -8,6 +8,10 @@ import { getForecastForEvent } from "@/lib/weather";
 
 const WEEK_STARTS_ON = 1;
 
+function normalizeSearch(value: string) {
+  return value.toLowerCase().replace(/[\s-]+/g, "");
+}
+
 export async function listEvents(filters: EventFilters = {}) {
   const events = await getApprovedEvents();
   const enriched = await Promise.all(
@@ -442,9 +446,11 @@ function applyEventFilters(events: KiteEvent[], filters: EventFilters) {
       .filter(Boolean)
       .join(" ")
       .toLowerCase();
+    const compactSearchable = normalizeSearch(searchable);
+    const compactQuery = filters.q ? normalizeSearch(filters.q) : undefined;
     const start = parseISO(event.startDate);
 
-    if (filters.q && !searchable.includes(filters.q.toLowerCase())) return false;
+    if (filters.q && !searchable.includes(filters.q.toLowerCase()) && !compactSearchable.includes(compactQuery ?? "")) return false;
     if (filters.country?.length && !filters.country.includes(event.country)) return false;
     if (filters.region && event.region !== filters.region) return false;
     if (filters.city && event.city !== filters.city) return false;

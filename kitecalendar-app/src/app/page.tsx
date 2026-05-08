@@ -5,6 +5,7 @@ import { CalendarGrid } from "@/components/calendar-grid";
 import { CountryFilterChips } from "@/components/country-filter-chips";
 import { EventListByMonth } from "@/components/event-list-by-month";
 import { EventSearchHero } from "@/components/event-search-hero";
+import { EventTypeFilterChips } from "@/components/event-type-filter-chips";
 import { FiltersPanel } from "@/components/filters-panel";
 import { getI18n } from "@/i18n/server";
 import { getBrands, getEventTypes, listEvents } from "@/lib/repository";
@@ -65,6 +66,8 @@ export default async function Home({
   const events = await listEvents(filters);
   const allEvents = await listEvents();
   const countries = Array.from(new Set(allEvents.map((event) => event.country))).sort();
+  const usedEventTypeSlugs = new Set(allEvents.map((event) => event.eventType.slug));
+  const usedEventTypes = getEventTypes().filter((type) => usedEventTypeSlugs.has(type.slug));
   const view = parseString(params.view) ?? "list";
   const showPastEvents = parseString(params.showPast) === "1";
   const today = startOfDay(new Date());
@@ -115,12 +118,12 @@ export default async function Home({
         <FiltersPanel
           dictionary={dictionary}
           brands={getBrands()}
-          eventTypes={getEventTypes()}
           basePath="/"
         />
 
-        <div className="mt-4">
+        <div className="mt-4 space-y-4">
           <CountryFilterChips dictionary={dictionary} countries={countries} />
+          <EventTypeFilterChips dictionary={dictionary} eventTypes={usedEventTypes} />
         </div>
 
         <div className="mt-3 flex justify-end">
