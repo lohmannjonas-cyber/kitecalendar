@@ -8,6 +8,7 @@ import { EventSearchHero } from "@/components/event-search-hero";
 import { EventTypeFilterChips } from "@/components/event-type-filter-chips";
 import { FiltersPanel } from "@/components/filters-panel";
 import { getI18n } from "@/i18n/server";
+import { expandCountryFilters } from "@/lib/country-groups";
 import { getBrands, getEventTypes, listEvents } from "@/lib/repository";
 import { parseNumber, parseString, parseStringArray } from "@/lib/utils";
 
@@ -49,7 +50,7 @@ export default async function Home({
   const { dictionary } = await getI18n();
   const filters = {
     q: parseString(params.q) ?? parseString(params.location),
-    country: parseStringArray(params.country),
+    country: expandCountryFilters(parseStringArray(params.country)),
     region: parseString(params.region),
     city: parseString(params.city),
     datePreset: parseString(params.datePreset) as "week" | "month" | "custom" | undefined,

@@ -3,6 +3,7 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import { useTransition } from "react";
 import type { Dictionary } from "@/i18n/dictionaries";
+import { countryFilterOptions } from "@/lib/country-groups";
 import { cn } from "@/lib/utils";
 
 export function CountryFilterChips({
@@ -18,6 +19,7 @@ export function CountryFilterChips({
   const searchParams = useSearchParams();
   const [pending, startTransition] = useTransition();
   const selectedCountries = searchParams.getAll("country");
+  const options = countryFilterOptions(countries);
 
   function pushParams(params: URLSearchParams) {
     const query = params.toString();
@@ -69,14 +71,14 @@ export function CountryFilterChips({
         >
           {dictionary.common.all}
         </button>
-        {countries.map((country) => {
-          const selected = selectedCountries.includes(country);
+        {options.map((country) => {
+          const selected = selectedCountries.includes(country.value);
 
           return (
             <button
-              key={country}
+              key={country.value}
               type="button"
-              onClick={() => toggleCountry(country)}
+              onClick={() => toggleCountry(country.value)}
               disabled={pending}
               className={cn(
                 "h-9 rounded-md border px-3 text-sm font-black transition disabled:opacity-60",
@@ -85,7 +87,7 @@ export function CountryFilterChips({
                   : "border-sky-100 bg-sky-50 text-sky-800 hover:border-sky-300 hover:bg-sky-100",
               )}
             >
-              {country}
+              {country.label}
             </button>
           );
         })}
