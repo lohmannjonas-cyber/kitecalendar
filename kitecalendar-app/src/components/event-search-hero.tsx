@@ -6,15 +6,25 @@ export function EventSearchHero({ dictionary }: { dictionary: Dictionary }) {
   return (
     <section className="hero-image relative overflow-hidden">
       <div
-        className="mx-auto grid max-w-7xl content-end px-4 pb-8 pt-24 sm:px-6 lg:px-8"
+        className="mx-auto grid max-w-7xl content-center px-4 pb-8 pt-24 sm:px-6 lg:px-8"
         style={{ minHeight: "min(760px, calc(100svh - 80px))" }}
       >
-        <div className="sr-only">
-          <h1>{dictionary.hero.title}</h1>
-          <p>{dictionary.hero.subtitle}</p>
+        <div className="max-w-4xl text-white">
+          <div className="mb-16 leading-none sm:mb-20">
+            <p className="brand-wordmark text-5xl font-black uppercase text-white drop-shadow-lg sm:text-6xl">Kite</p>
+            <p className="brand-wordmark-small mt-1 text-sm font-black uppercase text-[#42d5c8] sm:text-base">Calendar</p>
+          </div>
+
+          <h1 className="max-w-4xl text-6xl font-black uppercase leading-[0.94] tracking-normal drop-shadow-xl sm:text-7xl lg:text-8xl">
+            <span className="block">Chase wind.</span>
+            <span className="block text-[#42d5c8]">Live free.</span>
+          </h1>
+          <p className="mt-6 max-w-2xl text-xl font-medium leading-8 text-white drop-shadow md:text-2xl">
+            Your global kiteboarding companion. Events. Spots. Conditions. All in one place.
+          </p>
         </div>
 
-        <div className="flex flex-wrap gap-3">
+        <div className="mt-8 flex flex-wrap gap-3">
           <Link
             href="#events"
             className="inline-flex h-12 items-center justify-center gap-3 rounded-md bg-[#42d5c8] px-6 text-sm font-black uppercase tracking-normal text-[#042232] shadow-lg shadow-cyan-950/20 transition hover:bg-[#67eadf]"
