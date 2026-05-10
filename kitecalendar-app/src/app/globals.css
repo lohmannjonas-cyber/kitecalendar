@@ -3,8 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
-  --ocean: #0284c7;
-  --lagoon: #0f766e;
+  --ocean: #07324a;
+  --lagoon: #42d5c8;
   --sun: #f97316;
   --foam: #f8fafc;
 }
@@ -23,16 +23,24 @@ body {
 }
 
 ::selection {
-  background: #bae6fd;
-  color: #082f49;
+  background: #42d5c8;
+  color: #031d2b;
 }
 
 .hero-image {
   background-image:
-    linear-gradient(90deg, rgba(8, 47, 73, 0.72), rgba(14, 165, 233, 0.28), rgba(255, 255, 255, 0.12)),
-    url("/kitecalendar-hero.jpg");
+    linear-gradient(90deg, rgba(2, 16, 28, 0.36), rgba(5, 36, 54, 0.08), rgba(5, 36, 54, 0.02)),
+    url("/kitecalendar-brand-hero.png");
   background-position: center;
   background-size: cover;
+}
+
+.brand-wordmark {
+  letter-spacing: 0.08em;
+}
+
+.brand-wordmark-small {
+  letter-spacing: 0.42em;
 }
 
 .glass-panel {

@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CalendarDays, MapPin } from "lucide-react";
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries";
 
@@ -6,29 +6,28 @@ export function EventSearchHero({ dictionary }: { dictionary: Dictionary }) {
   return (
     <section className="hero-image relative overflow-hidden">
       <div
-        className="mx-auto grid max-w-7xl content-end px-4 pb-10 pt-24 sm:px-6 lg:px-8"
-        style={{ minHeight: "min(540px, calc(100svh - 96px))" }}
+        className="mx-auto grid max-w-7xl content-end px-4 pb-8 pt-24 sm:px-6 lg:px-8"
+        style={{ minHeight: "min(760px, calc(100svh - 80px))" }}
       >
-        <div className="max-w-4xl text-white">
-          <p className="mb-4 inline-flex rounded-md bg-white/15 px-3 py-1 text-sm font-black backdrop-blur">
-            {dictionary.hero.eyebrow}
-          </p>
-          <h1 className="max-w-3xl text-5xl font-black tracking-normal sm:text-6xl lg:text-7xl">{dictionary.hero.title}</h1>
-          <p className="mt-5 max-w-2xl text-lg font-medium leading-8 text-sky-50">{dictionary.hero.subtitle}</p>
+        <div className="sr-only">
+          <h1>{dictionary.hero.title}</h1>
+          <p>{dictionary.hero.subtitle}</p>
         </div>
 
-        <div className="mt-8 flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-3">
           <Link
             href="#events"
-            className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-sky-600 px-4 text-sm font-black text-white shadow-sm transition hover:bg-sky-700"
+            className="inline-flex h-12 items-center justify-center gap-3 rounded-md bg-[#42d5c8] px-6 text-sm font-black uppercase tracking-normal text-[#042232] shadow-lg shadow-cyan-950/20 transition hover:bg-[#67eadf]"
           >
+            <CalendarDays className="size-5" aria-hidden="true" />
             {dictionary.hero.explore}
             <ArrowRight className="size-4" aria-hidden="true" />
           </Link>
           <Link
             href="/submit-event"
-            className="inline-flex h-11 items-center justify-center rounded-md bg-white px-4 text-sm font-black text-sky-700 shadow-sm transition hover:bg-sky-50"
+            className="inline-flex h-12 items-center justify-center gap-3 rounded-md border border-white/70 bg-white/10 px-6 text-sm font-black uppercase tracking-normal text-white shadow-lg shadow-cyan-950/20 backdrop-blur transition hover:bg-white/18"
           >
+            <MapPin className="size-5" aria-hidden="true" />
             {dictionary.hero.submit}
           </Link>
         </div>

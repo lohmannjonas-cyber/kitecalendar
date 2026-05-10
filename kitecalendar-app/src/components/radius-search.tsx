@@ -89,14 +89,14 @@ export function RadiusSearch({
     <div className="rounded-md border border-sky-100 bg-white p-4 shadow-sm">
       <div className="mb-3 flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-2">
-          <MapPin className="size-5 text-sky-700" aria-hidden="true" />
+          <MapPin className="size-5 text-teal-600" aria-hidden="true" />
           <h3 className="text-sm font-black uppercase text-slate-500">{dictionary.common.radiusSearch}</h3>
         </div>
         {activeLabel ? (
           <button
             type="button"
             onClick={clearRadius}
-            className="inline-flex items-center gap-1 text-sm font-black text-sky-700 hover:text-sky-800"
+            className="inline-flex items-center gap-1 text-sm font-black text-teal-700 hover:text-teal-800"
           >
             <X className="size-4" aria-hidden="true" />
             {dictionary.common.clearRadius}
@@ -141,7 +141,7 @@ export function RadiusSearch({
           type="button"
           onClick={searchCity}
           disabled={pending}
-          className="inline-flex h-11 items-center justify-center rounded-md bg-sky-600 px-4 text-sm font-black text-white shadow-sm transition hover:bg-sky-700 disabled:opacity-60"
+          className="inline-flex h-11 items-center justify-center rounded-md bg-[#42d5c8] px-4 text-sm font-black text-[#042232] shadow-sm transition hover:bg-[#67eadf] disabled:opacity-60"
         >
           {dictionary.common.searchRadius}
         </button>
@@ -150,7 +150,7 @@ export function RadiusSearch({
           type="button"
           onClick={useCurrentLocation}
           disabled={pending}
-          className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-sky-200 bg-sky-50 px-4 text-sm font-black text-sky-700 transition hover:bg-sky-100 disabled:opacity-60"
+          className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-cyan-200 bg-cyan-50 px-4 text-sm font-black text-teal-700 transition hover:bg-cyan-100 disabled:opacity-60"
         >
           <LocateFixed className="size-4" aria-hidden="true" />
           {dictionary.common.useLocation}

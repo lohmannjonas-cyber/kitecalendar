@@ -54,7 +54,7 @@ export function FiltersPanel({
       <button
         type="button"
         onClick={() => setOpen((current) => !current)}
-        className="inline-flex h-11 items-center gap-2 rounded-md border border-sky-200 bg-white px-4 text-sm font-black text-sky-700 shadow-sm transition hover:bg-sky-50"
+        className="inline-flex h-11 items-center gap-2 rounded-md border border-cyan-200 bg-white px-4 text-sm font-black text-teal-700 shadow-sm transition hover:bg-cyan-50"
         aria-expanded={open}
       >
         <SlidersHorizontal className="size-5" aria-hidden="true" />
@@ -65,11 +65,11 @@ export function FiltersPanel({
         <form action={submit} className="mt-4 rounded-md border border-sky-100 bg-white p-4 shadow-sm">
           <div className="mb-4 flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <SlidersHorizontal className="size-5 text-sky-700" aria-hidden="true" />
+              <SlidersHorizontal className="size-5 text-teal-600" aria-hidden="true" />
               <h2 className="text-base font-black text-slate-950">{dictionary.common.filters}</h2>
             </div>
             <div className="flex items-center gap-3">
-              <button type="button" onClick={() => router.push(basePath)} className="text-sm font-bold text-sky-700">
+              <button type="button" onClick={() => router.push(basePath)} className="text-sm font-bold text-teal-700">
                 {dictionary.common.reset}
               </button>
               <button type="button" onClick={() => setOpen(false)} className="text-slate-400 hover:text-slate-700" aria-label="Close filters">
@@ -152,7 +152,7 @@ export function FiltersPanel({
             <button
               type="button"
               onClick={useLocation}
-              className="mt-5 inline-flex h-11 items-center justify-center gap-2 rounded-md border border-sky-200 bg-sky-50 px-3 text-sm font-black text-sky-700 transition hover:bg-sky-100"
+              className="mt-5 inline-flex h-11 items-center justify-center gap-2 rounded-md border border-cyan-200 bg-cyan-50 px-3 text-sm font-black text-teal-700 transition hover:bg-cyan-100"
             >
               <LocateFixed className="size-4" aria-hidden="true" />
               {geo ? dictionary.common.locationOn : dictionary.common.useLocation}
@@ -162,7 +162,7 @@ export function FiltersPanel({
           <button
             type="submit"
             disabled={pending}
-            className="mt-4 inline-flex h-11 items-center justify-center rounded-md bg-sky-600 px-5 text-sm font-black text-white shadow-sm transition hover:bg-sky-700 disabled:opacity-60"
+            className="mt-4 inline-flex h-11 items-center justify-center rounded-md bg-[#42d5c8] px-5 text-sm font-black text-[#042232] shadow-sm transition hover:bg-[#67eadf] disabled:opacity-60"
           >
             {dictionary.common.apply}
           </button>

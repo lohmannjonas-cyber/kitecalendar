@@ -18,7 +18,7 @@ export function LanguageToggle({ locale }: { locale: Locale }) {
   }
 
   return (
-    <div className="grid grid-cols-2 overflow-hidden rounded-md border border-sky-100 bg-white p-1 text-xs font-semibold shadow-sm">
+    <div className="grid grid-cols-2 overflow-hidden rounded-md border border-white/18 bg-white/8 p-1 text-xs font-semibold shadow-sm">
       {(["en", "de"] as Locale[]).map((item) => (
         <button
           key={item}
@@ -27,7 +27,7 @@ export function LanguageToggle({ locale }: { locale: Locale }) {
           onClick={() => switchLocale(item)}
           className={cn(
             "h-8 px-3 transition",
-            locale === item ? "rounded-sm bg-sky-600 text-white" : "text-slate-600 hover:text-sky-700",
+            locale === item ? "rounded-sm bg-[#42d5c8] text-[#042232]" : "text-cyan-50/80 hover:text-white",
           )}
           aria-pressed={locale === item}
         >

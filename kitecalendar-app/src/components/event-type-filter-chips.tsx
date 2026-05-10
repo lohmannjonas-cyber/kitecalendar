@@ -51,7 +51,7 @@ export function EventTypeFilterChips({
       <div className="mb-3 flex items-center justify-between gap-3">
         <h3 className="text-sm font-black uppercase text-slate-500">{dictionary.common.type}</h3>
         {selectedTypes.length ? (
-          <button type="button" onClick={clearTypes} className="text-sm font-black text-sky-700 hover:text-sky-800">
+          <button type="button" onClick={clearTypes} className="text-sm font-black text-teal-700 hover:text-teal-800">
             {dictionary.common.reset}
           </button>
         ) : null}
@@ -64,8 +64,8 @@ export function EventTypeFilterChips({
           className={cn(
             "h-9 rounded-md border px-3 text-sm font-black transition disabled:opacity-60",
             selectedTypes.length === 0
-              ? "border-sky-600 bg-sky-600 text-white"
-              : "border-sky-100 bg-white text-slate-700 hover:bg-sky-50 hover:text-sky-700",
+              ? "border-[#42d5c8] bg-[#42d5c8] text-[#042232]"
+              : "border-cyan-100 bg-white text-slate-700 hover:bg-cyan-50 hover:text-teal-700",
           )}
         >
           {dictionary.common.all}
@@ -82,8 +82,8 @@ export function EventTypeFilterChips({
               className={cn(
                 "h-9 rounded-md border px-3 text-sm font-black transition disabled:opacity-60",
                 selected
-                  ? "border-sky-600 bg-sky-600 text-white"
-                  : "border-sky-100 bg-sky-50 text-sky-800 hover:border-sky-300 hover:bg-sky-100",
+                  ? "border-[#42d5c8] bg-[#42d5c8] text-[#042232]"
+                  : "border-cyan-100 bg-cyan-50 text-teal-800 hover:border-cyan-300 hover:bg-cyan-100",
               )}
             >
               {type.name}

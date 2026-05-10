@@ -59,7 +59,7 @@ export function SubmissionForm({
         />
       </label>
 
-      <button className="inline-flex h-12 w-fit items-center justify-center gap-2 rounded-md bg-sky-600 px-5 text-sm font-black text-white shadow-sm transition hover:bg-sky-700">
+      <button className="inline-flex h-12 w-fit items-center justify-center gap-2 rounded-md bg-[#42d5c8] px-5 text-sm font-black text-[#042232] shadow-sm transition hover:bg-[#67eadf]">
         <Send className="size-4" aria-hidden="true" />
         {dictionary.submit.send}
       </button>
