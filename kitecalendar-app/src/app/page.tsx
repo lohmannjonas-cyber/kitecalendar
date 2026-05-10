@@ -2,13 +2,12 @@ import { addMonths, format, isBefore, parse, parseISO, startOfDay, startOfMonth 
 import Link from "next/link";
 import { AlertSignup } from "@/components/alert-signup";
 import { CalendarGrid } from "@/components/calendar-grid";
-import { CountryFilterChips } from "@/components/country-filter-chips";
 import { EventListByMonth } from "@/components/event-list-by-month";
 import { EventSearchHero } from "@/components/event-search-hero";
 import { EventTypeFilterChips } from "@/components/event-type-filter-chips";
 import { FiltersPanel } from "@/components/filters-panel";
+import { RadiusSearch } from "@/components/radius-search";
 import { getI18n } from "@/i18n/server";
-import { expandCountryFilters } from "@/lib/country-groups";
 import { getBrands, getEventTypes, listEvents } from "@/lib/repository";
 import { parseNumber, parseString, parseStringArray } from "@/lib/utils";
 
@@ -50,7 +49,7 @@ export default async function Home({
   const { dictionary } = await getI18n();
   const filters = {
     q: parseString(params.q) ?? parseString(params.location),
-    country: expandCountryFilters(parseStringArray(params.country)),
+    country: parseStringArray(params.country),
     region: parseString(params.region),
     city: parseString(params.city),
     datePreset: parseString(params.datePreset) as "week" | "month" | "custom" | undefined,
@@ -119,11 +118,12 @@ export default async function Home({
         <FiltersPanel
           dictionary={dictionary}
           brands={getBrands()}
+          countries={countries}
           basePath="/"
         />
 
         <div className="mt-4 space-y-4">
-          <CountryFilterChips dictionary={dictionary} countries={countries} />
+          <RadiusSearch dictionary={dictionary} />
           <EventTypeFilterChips dictionary={dictionary} eventTypes={usedEventTypes} />
         </div>
 

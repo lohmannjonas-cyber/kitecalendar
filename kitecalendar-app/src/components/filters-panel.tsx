@@ -9,10 +9,12 @@ import type { Brand } from "@/lib/types";
 export function FiltersPanel({
   dictionary,
   brands,
+  countries,
   basePath = "/events",
 }: {
   dictionary: Dictionary;
   brands: Brand[];
+  countries: string[];
   basePath?: string;
 }) {
   const router = useRouter();
@@ -23,7 +25,6 @@ export function FiltersPanel({
     searchParams.get(key),
   );
   const [open, setOpen] = useState(hasActiveFilters);
-  const selectedCountries = searchParams.getAll("country");
   const selectedEventTypes = searchParams.getAll("eventType");
 
   function submit(formData: FormData) {
@@ -77,12 +78,12 @@ export function FiltersPanel({
             </div>
           </div>
 
-          {selectedCountries.map((country) => (
-            <input key={country} type="hidden" name="country" value={country} />
-          ))}
           {selectedEventTypes.map((eventType) => (
             <input key={eventType} type="hidden" name="eventType" value={eventType} />
           ))}
+          {searchParams.get("latitude") ? <input type="hidden" name="latitude" value={searchParams.get("latitude") ?? ""} /> : null}
+          {searchParams.get("longitude") ? <input type="hidden" name="longitude" value={searchParams.get("longitude") ?? ""} /> : null}
+          {searchParams.get("radiusLabel") ? <input type="hidden" name="radiusLabel" value={searchParams.get("radiusLabel") ?? ""} /> : null}
 
           <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
             <label className="space-y-1">
@@ -97,6 +98,15 @@ export function FiltersPanel({
                 />
               </div>
             </label>
+
+            <Select label={dictionary.common.country} name="country" defaultValue={searchParams.get("country") ?? ""}>
+              <option value="">{dictionary.common.all}</option>
+              {countries.map((country) => (
+                <option key={country} value={country}>
+                  {country}
+                </option>
+              ))}
+            </Select>
 
             <Select label={dictionary.common.brand} name="brand" defaultValue={searchParams.get("brand") ?? ""}>
               <option value="">{dictionary.common.all}</option>
