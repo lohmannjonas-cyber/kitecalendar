@@ -86,7 +86,7 @@ export function RadiusSearch({
   }
 
   return (
-    <div className="rounded-md border border-sky-100 bg-white p-4 shadow-sm">
+    <div className="rounded-xl border border-slate-100 bg-white p-4 shadow-lg shadow-slate-950/5">
       <div className="mb-3 flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-2">
           <MapPin className="size-5 text-teal-600" aria-hidden="true" />
@@ -141,7 +141,7 @@ export function RadiusSearch({
           type="button"
           onClick={searchCity}
           disabled={pending}
-          className="inline-flex h-11 items-center justify-center rounded-md bg-[#42d5c8] px-4 text-sm font-black text-[#042232] shadow-sm transition hover:bg-[#67eadf] disabled:opacity-60"
+          className="inline-flex h-11 items-center justify-center rounded-full bg-[#061b34] px-5 text-sm font-black text-white shadow-sm transition hover:bg-[#0c2a4d] disabled:opacity-60"
         >
           {dictionary.common.searchRadius}
         </button>

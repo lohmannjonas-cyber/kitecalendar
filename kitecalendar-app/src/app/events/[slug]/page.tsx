@@ -65,7 +65,7 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
   };
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-7xl px-4 pb-8 pt-28 sm:px-6 lg:px-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <div className="grid gap-6 lg:grid-cols-[1fr_380px]">
         <article className="rounded-md border border-sky-100 bg-white p-5 shadow-sm">

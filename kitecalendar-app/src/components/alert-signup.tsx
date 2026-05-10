@@ -13,13 +13,13 @@ export function AlertSignup({
   countries: string[];
 }) {
   return (
-    <form action={subscribeAlertAction} className="rounded-md border border-sky-100 bg-white p-5 shadow-sm">
+    <form action={subscribeAlertAction} className="rounded-xl border border-slate-100 bg-white p-5 shadow-lg shadow-slate-950/5">
       <div className="mb-4 flex items-start gap-3">
         <span className="flex size-10 items-center justify-center rounded-md bg-sky-50 text-sky-700">
           <BellRing className="size-5" aria-hidden="true" />
         </span>
         <div>
-          <h2 className="text-xl font-black text-slate-950">{dictionary.common.alertsTitle}</h2>
+          <h2 className="text-xl font-black text-[#061b34]">{dictionary.common.alertsTitle}</h2>
           <p className="mt-1 text-sm leading-6 text-slate-600">{dictionary.common.alertsBody}</p>
         </div>
       </div>
@@ -49,7 +49,7 @@ export function AlertSignup({
           ))}
         </select>
         <input type="hidden" name="minRating" value="Good" />
-        <button className="h-11 rounded-md bg-slate-950 px-4 text-sm font-black text-white transition hover:bg-slate-800">
+        <button className="h-11 rounded-full bg-[#061b34] px-5 text-sm font-black text-white transition hover:bg-[#0c2a4d]">
           {dictionary.common.subscribe}
         </button>
       </div>

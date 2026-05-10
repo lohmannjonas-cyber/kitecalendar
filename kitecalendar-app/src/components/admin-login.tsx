@@ -4,7 +4,7 @@ import type { Dictionary } from "@/i18n/dictionaries";
 
 export function AdminLogin({ dictionary, error }: { dictionary: Dictionary; error?: string }) {
   return (
-    <section className="mx-auto flex min-h-[620px] max-w-md items-center px-4 py-12">
+    <section className="mx-auto flex min-h-[620px] max-w-md items-center px-4 pb-12 pt-28">
       <form action={loginAction} className="w-full rounded-md border border-sky-100 bg-white p-6 shadow-sm">
         <div className="mb-6 flex items-center gap-3">
           <span className="flex size-11 items-center justify-center rounded-md bg-sky-600 text-white">

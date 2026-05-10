@@ -28,7 +28,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className="h-full antialiased">
-      <body className="flex min-h-full flex-col bg-sky-50/40 text-slate-950">
+      <body className="flex min-h-full flex-col bg-[#f7fbfd] text-slate-950">
         <SiteHeader locale={locale} dictionary={dictionary} />
         <main className="flex-1">{children}</main>
         <SiteFooter dictionary={dictionary} />

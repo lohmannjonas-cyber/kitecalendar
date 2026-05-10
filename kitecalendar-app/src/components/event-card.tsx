@@ -10,7 +10,7 @@ export function EventCard({ event, dictionary, compact = false }: { event: KiteE
   const showTypeBadge = !(hasBrandDemo && event.eventType.slug === "demo-day");
 
   return (
-    <article className="group rounded-md border border-cyan-100 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-[#42d5c8] hover:shadow-md">
+    <article className="group rounded-xl border border-slate-100 bg-white p-5 shadow-lg shadow-slate-950/5 transition hover:-translate-y-0.5 hover:border-[#58d7d0] hover:shadow-xl hover:shadow-slate-950/8">
       <div className="flex flex-col gap-4">
         <div className="flex flex-wrap items-center gap-2">
           {showTypeBadge ? (
@@ -26,7 +26,7 @@ export function EventCard({ event, dictionary, compact = false }: { event: KiteE
 
         <div>
           <Link href={`/events/${event.slug}`} className="block">
-            <h3 className="text-xl font-black tracking-normal text-slate-950 transition group-hover:text-teal-600">
+            <h3 className="text-xl font-black tracking-normal text-[#061b34] transition group-hover:text-[#139f9a]">
               {event.title}
             </h3>
           </Link>
@@ -54,7 +54,7 @@ export function EventCard({ event, dictionary, compact = false }: { event: KiteE
           </div>
           <Link
             href={`/events/${event.slug}`}
-            className="inline-flex items-center gap-2 rounded-md bg-[#42d5c8] px-3 py-2 text-sm font-black text-[#042232] shadow-sm transition hover:bg-[#67eadf]"
+            className="inline-flex items-center gap-2 rounded-full bg-[#061b34] px-4 py-2 text-sm font-black text-white shadow-sm transition hover:bg-[#0c2a4d]"
           >
             {dictionary.common.view}
             <ArrowRight className="size-4" aria-hidden="true" />

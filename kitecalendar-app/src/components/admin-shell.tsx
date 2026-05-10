@@ -14,7 +14,7 @@ export function AdminShell({ dictionary, children }: { dictionary: Dictionary; c
   ];
 
   return (
-    <div className="mx-auto grid max-w-7xl gap-6 px-4 py-8 sm:px-6 lg:grid-cols-[250px_1fr] lg:px-8">
+    <div className="mx-auto grid max-w-7xl gap-6 px-4 pb-8 pt-28 sm:px-6 lg:grid-cols-[250px_1fr] lg:px-8">
       <aside className="rounded-md border border-sky-100 bg-white p-3 shadow-sm">
         <nav className="grid gap-1">
           {links.map((item) => {

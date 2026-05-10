@@ -12,9 +12,9 @@ export const dictionaries = {
     },
     hero: {
       eyebrow: "Kitecalendar.com",
-      title: "Where are the best kite events happening next?",
+      title: "Chase the wind. Plan the ride.",
       subtitle:
-        "Discover competitions, demo days, festivals, camps, and brand activations at windy spots worldwide.",
+        "The global kiteboarding calendar with events, camps, brand demos, and wind-aware planning in one place.",
       searchPlaceholder: "Search by spot, country, event, or brand",
       locationPlaceholder: "Country or city",
       datePlaceholder: "Date",
@@ -161,9 +161,9 @@ export const dictionaries = {
     },
     hero: {
       eyebrow: "Kitecalendar.com",
-      title: "Wo finden die besten Kite-Events als Naechstes statt?",
+      title: "Folge dem Wind. Plane deinen Ride.",
       subtitle:
-        "Finde Wettbewerbe, Demo Days, Festivals, Camps und Markenaktionen an windigen Spots weltweit.",
+        "Der globale Kiteboarding-Kalender mit Events, Camps, Brand Demos und windbewusster Planung an einem Ort.",
       searchPlaceholder: "Suche nach Spot, Land, Event oder Marke",
       locationPlaceholder: "Land oder Stadt",
       datePlaceholder: "Datum",

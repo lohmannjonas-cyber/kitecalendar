@@ -54,7 +54,7 @@ export function FiltersPanel({
       <button
         type="button"
         onClick={() => setOpen((current) => !current)}
-        className="inline-flex h-11 items-center gap-2 rounded-md border border-cyan-200 bg-white px-4 text-sm font-black text-teal-700 shadow-sm transition hover:bg-cyan-50"
+          className="inline-flex h-11 items-center gap-2 rounded-full border border-slate-200 bg-white px-5 text-sm font-black text-[#061b34] shadow-sm transition hover:bg-slate-50"
         aria-expanded={open}
       >
         <SlidersHorizontal className="size-5" aria-hidden="true" />
@@ -62,7 +62,7 @@ export function FiltersPanel({
       </button>
 
       {open ? (
-        <form action={submit} className="mt-4 rounded-md border border-sky-100 bg-white p-4 shadow-sm">
+        <form action={submit} className="mt-4 rounded-xl border border-slate-100 bg-white p-4 shadow-lg shadow-slate-950/5">
           <div className="mb-4 flex items-center justify-between">
             <div className="flex items-center gap-2">
               <SlidersHorizontal className="size-5 text-teal-600" aria-hidden="true" />
@@ -162,7 +162,7 @@ export function FiltersPanel({
           <button
             type="submit"
             disabled={pending}
-            className="mt-4 inline-flex h-11 items-center justify-center rounded-md bg-[#42d5c8] px-5 text-sm font-black text-[#042232] shadow-sm transition hover:bg-[#67eadf] disabled:opacity-60"
+            className="mt-4 inline-flex h-11 items-center justify-center rounded-full bg-[#061b34] px-5 text-sm font-black text-white shadow-sm transition hover:bg-[#0c2a4d] disabled:opacity-60"
           >
             {dictionary.common.apply}
           </button>

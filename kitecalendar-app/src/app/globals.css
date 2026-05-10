@@ -3,8 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
-  --ocean: #07324a;
-  --lagoon: #42d5c8;
+  --ocean: #061b34;
+  --lagoon: #58d7d0;
   --sun: #f97316;
   --foam: #f8fafc;
 }
@@ -29,18 +29,19 @@ body {
 
 .hero-image {
   background-image:
-    linear-gradient(90deg, rgba(2, 16, 28, 0.76), rgba(5, 36, 54, 0.24), rgba(5, 36, 54, 0.02)),
-    url("/kitecalendar-clean-hero.png");
+    linear-gradient(180deg, rgba(6, 27, 52, 0.72) 0%, rgba(6, 27, 52, 0.34) 16%, rgba(6, 27, 52, 0) 28%),
+    linear-gradient(90deg, rgba(247, 251, 253, 0.92) 0%, rgba(247, 251, 253, 0.74) 30%, rgba(247, 251, 253, 0.12) 62%, rgba(247, 251, 253, 0) 100%),
+    url("/kitecalendar-soft-hero.jpeg");
   background-position: center;
   background-size: cover;
 }
 
 .brand-wordmark {
-  letter-spacing: 0.08em;
+  letter-spacing: 0.22em;
 }
 
 .brand-wordmark-small {
-  letter-spacing: 0.42em;
+  letter-spacing: 0.2em;
 }
 
 .glass-panel {

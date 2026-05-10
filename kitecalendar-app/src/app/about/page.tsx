@@ -16,7 +16,7 @@ export default async function AboutPage() {
   ];
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-6xl px-4 pb-12 pt-28 sm:px-6 lg:px-8">
       <div className="max-w-3xl">
         <p className="text-sm font-black uppercase text-sky-700">Kitecalendar.com</p>
         <h1 className="mt-2 text-4xl font-black tracking-normal text-slate-950 sm:text-5xl">{dictionary.about.title}</h1>

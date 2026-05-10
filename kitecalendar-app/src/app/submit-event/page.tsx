@@ -16,7 +16,7 @@ export default async function SubmitEventPage({
   const { dictionary } = await getI18n();
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-5xl px-4 pb-8 pt-28 sm:px-6 lg:px-8">
       <div className="mb-6 max-w-3xl">
         <p className="text-sm font-black uppercase text-sky-700">Kitecalendar.com</p>
         <h1 className="text-4xl font-black tracking-normal text-slate-950">{dictionary.submit.title}</h1>
