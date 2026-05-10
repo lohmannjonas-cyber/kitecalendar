@@ -7,14 +7,9 @@ export function EventSearchHero({ dictionary }: { dictionary: Dictionary }) {
     <section className="hero-image relative overflow-hidden">
       <div
         className="mx-auto grid max-w-7xl content-center px-4 pb-8 pt-24 sm:px-6 lg:px-8"
-        style={{ minHeight: "min(760px, calc(100svh - 80px))" }}
+        style={{ minHeight: "min(620px, calc(100svh - 80px))" }}
       >
         <div className="max-w-4xl text-white">
-          <div className="mb-16 leading-none sm:mb-20">
-            <p className="brand-wordmark text-5xl font-black uppercase text-white drop-shadow-lg sm:text-6xl">Kite</p>
-            <p className="brand-wordmark-small mt-1 text-sm font-black uppercase text-[#42d5c8] sm:text-base">Calendar</p>
-          </div>
-
           <h1 className="max-w-4xl text-6xl font-black uppercase leading-[0.94] tracking-normal drop-shadow-xl sm:text-7xl lg:text-8xl">
             <span className="block">Chase wind.</span>
             <span className="block text-[#42d5c8]">Live free.</span>
