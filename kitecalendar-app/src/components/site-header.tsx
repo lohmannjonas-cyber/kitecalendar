@@ -12,11 +12,6 @@ export function SiteHeader({ locale, dictionary }: { locale: Locale; dictionary:
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const glassActive = pathname !== "/" || scrolled;
-  const nav = [
-    { href: "/", label: dictionary.nav.home },
-    { href: "/submit-event", label: dictionary.nav.submit },
-    { href: "/about", label: dictionary.nav.about },
-  ];
 
   useEffect(() => {
     function updateVisibility() {
@@ -46,28 +41,6 @@ export function SiteHeader({ locale, dictionary }: { locale: Locale; dictionary:
             CALENDAR
           </span>
         </Link>
-
-        <nav
-          className={cn(
-            "hidden items-center gap-1 rounded-full p-1 transition duration-300 md:flex",
-            glassActive ? "border border-white/40 bg-white/20 shadow-sm backdrop-blur" : "border border-transparent bg-transparent shadow-none",
-          )}
-        >
-          {nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={cn(
-                "rounded-full px-4 py-2 text-sm font-semibold transition hover:shadow-sm",
-                glassActive
-                  ? "text-[#263f54] hover:bg-white/70 hover:text-[#061b34]"
-                  : "text-white/88 hover:bg-white/18 hover:text-white",
-              )}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
 
         <div className="flex items-center gap-2">
           <Link
