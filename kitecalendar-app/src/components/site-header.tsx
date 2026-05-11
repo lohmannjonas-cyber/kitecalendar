@@ -38,16 +38,11 @@ export function SiteHeader({ locale, dictionary }: { locale: Locale; dictionary:
             : "rounded-none border border-transparent bg-transparent shadow-none",
         )}
       >
-        <Link href="/" className="flex w-[128px] flex-col leading-none">
-          <span
-            className={cn(
-              "text-[34px] font-black uppercase tracking-[0.2em] drop-shadow-[0_1px_10px_rgba(255,255,255,0.35)]",
-              glassActive ? "text-[#061b34]" : "text-white",
-            )}
-          >
+        <Link href="/" className="flex w-[104px] flex-col leading-none">
+          <span className="text-[34px] font-black uppercase tracking-normal text-white drop-shadow-[0_1px_10px_rgba(255,255,255,0.35)]">
             KITE
           </span>
-          <span className="-mt-0.5 text-[16px] font-black uppercase tracking-[0.055em] text-[#58d7d0] drop-shadow-[0_1px_10px_rgba(88,215,208,0.38)]">
+          <span className="-mt-0.5 text-[11px] font-black uppercase tracking-[0.42em] text-[#58d7d0] drop-shadow-[0_1px_10px_rgba(88,215,208,0.38)]">
             CALENDAR
           </span>
         </Link>

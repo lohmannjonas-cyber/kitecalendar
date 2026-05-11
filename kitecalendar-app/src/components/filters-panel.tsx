@@ -65,11 +65,11 @@ export function FiltersPanel({
         <form action={submit} className="mt-4 rounded-xl border border-slate-100 bg-white p-4 shadow-lg shadow-slate-950/5">
           <div className="mb-4 flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <SlidersHorizontal className="size-5 text-teal-600" aria-hidden="true" />
-              <h2 className="text-base font-black text-slate-950">{dictionary.common.filters}</h2>
+              <SlidersHorizontal className="size-5 text-[#00658e]" aria-hidden="true" />
+              <h2 className="text-base font-black text-[#032d60]">{dictionary.common.filters}</h2>
             </div>
             <div className="flex items-center gap-3">
-              <button type="button" onClick={() => router.push(basePath)} className="text-sm font-bold text-teal-700">
+              <button type="button" onClick={() => router.push(basePath)} className="text-sm font-bold text-[#00658e]">
                 {dictionary.common.reset}
               </button>
               <button type="button" onClick={() => setOpen(false)} className="text-slate-400 hover:text-slate-700" aria-label="Close filters">
@@ -131,7 +131,7 @@ export function FiltersPanel({
                 name="minWind"
                 defaultValue={searchParams.get("minWind") ?? ""}
                 placeholder="18 kt"
-                className="h-11 w-full rounded-md border border-slate-200 px-3 text-sm outline-none focus:border-sky-300"
+                className="h-11 w-full rounded-md border border-[#d8dde6] px-3 text-sm outline-none focus:border-[#84cfff]"
               />
             </label>
 
@@ -140,7 +140,7 @@ export function FiltersPanel({
               <select
                 name="distanceKm"
                 defaultValue={searchParams.get("distanceKm") ?? ""}
-                className="h-11 w-full rounded-md border border-slate-200 bg-white px-3 text-sm outline-none focus:border-sky-300"
+                className="h-11 w-full rounded-md border border-[#d8dde6] bg-white px-3 text-sm outline-none focus:border-[#84cfff]"
               >
                 <option value="">{dictionary.common.all}</option>
                 <option value="100">100 km</option>
@@ -152,7 +152,7 @@ export function FiltersPanel({
             <button
               type="button"
               onClick={useLocation}
-              className="mt-5 inline-flex h-11 items-center justify-center gap-2 rounded-md border border-cyan-200 bg-cyan-50 px-3 text-sm font-black text-teal-700 transition hover:bg-cyan-100"
+              className="mt-5 inline-flex h-11 items-center justify-center gap-2 rounded-md border border-[#84cfff] bg-[#c7e7ff] px-3 text-sm font-black text-[#00658e] transition hover:bg-[#84cfff]/40"
             >
               <LocateFixed className="size-4" aria-hidden="true" />
               {geo ? dictionary.common.locationOn : dictionary.common.useLocation}
@@ -162,7 +162,7 @@ export function FiltersPanel({
           <button
             type="submit"
             disabled={pending}
-            className="mt-4 inline-flex h-11 items-center justify-center rounded-full bg-[#061b34] px-5 text-sm font-black text-white shadow-sm transition hover:bg-[#0c2a4d] disabled:opacity-60"
+            className="mt-4 inline-flex h-11 items-center justify-center rounded-xl bg-[#00658e] px-5 text-sm font-black text-white shadow-sm transition hover:bg-[#0088c7] disabled:opacity-60"
           >
             {dictionary.common.apply}
           </button>
@@ -189,7 +189,7 @@ function Select({
       <select
         name={name}
         defaultValue={defaultValue}
-        className="h-11 w-full rounded-md border border-slate-200 bg-white px-3 text-sm outline-none focus:border-sky-300"
+        className="h-11 w-full rounded-md border border-[#d8dde6] bg-white px-3 text-sm outline-none focus:border-[#84cfff]"
       >
         {children}
       </select>

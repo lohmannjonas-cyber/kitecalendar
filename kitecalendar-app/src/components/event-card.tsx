@@ -10,7 +10,7 @@ export function EventCard({ event, dictionary, compact = false }: { event: KiteE
   const showTypeBadge = !(hasBrandDemo && event.eventType.slug === "demo-day");
 
   return (
-    <article className="group rounded-xl border border-slate-100 bg-white p-5 shadow-lg shadow-slate-950/5 transition hover:-translate-y-0.5 hover:border-[#58d7d0] hover:shadow-xl hover:shadow-slate-950/8">
+    <article className="group overflow-hidden rounded-xl border border-[#d8dde6] bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-[#84cfff] hover:shadow-md">
       <div className="flex flex-col gap-4">
         <div className="flex flex-wrap items-center gap-2">
           {showTypeBadge ? (
@@ -26,14 +26,14 @@ export function EventCard({ event, dictionary, compact = false }: { event: KiteE
 
         <div>
           <Link href={`/events/${event.slug}`} className="block">
-            <h3 className="text-xl font-black tracking-normal text-[#061b34] transition group-hover:text-[#139f9a]">
+            <h3 className="text-xl font-black tracking-normal text-[#032d60] transition group-hover:text-[#00658e]">
               {event.title}
             </h3>
           </Link>
-          {!compact ? <p className="mt-2 line-clamp-2 text-sm leading-6 text-slate-600">{event.description}</p> : null}
+          {!compact ? <p className="mt-2 line-clamp-2 text-sm leading-6 text-[#3e4850]">{event.description}</p> : null}
         </div>
 
-        <div className="grid gap-2 text-sm text-slate-600 sm:grid-cols-2">
+        <div className="grid gap-2 text-sm text-[#3e4850] sm:grid-cols-2">
           <Info icon={<CalendarDays className="size-4" />} value={formatDateRange(event.startDate, event.endDate)} />
           <Info icon={<MapPin className="size-4" />} value={`${event.city}${event.spotName ? `, ${event.spotName}` : ""}`} />
           <Info icon={<Users className="size-4" />} value={event.organizerName} />
@@ -54,7 +54,7 @@ export function EventCard({ event, dictionary, compact = false }: { event: KiteE
           </div>
           <Link
             href={`/events/${event.slug}`}
-            className="inline-flex items-center gap-2 rounded-full bg-[#061b34] px-4 py-2 text-sm font-black text-white shadow-sm transition hover:bg-[#0c2a4d]"
+            className="inline-flex items-center gap-2 rounded-xl border border-[#00658e] px-4 py-2 text-sm font-black text-[#00658e] shadow-sm transition hover:bg-[#c7e7ff]"
           >
             {dictionary.common.view}
             <ArrowRight className="size-4" aria-hidden="true" />
@@ -68,7 +68,7 @@ export function EventCard({ event, dictionary, compact = false }: { event: KiteE
 function Info({ icon, value }: { icon: React.ReactNode; value: string }) {
   return (
     <div className="flex min-w-0 items-center gap-2">
-      <span className="text-teal-600">{icon}</span>
+      <span className="text-[#00658e]">{icon}</span>
       <span className="truncate font-medium">{value}</span>
     </div>
   );

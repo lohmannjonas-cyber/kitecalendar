@@ -9,7 +9,7 @@ export function RatingBadge({ rating }: { rating: KiteRating }) {
         "inline-flex items-center gap-1 rounded-md px-2 py-1 text-xs font-black",
         rating === "Epic" && "bg-orange-100 text-orange-700",
         rating === "Good" && "bg-emerald-100 text-emerald-700",
-        rating === "Okay" && "bg-sky-100 text-sky-700",
+        rating === "Okay" && "bg-[#c7e7ff] text-[#00658e]",
         rating === "Poor" && "bg-slate-100 text-slate-600",
       )}
     >

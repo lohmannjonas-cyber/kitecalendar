@@ -93,11 +93,11 @@ export default async function Home({
   return (
     <>
       <EventSearchHero dictionary={dictionary} />
-      <section id="events" className="relative z-10 mx-auto -mt-8 max-w-7xl scroll-mt-24 rounded-t-[2rem] bg-[#f7fbfd] px-4 py-10 sm:px-6 lg:px-8">
+      <section id="events" className="relative z-10 mx-auto -mt-8 max-w-7xl scroll-mt-24 rounded-t-[2rem] bg-[#f6faff] px-4 py-8 sm:px-6 lg:px-8">
         <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-sm font-black uppercase tracking-[0.12em] text-[#139f9a]">{dictionary.common.upcomingEvents}</p>
-            <h2 className="text-4xl font-black tracking-normal text-[#061b34]">{dictionary.common.bestUpcoming}</h2>
+            <p className="text-xs font-black uppercase tracking-[0.12em] text-[#00658e]">{dictionary.common.upcomingEvents}</p>
+            <h2 className="text-3xl font-black tracking-normal text-[#032d60] sm:text-4xl">{dictionary.common.bestUpcoming}</h2>
           </div>
           <div className="flex rounded-full border border-slate-200 bg-white p-1 shadow-sm">
             <Link
@@ -128,7 +128,7 @@ export default async function Home({
         </div>
 
         <div className="mt-3 flex justify-end">
-          <Link href={pastEventsHref} className="text-sm font-bold text-slate-500 hover:text-sky-700">
+          <Link href={pastEventsHref} className="text-sm font-bold text-[#706e6b] hover:text-[#00658e]">
             {showPastEvents ? dictionary.common.hidePastEvents : dictionary.common.showPastEvents}
           </Link>
         </div>
@@ -142,7 +142,7 @@ export default async function Home({
         </div>
 
         {visibleEvents.length === 0 ? (
-          <div className="mt-6 rounded-md border border-dashed border-sky-200 bg-white p-8 text-center">
+          <div className="mt-6 rounded-xl border border-dashed border-[#84cfff] bg-white p-8 text-center">
             <p className="text-lg font-black text-slate-950">{dictionary.common.noResults}</p>
             <Link
               href="/submit-event"

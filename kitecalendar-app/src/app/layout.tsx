@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BottomNav } from "@/components/bottom-nav";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { getI18n } from "@/i18n/server";
@@ -28,10 +29,11 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className="h-full antialiased">
-      <body className="flex min-h-full flex-col bg-[#f7fbfd] text-slate-950">
+      <body className="flex min-h-full flex-col bg-[#f6faff] pb-16 text-[#171c20]">
         <SiteHeader locale={locale} dictionary={dictionary} />
         <main className="flex-1">{children}</main>
         <SiteFooter dictionary={dictionary} />
+        <BottomNav dictionary={dictionary} />
       </body>
     </html>
   );

@@ -18,7 +18,7 @@ export default async function SubmitEventPage({
   return (
     <div className="mx-auto max-w-5xl px-4 pb-8 pt-28 sm:px-6 lg:px-8">
       <div className="mb-6 max-w-3xl">
-        <p className="text-sm font-black uppercase text-sky-700">Kitecalendar.com</p>
+        <p className="text-sm font-black uppercase text-[#00658e]">Kitecalendar.com</p>
         <h1 className="text-4xl font-black tracking-normal text-slate-950">{dictionary.submit.title}</h1>
         <p className="mt-3 text-base leading-7 text-slate-600">{dictionary.submit.intro}</p>
       </div>

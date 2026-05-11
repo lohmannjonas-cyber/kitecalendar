@@ -12,7 +12,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: "Inter", "Aptos", "Segoe UI", Arial, sans-serif;
+  --font-sans: "Nunito Sans", "Aptos", "Segoe UI", Arial, sans-serif;
   --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
@@ -29,8 +29,9 @@ body {
 
 .hero-image {
   background-image:
-    linear-gradient(180deg, rgba(6, 27, 52, 0.72) 0%, rgba(6, 27, 52, 0.34) 16%, rgba(6, 27, 52, 0) 28%),
-    linear-gradient(90deg, rgba(247, 251, 253, 0.92) 0%, rgba(247, 251, 253, 0.74) 30%, rgba(247, 251, 253, 0.12) 62%, rgba(247, 251, 253, 0) 100%),
+    linear-gradient(180deg, rgba(3, 45, 96, 0.58) 0%, rgba(3, 45, 96, 0.25) 18%, rgba(246, 250, 255, 0) 34%),
+    linear-gradient(180deg, rgba(3, 45, 96, 0.04) 0%, rgba(246, 250, 255, 0.92) 100%),
+    linear-gradient(90deg, rgba(246, 250, 255, 0.9) 0%, rgba(246, 250, 255, 0.62) 31%, rgba(246, 250, 255, 0.08) 66%, rgba(246, 250, 255, 0) 100%),
     url("/kitecalendar-soft-hero.jpeg");
   background-position: center;
   background-size: cover;

@@ -15,7 +15,7 @@ export function AlertSignup({
   return (
     <form action={subscribeAlertAction} className="rounded-xl border border-slate-100 bg-white p-5 shadow-lg shadow-slate-950/5">
       <div className="mb-4 flex items-start gap-3">
-        <span className="flex size-10 items-center justify-center rounded-md bg-sky-50 text-sky-700">
+        <span className="flex size-10 items-center justify-center rounded-md bg-[#c7e7ff] text-[#00658e]">
           <BellRing className="size-5" aria-hidden="true" />
         </span>
         <div>
@@ -30,9 +30,9 @@ export function AlertSignup({
           name="email"
           required
           placeholder={dictionary.common.email}
-          className="h-11 rounded-md border border-slate-200 px-3 text-sm outline-none focus:border-sky-300"
+          className="h-11 rounded-md border border-[#d8dde6] px-3 text-sm outline-none focus:border-[#84cfff]"
         />
-        <select name="country" className="h-11 rounded-md border border-slate-200 bg-white px-3 text-sm outline-none focus:border-sky-300">
+        <select name="country" className="h-11 rounded-md border border-[#d8dde6] bg-white px-3 text-sm outline-none focus:border-[#84cfff]">
           <option value="">{dictionary.common.country}</option>
           {countries.map((country) => (
             <option key={country} value={country}>
@@ -40,7 +40,7 @@ export function AlertSignup({
             </option>
           ))}
         </select>
-        <select name="brandNames" className="h-11 rounded-md border border-slate-200 bg-white px-3 text-sm outline-none focus:border-sky-300">
+        <select name="brandNames" className="h-11 rounded-md border border-[#d8dde6] bg-white px-3 text-sm outline-none focus:border-[#84cfff]">
           <option value="">{dictionary.common.brand}</option>
           {brands.map((brand) => (
             <option key={brand.id} value={brand.name}>

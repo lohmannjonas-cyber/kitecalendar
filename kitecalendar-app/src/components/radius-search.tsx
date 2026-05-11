@@ -89,14 +89,14 @@ export function RadiusSearch({
     <div className="rounded-xl border border-slate-100 bg-white p-4 shadow-lg shadow-slate-950/5">
       <div className="mb-3 flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-2">
-          <MapPin className="size-5 text-teal-600" aria-hidden="true" />
+          <MapPin className="size-5 text-[#00658e]" aria-hidden="true" />
           <h3 className="text-sm font-black uppercase text-slate-500">{dictionary.common.radiusSearch}</h3>
         </div>
         {activeLabel ? (
           <button
             type="button"
             onClick={clearRadius}
-            className="inline-flex items-center gap-1 text-sm font-black text-teal-700 hover:text-teal-800"
+            className="inline-flex items-center gap-1 text-sm font-black text-[#00658e] hover:text-[#0088c7]"
           >
             <X className="size-4" aria-hidden="true" />
             {dictionary.common.clearRadius}
@@ -127,7 +127,7 @@ export function RadiusSearch({
         <select
           value={distanceKm}
           onChange={(event) => setDistanceKm(event.target.value)}
-          className="h-11 rounded-md border border-slate-200 bg-white px-3 text-sm outline-none focus:border-sky-300"
+          className="h-11 rounded-md border border-[#d8dde6] bg-white px-3 text-sm outline-none focus:border-[#84cfff]"
           aria-label={dictionary.common.distance}
         >
           <option value="50">50 km</option>
@@ -141,7 +141,7 @@ export function RadiusSearch({
           type="button"
           onClick={searchCity}
           disabled={pending}
-          className="inline-flex h-11 items-center justify-center rounded-full bg-[#061b34] px-5 text-sm font-black text-white shadow-sm transition hover:bg-[#0c2a4d] disabled:opacity-60"
+          className="inline-flex h-11 items-center justify-center rounded-xl bg-[#00658e] px-5 text-sm font-black text-white shadow-sm transition hover:bg-[#0088c7] disabled:opacity-60"
         >
           {dictionary.common.searchRadius}
         </button>
@@ -150,7 +150,7 @@ export function RadiusSearch({
           type="button"
           onClick={useCurrentLocation}
           disabled={pending}
-          className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-cyan-200 bg-cyan-50 px-4 text-sm font-black text-teal-700 transition hover:bg-cyan-100 disabled:opacity-60"
+          className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-[#84cfff] bg-[#c7e7ff] px-4 text-sm font-black text-[#00658e] transition hover:bg-[#84cfff]/40 disabled:opacity-60"
         >
           <LocateFixed className="size-4" aria-hidden="true" />
           {dictionary.common.useLocation}

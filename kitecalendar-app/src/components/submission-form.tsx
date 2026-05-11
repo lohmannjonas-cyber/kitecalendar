@@ -13,7 +13,7 @@ export function SubmissionForm({
   eventTypes: EventType[];
 }) {
   return (
-    <form action={submitEventAction} className="grid gap-5 rounded-md border border-sky-100 bg-white p-5 shadow-sm">
+    <form action={submitEventAction} className="grid gap-5 rounded-xl border border-[#d8dde6] bg-white p-5 shadow-sm">
       <div className="grid gap-4 md:grid-cols-2">
         <Field label={dictionary.submit.eventName} name="title" required />
         <Select label={dictionary.common.type} name="eventTypeSlug" required>
@@ -41,7 +41,7 @@ export function SubmissionForm({
         <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
           {brands.map((brand) => (
             <label key={brand.id} className="flex items-center gap-2 rounded-md border border-slate-200 px-3 py-2 text-sm font-semibold">
-              <input type="checkbox" name="brandNames" value={brand.name} className="size-4 accent-sky-600" />
+              <input type="checkbox" name="brandNames" value={brand.name} className="size-4 accent-[#00658e]" />
               {brand.name}
             </label>
           ))}
@@ -55,11 +55,11 @@ export function SubmissionForm({
           required
           minLength={20}
           rows={6}
-          className="w-full rounded-md border border-slate-200 px-3 py-3 text-sm outline-none focus:border-sky-300"
+          className="w-full rounded-md border border-[#d8dde6] px-3 py-3 text-sm outline-none focus:border-[#84cfff]"
         />
       </label>
 
-      <button className="inline-flex h-12 w-fit items-center justify-center gap-2 rounded-md bg-[#42d5c8] px-5 text-sm font-black text-[#042232] shadow-sm transition hover:bg-[#67eadf]">
+      <button className="inline-flex h-12 w-fit items-center justify-center gap-2 rounded-xl bg-[#00658e] px-5 text-sm font-black text-white shadow-sm transition hover:bg-[#0088c7]">
         <Send className="size-4" aria-hidden="true" />
         {dictionary.submit.send}
       </button>
@@ -88,7 +88,7 @@ function Field({
         type={type}
         required={required}
         step={step}
-        className="h-11 w-full rounded-md border border-slate-200 px-3 text-sm outline-none focus:border-sky-300"
+        className="h-11 w-full rounded-md border border-[#d8dde6] px-3 text-sm outline-none focus:border-[#84cfff]"
       />
     </label>
   );
@@ -111,7 +111,7 @@ function Select({
       <select
         name={name}
         required={required}
-        className="h-11 w-full rounded-md border border-slate-200 bg-white px-3 text-sm outline-none focus:border-sky-300"
+        className="h-11 w-full rounded-md border border-[#d8dde6] bg-white px-3 text-sm outline-none focus:border-[#84cfff]"
       >
         {children}
       </select>

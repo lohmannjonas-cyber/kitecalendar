@@ -18,16 +18,16 @@ export function EventListByMonth({ events, dictionary }: { events: KiteEvent[]; 
   }, []);
 
   return (
-    <div className="space-y-10">
+    <div className="space-y-8">
       {grouped.map((group) => (
         <section key={group.month} aria-labelledby={`events-${group.month.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>
           <div className="mb-4 flex items-center gap-4">
-            <h2 id={`events-${group.month.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} className="text-xl font-black text-slate-950">
+            <h2 id={`events-${group.month.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} className="text-xl font-black text-[#032d60]">
               {group.month}
             </h2>
-            <div className="h-px flex-1 bg-sky-100" />
+            <div className="h-px flex-1 bg-[#d8dde6]" />
           </div>
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid gap-5 md:grid-cols-2">
             {group.events.map((event) => (
               <EventCard key={event.id} event={event} dictionary={dictionary} />
             ))}
